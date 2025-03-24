@@ -167,45 +167,46 @@ public:
 
 
         // The best chain should have at least this much work
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000859d8e6ba8224a4"); // Block 50000
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000"); // Block 0
 
         // By default assume that the signatures in ancestors of this block are valid. Block# 1040000
-        consensus.defaultAssumeValid = uint256S("0x0000000000043a9280011ff1382e99ade4d90d51821cc4dadfb20bd1a0905b1c"); // Block 50000
+        consensus.defaultAssumeValid = uint256S("0x0x00000056b9854abf830236d77443a8e3556f0244265e3eb12281a7bc43b7ff57"); // Block 0
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0x4d; // M
-        pchMessageStart[1] = 0x45; // E
-        pchMessageStart[2] = 0x57; // W
+        pchMessageStart[0] = 0x53; // S
+        pchMessageStart[1] = 0x4c; // L
+        pchMessageStart[2] = 0x4d; // M
         pchMessageStart[3] = 0x43; // C
-        nDefaultPort = 8788;
+        nDefaultPort = 4767;
         nPruneAfterHeight = 100000;
 
-        uint32_t nGenesisTime = 1661730843;
+        uint32_t nGenesisTime = 1721866235;
+        uint32_t nGenesisNonce = 6353113; 
 
-        genesis = CreateGenesisBlock(nGenesisTime, 351574, 0x1e00ffff, 4, 5000 * COIN);
+        std::string nGenesisBlockHash = "0x00000056b9854abf830236d77443a8e3556f0244265e3eb12281a7bc43b7ff57";
+        std::string nGenesisMerkleRoot = "457e7d4f5c3d388fbf90f9a5260ed627a43a0c13f4578d48bc2f983b6ce6e5f7";
 
-        consensus.hashGenesisBlock = genesis.GetX16RHash();
+        genesis = CreateGenesisBlock(nGenesisTime, nGenesisNonce, 0x1e00ffff, 4, 5000 * COIN);
 
-        assert(consensus.hashGenesisBlock == uint256S("0x000000edd819220359469c54f2614b5602ebc775ea67a64602f354bdaa320f70"));
-        assert(genesis.hashMerkleRoot == uint256S("0xe8916cf6592c8433d598c3a5fe60a9741fd2a997b39d93af2d789cdd9d9a7390"));
+        consensus.hashGenesisBlock = genesis.GetX16RV2Hash();
 
         vSeeds.emplace_back("seed-mainnet-slme.slimecoin.cc", false);
         vSeeds.emplace_back("dnsseed.nodeslist.xyz", false);
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,50);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,122);
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,112);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,63);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,125);
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,153);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
 
         // Slimecoin BIP44 cointype in mainnet is '1669'
-        nExtCoinType = 1669;
+        nExtCoinType = 31337;
 
-        vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
+        //vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
@@ -214,17 +215,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                {0, uint256S("0x000000edd819220359469c54f2614b5602ebc775ea67a64602f354bdaa320f70")},
-                {1, uint256S("0x003c8dc5fc743a984caab5d48ccac176504b04efc165670b5dc54e4b8c08a014")},
-                {100, uint256S("0x008d078cc061d3f5b35fb650f6bc8f0f1dd72d134e5bfcdf45b6db79d781fb37")},
-                {500, uint256S("0x000000047104eb030474b4f0c260dbbcdf7fa7441288a19c08c8be64cc1aec49")},
-                {1500, uint256S("0x000000015ce99dc668585599606c31892d3be2e93e0ee6bb51d599c2fffd5b93")},
-                {5000, uint256S("0x0000000000591321b74c0bdb697b859f6553ac69db64632d1353ad2debd6a6d8")},
-                {8000, uint256S("0x00000000004bdac507d8db8dd8b80670705259f80e8c08b32ae4ea395e00ef66")},
-                {12000, uint256S("0x00000000001a45336692852c86060c48ea1b20d9dfbf97f77433b2fe38351fd9")},
-                {15000, uint256S("0x0000000000063b1ef11f2032a117d84fe098efd655832de7b06559b9a214663b")},
-                {25000, uint256S("0x0000000000095ef1f2e4e24d990552587e773be85e4bfbfdae467d4a57f58d6b")},
-                {50000, uint256S("0x0000000000043a9280011ff1382e99ade4d90d51821cc4dadfb20bd1a0905b1c")}
+                {    0, uint256S("0x00000056b9854abf830236d77443a8e3556f0244265e3eb12281a7bc43b7ff57")},
             }
         };
 
@@ -233,10 +224,10 @@ public:
         chainTxData = ChainTxData{
             // Update as we know more about the contents of the Slimecoin chain
             // Stats as of 0x00000000000016ec03d8d93f9751323bcc42137b1b4df67e6a11c4394fd8e5ad window size 43200
-            1665504479, // * UNIX timestamp of last known number of transactions
-            99360,    // * total number of transactions between genesis and that timestamp
+            1723683041, // * UNIX timestamp of last known number of transactions
+            0,    // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
-            0.03289449084985968       // * estimated number of transactions per second after that timestamp
+            0.0         // * estimated number of transactions per second after that timestamp
         };
 
         /** SLME Start **/
@@ -283,10 +274,10 @@ public:
         nMessagingActivationBlock = 1; // Messaging activated block height
         nRestrictedActivationBlock = 1; // Restricted activated block height
 
-        nKAAAWWWPOWActivationTime = 1662493424; // UTC: Wed May 06 2020 18:00:00
+        nKAAAWWWPOWActivationTime = nGenesisTime + 1; // UTC: Wed May 06 2020 18:00:00
         nKAWPOWActivationTime = nKAAAWWWPOWActivationTime;
 
-        nMEOWWWWPOWActivationTime = 1710799200; // March 18 2024 -- 3pm PST
+        nMEOWWWWPOWActivationTime = nGenesisTime + 1; // March 18 2024 -- 3pm PST
         nMEOWPOWActivationTime = nMEOWWWWPOWActivationTime;
         /** SLME End **/
     }
