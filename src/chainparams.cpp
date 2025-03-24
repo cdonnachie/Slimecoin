@@ -170,7 +170,7 @@ public:
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000"); // Block 0
 
         // By default assume that the signatures in ancestors of this block are valid. Block# 1040000
-        consensus.defaultAssumeValid = uint256S("0x00000056b9854abf830236d77443a8e3556f0244265e3eb12281a7bc43b7ff57"); // Block 0
+        consensus.defaultAssumeValid = uint256S("0x000000edd819220359469c54f2614b5602ebc775ea67a64602f354bdaa320f70"); // Block 0
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -184,11 +184,11 @@ public:
         nDefaultPort = 4767;
         nPruneAfterHeight = 100000;
 
-        uint32_t nGenesisTime = 1721866235;
-        uint32_t nGenesisNonce = 6353113; 
+        uint32_t nGenesisTime = 1661730843;
+        uint32_t nGenesisNonce = 351574; 
 
-        std::string nGenesisBlockHash = "0x00000056b9854abf830236d77443a8e3556f0244265e3eb12281a7bc43b7ff57";
-        std::string nGenesisMerkleRoot = "457e7d4f5c3d388fbf90f9a5260ed627a43a0c13f4578d48bc2f983b6ce6e5f7";
+        std::string nGenesisBlockHash = "0x000000edd819220359469c54f2614b5602ebc775ea67a64602f354bdaa320f70";
+        std::string nGenesisMerkleRoot = "0xe8916cf6592c8433d598c3a5fe60a9741fd2a997b39d93af2d789cdd9d9a7390";
 
         genesis = CreateGenesisBlock(nGenesisTime, nGenesisNonce, 0x1e00ffff, 4, 5000 * COIN);
 
@@ -215,7 +215,7 @@ public:
 
         checkpointData = (CCheckpointData) {
             {
-                {    0, uint256S("0x00000056b9854abf830236d77443a8e3556f0244265e3eb12281a7bc43b7ff57")},
+                {    0, uint256S("0x000000edd819220359469c54f2614b5602ebc775ea67a64602f354bdaa320f70")},
             }
         };
 
