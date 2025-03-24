@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The Meowcoin Core developers
+// Copyright (c) 2017-2019 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "meowcoinconsensus.h"
+#include "slimecoinconsensus.h"
 
 #include "primitives/transaction.h"
 #include "pubkey.h"
@@ -126,5 +126,5 @@ int meowconsensus_verify_script(const unsigned char *scriptPubKey, unsigned int 
 unsigned int meowconsensus_version()
 {
     // Just use the API version for now
-    return MEOWCOINCONSENSUS_API_VER;
+    return SLIMECOINCONSENSUS_API_VER;
 }

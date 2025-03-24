@@ -3,11 +3,11 @@ Shared Libraries
 
 ## meowconsensus
 
-The purpose of this library is to make the verification functionality that is critical to Meowcoin's consensus available to other applications, e.g. to language bindings.
+The purpose of this library is to make the verification functionality that is critical to Slimecoin's consensus available to other applications, e.g. to language bindings.
 
 ### API
 
-The interface is defined in the C header `meowcoinconsensus.h` located in  `src/script/meowcoinconsensus.h`.
+The interface is defined in the C header `slimecoinconsensus.h` located in  `src/script/slimecoinconsensus.h`.
 
 #### Version
 
@@ -43,7 +43,7 @@ The interface is defined in the C header `meowcoinconsensus.h` located in  `src/
 - `meowconsensus_ERR_AMOUNT_REQUIRED` - Input amount is required if WITNESS is used
 
 ### Example Implementations
-- [NMeowcoin](https://github.com/NicolasDorier/NMeowcoin/blob/master/NMeowcoin/Script.cs#L814) (.NET Bindings)
-- [node-libmeowcoinconsensus](https://github.com/bitpay/node-libmeowcoinconsensus) (Node.js Bindings)
-- [java-libmeowcoinconsensus](https://github.com/dexX7/java-libmeowcoinconsensus) (Java Bindings)
+- [NSlimecoin](https://github.com/NicolasDorier/NSlimecoin/blob/master/NSlimecoin/Script.cs#L814) (.NET Bindings)
+- [node-libslimecoinconsensus](https://github.com/bitpay/node-libslimecoinconsensus) (Node.js Bindings)
+- [java-libslimecoinconsensus](https://github.com/dexX7/java-libslimecoinconsensus) (Java Bindings)
 - [meowconsensus-php](https://github.com/Bit-Wasp/meowconsensus-php) (PHP Bindings)

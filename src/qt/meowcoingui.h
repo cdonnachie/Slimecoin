@@ -1,13 +1,13 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Meowcoin Core developers
+// Copyright (c) 2017-2021 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_QT_MEOWCOINGUI_H
-#define MEOWCOIN_QT_MEOWCOINGUI_H
+#ifndef SLIMECOIN_QT_SLIMECOINGUI_H
+#define SLIMECOIN_QT_SLIMECOINGUI_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/meowcoin-config.h"
+#include "config/slimecoin-config.h"
 #endif
 
 #include "amount.h"
@@ -44,10 +44,10 @@ class QNetworkRequest;
 QT_END_NAMESPACE
 
 /**
-  Meowcoin GUI main class. This class represents the main window of the Meowcoin UI. It communicates with both the client and
+  Slimecoin GUI main class. This class represents the main window of the Slimecoin UI. It communicates with both the client and
   wallet models to give the user an up-to-date view of the current core state.
 */
-class MeowcoinGUI : public QMainWindow
+class SlimecoinGUI : public QMainWindow
 {
     Q_OBJECT
 
@@ -55,8 +55,8 @@ public:
     static const QString DEFAULT_WALLET;
     static const std::string DEFAULT_UIPLATFORM;
 
-    explicit MeowcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *networkStyle, QWidget *parent = 0);
-    ~MeowcoinGUI();
+    explicit SlimecoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *networkStyle, QWidget *parent = 0);
+    ~SlimecoinGUI();
 
     /** Set the client model.
         The client model represents the part of the core that communicates with the P2P network, and is wallet-agnostic.
@@ -65,7 +65,7 @@ public:
 
 #ifdef ENABLE_WALLET
     /** Set the wallet model.
-        The wallet model represents a meowcoin wallet, and offers access to the list of transactions, address book and sending
+        The wallet model represents a slimecoin wallet, and offers access to the list of transactions, address book and sending
         functionality.
     */
     bool addWallet(const QString& name, WalletModel *walletModel);
@@ -127,7 +127,7 @@ private:
     QAction *openAction = nullptr;
     QAction *showHelpMessageAction = nullptr;
 
-    /** MEWC START */
+    /** SLME START */
     QAction *transferAssetAction = nullptr;
     QAction *createAssetAction = nullptr;
     QAction *manageAssetAction = nullptr;
@@ -137,7 +137,7 @@ private:
     QWidget *headerWidget = nullptr;
     QLabel *labelCurrentMarket = nullptr;
     QLabel *labelCurrentPrice = nullptr;
-    QComboBox *comboMewcUnit = nullptr;
+    QComboBox *comboSlmeUnit = nullptr;
     QTimer *pricingTimer = nullptr;
     QNetworkAccessManager* networkManager = nullptr;
     QNetworkRequest* request = nullptr;
@@ -148,7 +148,7 @@ private:
     QLabel *labelToolbar = nullptr;
     QToolBar *m_toolbar = nullptr;
 
-    /** MEWC END */
+    /** SLME END */
 
     QSystemTrayIcon *trayIcon = nullptr;
     QMenu *trayIconMenu = nullptr;
@@ -269,13 +269,13 @@ private Q_SLOTS:
     /** Show open dialog */
     void openClicked();
 
-    /** MEWC START */
+    /** SLME START */
     /** Switch to assets page */
     void gotoAssetsPage();
     void gotoCreateAssetsPage();
     void gotoManageAssetsPage();
     void gotoRestrictedAssetsPage();
-    /** MEWC END */
+    /** SLME END */
 
 #endif // ENABLE_WALLET
     /** Show configuration dialog */
@@ -345,4 +345,4 @@ private Q_SLOTS:
 };
 
 
-#endif // MEOWCOIN_QT_MEOWCOINGUI_H
+#endif // SLIMECOIN_QT_SLIMECOINGUI_H

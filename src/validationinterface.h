@@ -1,11 +1,11 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The Meowcoin Core developers
+// Copyright (c) 2017-2019 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_VALIDATIONINTERFACE_H
-#define MEOWCOIN_VALIDATIONINTERFACE_H
+#ifndef SLIMECOIN_VALIDATIONINTERFACE_H
+#define SLIMECOIN_VALIDATIONINTERFACE_H
 
 #include <memory>
 
@@ -111,4 +111,4 @@ public:
 
 CMainSignals& GetMainSignals();
 
-#endif // MEOWCOIN_VALIDATIONINTERFACE_H
+#endif // SLIMECOIN_VALIDATIONINTERFACE_H

@@ -1,10 +1,10 @@
 // Copyright (c) 2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The Meowcoin Core developers
+// Copyright (c) 2017-2019 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_THREADINTERRUPT_H
-#define MEOWCOIN_THREADINTERRUPT_H
+#ifndef SLIMECOIN_THREADINTERRUPT_H
+#define SLIMECOIN_THREADINTERRUPT_H
 
 #include <atomic>
 #include <chrono>
@@ -32,4 +32,4 @@ private:
     std::atomic<bool> flag;
 };
 
-#endif //MEOWCOIN_THREADINTERRUPT_H
+#endif //SLIMECOIN_THREADINTERRUPT_H

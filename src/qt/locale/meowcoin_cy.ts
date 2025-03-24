@@ -233,7 +233,7 @@
     </message>
     </context>
 <context>
-    <name>MeowcoinGUI</name>
+    <name>SlimecoinGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Cysoni â'r rhwydwaith...</translation>
@@ -295,8 +295,8 @@
         <translation>Newid y cyfrinymadrodd a ddefnyddiwyd ar gyfer amgryptio'r waled</translation>
     </message>
     <message>
-        <source>Meowcoin</source>
-        <translation>Meowcoin</translation>
+        <source>Slimecoin</source>
+        <translation>Slimecoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -515,14 +515,14 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>meowcoin-core</name>
+    <name>slimecoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opsiynau:</translation>
     </message>
     <message>
-        <source>Meowcoin Core</source>
-        <translation>Craidd Meowcoin</translation>
+        <source>Slimecoin Core</source>
+        <translation>Craidd Slimecoin</translation>
     </message>
     <message>
         <source>Information</source>

@@ -1,10 +1,10 @@
 // Copyright (c) 2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The Meowcoin Core developers
+// Copyright (c) 2017-2019 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_BLOCK_ENCODINGS_H
-#define MEOWCOIN_BLOCK_ENCODINGS_H
+#ifndef SLIMECOIN_BLOCK_ENCODINGS_H
+#define SLIMECOIN_BLOCK_ENCODINGS_H
 
 #include "primitives/block.h"
 

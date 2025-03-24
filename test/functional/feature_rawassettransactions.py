@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2014-2016 The Bitcoin Core developers
-# Copyright (c) 2017-2020 The Meowcoin Core developers
+# Copyright (c) 2017-2020 The Slimecoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,7 +10,7 @@ Test the rawtransaction RPCs for asset transactions.
 
 import math
 from io import BytesIO
-from test_framework.test_framework import MeowcoinTestFramework
+from test_framework.test_framework import SlimecoinTestFramework
 from test_framework.util import assert_equal, assert_raises_rpc_error, assert_is_hash_string, assert_does_not_contain_key, assert_contains_key, assert_contains_pair
 from test_framework.mininode import CTransaction, hex_str_to_bytes, bytes_to_hex_str, CScriptReissue, CScriptOwner, CScriptTransfer, CTxOut, CScriptIssue
 
@@ -56,13 +56,13 @@ def get_tx_issue_hex(self, node, asset_name, asset_quantity, asset_units=0):
 
 
 # noinspection PyTypeChecker
-class RawAssetTransactionsTest(MeowcoinTestFramework):
+class RawAssetTransactionsTest(SlimecoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 3
 
     def activate_assets(self):
-        self.log.info("Generating MEWC for node[0] and activating assets...")
+        self.log.info("Generating SLME for node[0] and activating assets...")
         n0 = self.nodes[0]
 
         n0.generate(1)
@@ -136,19 +136,19 @@ class RawAssetTransactionsTest(MeowcoinTestFramework):
         tx = CTransaction()
         f = BytesIO(hex_str_to_bytes(tx_hex))
         tx.deserialize(f)
-        mewcr = '72766e72'  # mewcr
+        slmer = '72766e72'  # slmer
         op_drop = '75'
         for n in range(0, len(tx.vout)):
             out = tx.vout[n]
-            if mewcr in bytes_to_hex_str(out.scriptPubKey):
+            if slmer in bytes_to_hex_str(out.scriptPubKey):
                 script_hex = bytes_to_hex_str(out.scriptPubKey)
-                reissue_script_hex = script_hex[script_hex.index(mewcr) + len(mewcr):-len(op_drop)]
+                reissue_script_hex = script_hex[script_hex.index(slmer) + len(slmer):-len(op_drop)]
                 f = BytesIO(hex_str_to_bytes(reissue_script_hex))
                 reissue = CScriptReissue()
                 reissue.deserialize(f)
                 reissue.name = alternate_asset_name.encode()
                 tampered_reissue = bytes_to_hex_str(reissue.serialize())
-                tampered_script = script_hex[:script_hex.index(mewcr)] + mewcr + tampered_reissue + op_drop
+                tampered_script = script_hex[:script_hex.index(slmer)] + slmer + tampered_reissue + op_drop
                 tx.vout[n].scriptPubKey = hex_str_to_bytes(tampered_script)
         tx_hex_bad = bytes_to_hex_str(tx.serialize())
         tx_signed = n0.signrawtransaction(tx_hex_bad)['hex']
@@ -159,9 +159,9 @@ class RawAssetTransactionsTest(MeowcoinTestFramework):
         tx = CTransaction()
         f = BytesIO(hex_str_to_bytes(tx_hex))
         tx.deserialize(f)
-        mewct = '72766e74'  # mewct
+        slmet = '72766e74'  # slmet
         # remove the owner output from vout
-        bad_vout = list(filter(lambda out_script: mewct not in bytes_to_hex_str(out_script.scriptPubKey), tx.vout))
+        bad_vout = list(filter(lambda out_script: slmet not in bytes_to_hex_str(out_script.scriptPubKey), tx.vout))
         tx.vout = bad_vout
         tx_hex_bad = bytes_to_hex_str(tx.serialize())
         tx_signed = n0.signrawtransaction(tx_hex_bad)['hex']
@@ -195,9 +195,9 @@ class RawAssetTransactionsTest(MeowcoinTestFramework):
         tx = CTransaction()
         f = BytesIO(hex_str_to_bytes(tx_issue_hex))
         tx.deserialize(f)
-        mewco = '72766e6f'  # mewco
+        slmeo = '72766e6f'  # slmeo
         # remove the owner output from vout
-        bad_vout = list(filter(lambda out_script: mewco not in bytes_to_hex_str(out_script.scriptPubKey), tx.vout))
+        bad_vout = list(filter(lambda out_script: slmeo not in bytes_to_hex_str(out_script.scriptPubKey), tx.vout))
         tx.vout = bad_vout
         tx_bad_issue = bytes_to_hex_str(tx.serialize())
         tx_bad_issue_signed = n0.signrawtransaction(tx_bad_issue)['hex']
@@ -209,9 +209,9 @@ class RawAssetTransactionsTest(MeowcoinTestFramework):
         tx = CTransaction()
         f = BytesIO(hex_str_to_bytes(tx_issue_hex))
         tx.deserialize(f)
-        mewco = '72766e6f'  # mewco
+        slmeo = '72766e6f'  # slmeo
         # find the owner output from vout and insert a duplicate back in
-        owner_vout = list(filter(lambda out_script: mewco in bytes_to_hex_str(out_script.scriptPubKey), tx.vout))[0]
+        owner_vout = list(filter(lambda out_script: slmeo in bytes_to_hex_str(out_script.scriptPubKey), tx.vout))[0]
         tx.vout.insert(-1, owner_vout)
         tx_bad_issue = bytes_to_hex_str(tx.serialize())
         tx_bad_issue_signed = n0.signrawtransaction(tx_bad_issue)['hex']
@@ -223,9 +223,9 @@ class RawAssetTransactionsTest(MeowcoinTestFramework):
         tx = CTransaction()
         f = BytesIO(hex_str_to_bytes(tx_issue_hex))
         tx.deserialize(f)
-        mewcq = '72766e71'  # mewcq
+        slmeq = '72766e71'  # slmeq
         # remove the owner output from vout
-        bad_vout = list(filter(lambda out_script: mewcq not in bytes_to_hex_str(out_script.scriptPubKey), tx.vout))
+        bad_vout = list(filter(lambda out_script: slmeq not in bytes_to_hex_str(out_script.scriptPubKey), tx.vout))
         tx.vout = bad_vout
         tx_bad_issue = bytes_to_hex_str(tx.serialize())
         tx_bad_issue_signed = n0.signrawtransaction(tx_bad_issue)['hex']
@@ -237,21 +237,21 @@ class RawAssetTransactionsTest(MeowcoinTestFramework):
         tx = CTransaction()
         f = BytesIO(hex_str_to_bytes(tx_issue_hex))
         tx.deserialize(f)
-        mewco = '72766e6f'  # mewco
+        slmeo = '72766e6f'  # slmeo
         op_drop = '75'
         # change the owner name
         for n in range(0, len(tx.vout)):
             out = tx.vout[n]
-            if mewco in bytes_to_hex_str(out.scriptPubKey):
+            if slmeo in bytes_to_hex_str(out.scriptPubKey):
                 owner_out = out
                 owner_script_hex = bytes_to_hex_str(owner_out.scriptPubKey)
-                asset_script_hex = owner_script_hex[owner_script_hex.index(mewco) + len(mewco):-len(op_drop)]
+                asset_script_hex = owner_script_hex[owner_script_hex.index(slmeo) + len(slmeo):-len(op_drop)]
                 f = BytesIO(hex_str_to_bytes(asset_script_hex))
                 owner = CScriptOwner()
                 owner.deserialize(f)
                 owner.name = b"NOT_MY_ASSET!"
                 tampered_owner = bytes_to_hex_str(owner.serialize())
-                tampered_script = owner_script_hex[:owner_script_hex.index(mewco)] + mewco + tampered_owner + op_drop
+                tampered_script = owner_script_hex[:owner_script_hex.index(slmeo)] + slmeo + tampered_owner + op_drop
                 tx.vout[n].scriptPubKey = hex_str_to_bytes(tampered_script)
         tx_bad_issue = bytes_to_hex_str(tx.serialize())
         tx_bad_issue_signed = n0.signrawtransaction(tx_bad_issue)['hex']
@@ -263,18 +263,18 @@ class RawAssetTransactionsTest(MeowcoinTestFramework):
         tx = CTransaction()
         f = BytesIO(hex_str_to_bytes(tx_issue_hex))
         tx.deserialize(f)
-        mewco = '72766e6f'  # mewco
-        MEWCO = '52564e4f'  # MEWCO
+        slmeo = '72766e6f'  # slmeo
+        SLMEO = '52564e4f'  # SLMEO
         # change the owner output script type to be invalid
         for n in range(0, len(tx.vout)):
             out = tx.vout[n]
-            if mewco in bytes_to_hex_str(out.scriptPubKey):
+            if slmeo in bytes_to_hex_str(out.scriptPubKey):
                 owner_script_hex = bytes_to_hex_str(out.scriptPubKey)
-                tampered_script = owner_script_hex.replace(mewco, MEWCO)
+                tampered_script = owner_script_hex.replace(slmeo, SLMEO)
                 tx.vout[n].scriptPubKey = hex_str_to_bytes(tampered_script)
         tx_bad_issue = bytes_to_hex_str(tx.serialize())
         tx_bad_issue_signed = n0.signrawtransaction(tx_bad_issue)['hex']
-        assert_raises_rpc_error(-26, "bad-txns-op-mewc-asset-not-in-right-script-location",
+        assert_raises_rpc_error(-26, "bad-txns-op-slme-asset-not-in-right-script-location",
                                 n0.sendrawtransaction, tx_bad_issue_signed)
 
         ########################################
@@ -396,17 +396,17 @@ class RawAssetTransactionsTest(MeowcoinTestFramework):
         tx = CTransaction()
         f = BytesIO(hex_str_to_bytes(tx_hex))
         tx.deserialize(f)
-        mewct = '72766e74'  # mewct
+        slmet = '72766e74'  # slmet
         op_drop = '75'
         # change asset outputs from 400,600 to 500,500
         for i in range(1, 3):
             script_hex = bytes_to_hex_str(tx.vout[i].scriptPubKey)
-            f = BytesIO(hex_str_to_bytes(script_hex[script_hex.index(mewct) + len(mewct):-len(op_drop)]))
+            f = BytesIO(hex_str_to_bytes(script_hex[script_hex.index(slmet) + len(slmet):-len(op_drop)]))
             transfer = CScriptTransfer()
             transfer.deserialize(f)
             transfer.amount = 50000000000
             tampered_transfer = bytes_to_hex_str(transfer.serialize())
-            tampered_script = script_hex[:script_hex.index(mewct)] + mewct + tampered_transfer + op_drop
+            tampered_script = script_hex[:script_hex.index(slmet)] + slmet + tampered_transfer + op_drop
             tx.vout[i].scriptPubKey = hex_str_to_bytes(tampered_script)
         tampered_hex = bytes_to_hex_str(tx.serialize())
         assert_raises_rpc_error(-26, "mandatory-script-verify-flag-failed (Signature must be zero for failed CHECK(MULTI)SIG operation)", n0.sendrawtransaction, tampered_hex)
@@ -459,19 +459,19 @@ class RawAssetTransactionsTest(MeowcoinTestFramework):
         tx = CTransaction()
         f = BytesIO(hex_str_to_bytes(tx_hex))
         tx.deserialize(f)
-        mewct = '72766e74'  # mewct
+        slmet = '72766e74'  # slmet
         op_drop = '75'
         # change asset name
         for n in range(0, len(tx.vout)):
             out = tx.vout[n]
-            if mewct in bytes_to_hex_str(out.scriptPubKey):
+            if slmet in bytes_to_hex_str(out.scriptPubKey):
                 script_hex = bytes_to_hex_str(out.scriptPubKey)
-                f = BytesIO(hex_str_to_bytes(script_hex[script_hex.index(mewct) + len(mewct):-len(op_drop)]))
+                f = BytesIO(hex_str_to_bytes(script_hex[script_hex.index(slmet) + len(slmet):-len(op_drop)]))
                 transfer = CScriptTransfer()
                 transfer.deserialize(f)
                 transfer.name = b"ASSET_DOES_NOT_EXIST"
                 tampered_transfer = bytes_to_hex_str(transfer.serialize())
-                tampered_script = script_hex[:script_hex.index(mewct)] + mewct + tampered_transfer + op_drop
+                tampered_script = script_hex[:script_hex.index(slmet)] + slmet + tampered_transfer + op_drop
                 tx.vout[n].scriptPubKey = hex_str_to_bytes(tampered_script)
         tampered_hex = bytes_to_hex_str(tx.serialize())
         assert_raises_rpc_error(-26, "bad-txns-transfer-asset-not-exist",
@@ -485,19 +485,19 @@ class RawAssetTransactionsTest(MeowcoinTestFramework):
         tx = CTransaction()
         f = BytesIO(hex_str_to_bytes(tx_hex))
         tx.deserialize(f)
-        mewct = '72766e74'  # mewct
+        slmet = '72766e74'  # slmet
         op_drop = '75'
         # change asset name
         for n in range(0, len(tx.vout)):
             out = tx.vout[n]
-            if mewct in bytes_to_hex_str(out.scriptPubKey):
+            if slmet in bytes_to_hex_str(out.scriptPubKey):
                 script_hex = bytes_to_hex_str(out.scriptPubKey)
-                f = BytesIO(hex_str_to_bytes(script_hex[script_hex.index(mewct) + len(mewct):-len(op_drop)]))
+                f = BytesIO(hex_str_to_bytes(script_hex[script_hex.index(slmet) + len(slmet):-len(op_drop)]))
                 transfer = CScriptTransfer()
                 transfer.deserialize(f)
                 transfer.name = alternate_asset_name.encode()
                 tampered_transfer = bytes_to_hex_str(transfer.serialize())
-                tampered_script = script_hex[:script_hex.index(mewct)] + mewct + tampered_transfer + op_drop
+                tampered_script = script_hex[:script_hex.index(slmet)] + slmet + tampered_transfer + op_drop
                 tx.vout[n].scriptPubKey = hex_str_to_bytes(tampered_script)
         tampered_hex = bytes_to_hex_str(tx.serialize())
         assert_raises_rpc_error(-26, "bad-tx-inputs-outputs-mismatch Bad Transaction - " +
@@ -509,9 +509,9 @@ class RawAssetTransactionsTest(MeowcoinTestFramework):
         tx = CTransaction()
         f = BytesIO(hex_str_to_bytes(tx_hex))
         tx.deserialize(f)
-        mewct = '72766e74'  # mewct
+        slmet = '72766e74'  # slmet
         # remove the transfer output from vout
-        bad_vout = list(filter(lambda out_script: mewct not in bytes_to_hex_str(out_script.scriptPubKey), tx.vout))
+        bad_vout = list(filter(lambda out_script: slmet not in bytes_to_hex_str(out_script.scriptPubKey), tx.vout))
         tx.vout = bad_vout
         tampered_hex = bytes_to_hex_str(tx.serialize())
         assert_raises_rpc_error(-26, "bad-tx-asset-inputs-size-does-not-match-outputs-size",
@@ -1292,21 +1292,21 @@ class RawAssetTransactionsTest(MeowcoinTestFramework):
         tx = CTransaction()
         f = BytesIO(hex_str_to_bytes(tx_issue_sub_hex))
         tx.deserialize(f)
-        mewct = '72766e74'  # mewct
+        slmet = '72766e74'  # slmet
         op_drop = '75'
         # change the transfer amount
         for n in range(0, len(tx.vout)):
             out = tx.vout[n]
-            if mewct in bytes_to_hex_str(out.scriptPubKey):
+            if slmet in bytes_to_hex_str(out.scriptPubKey):
                 transfer_out = out
                 transfer_script_hex = bytes_to_hex_str(transfer_out.scriptPubKey)
-                asset_script_hex = transfer_script_hex[transfer_script_hex.index(mewct) + len(mewct):-len(op_drop)]
+                asset_script_hex = transfer_script_hex[transfer_script_hex.index(slmet) + len(slmet):-len(op_drop)]
                 f = BytesIO(hex_str_to_bytes(asset_script_hex))
                 transfer = CScriptTransfer()
                 transfer.deserialize(f)
                 transfer.amount = 0
                 tampered_transfer = bytes_to_hex_str(transfer.serialize())
-                tampered_script = transfer_script_hex[:transfer_script_hex.index(mewct)] + mewct + tampered_transfer + op_drop
+                tampered_script = transfer_script_hex[:transfer_script_hex.index(slmet)] + slmet + tampered_transfer + op_drop
                 tx.vout[n].scriptPubKey = hex_str_to_bytes(tampered_script)
         tx_bad_transfer = bytes_to_hex_str(tx.serialize())
         tx_bad_transfer_signed = n0.signrawtransaction(tx_bad_transfer)['hex']
@@ -1368,21 +1368,21 @@ class RawAssetTransactionsTest(MeowcoinTestFramework):
         tx = CTransaction()
         f = BytesIO(hex_str_to_bytes(tx_transfer_hex))
         tx.deserialize(f)
-        mewct = '72766e74'  # mewct
+        slmet = '72766e74'  # slmet
         op_drop = '75'
         # change the transfer amounts = 0
         for n in range(0, len(tx.vout)):
             out = tx.vout[n]
-            if mewct in bytes_to_hex_str(out.scriptPubKey):
+            if slmet in bytes_to_hex_str(out.scriptPubKey):
                 transfer_out = out
                 transfer_script_hex = bytes_to_hex_str(transfer_out.scriptPubKey)
-                asset_script_hex = transfer_script_hex[transfer_script_hex.index(mewct) + len(mewct):-len(op_drop)]
+                asset_script_hex = transfer_script_hex[transfer_script_hex.index(slmet) + len(slmet):-len(op_drop)]
                 f = BytesIO(hex_str_to_bytes(asset_script_hex))
                 transfer = CScriptTransfer()
                 transfer.deserialize(f)
                 transfer.amount = 0
                 tampered_transfer = bytes_to_hex_str(transfer.serialize())
-                tampered_script = transfer_script_hex[:transfer_script_hex.index(mewct)] + mewct + tampered_transfer + op_drop
+                tampered_script = transfer_script_hex[:transfer_script_hex.index(slmet)] + slmet + tampered_transfer + op_drop
                 tx.vout[n].scriptPubKey = hex_str_to_bytes(tampered_script)
         tx_bad_transfer = bytes_to_hex_str(tx.serialize())
         tx_bad_transfer_signed = n0.signrawtransaction(tx_bad_transfer)['hex']
@@ -1434,7 +1434,7 @@ class RawAssetTransactionsTest(MeowcoinTestFramework):
         tx = CTransaction()
         f = BytesIO(hex_str_to_bytes(tx_transfer_hex))
         tx.deserialize(f)
-        mewct = '72766e74'  # mewct
+        slmet = '72766e74'  # slmet
         op_drop = '75'
 
         # create a new issue CTxOut
@@ -1446,16 +1446,16 @@ class RawAssetTransactionsTest(MeowcoinTestFramework):
         issue_script.name = b'BYTE_ISSUE'
         issue_script.amount = 1
         issue_serialized = bytes_to_hex_str(issue_script.serialize())
-        mewcq = '72766e71'  # mewcq
+        slmeq = '72766e71'  # slmeq
 
         for n in range(0, len(tx.vout)):
             out = tx.vout[n]
-            if mewct in bytes_to_hex_str(out.scriptPubKey):
+            if slmet in bytes_to_hex_str(out.scriptPubKey):
                 transfer_out = out
                 transfer_script_hex = bytes_to_hex_str(transfer_out.scriptPubKey)
 
-                # Generate a script that has a valid destination address but switch it with mewcq and the issue_serialized data
-                issue_out.scriptPubKey = hex_str_to_bytes(transfer_script_hex[:transfer_script_hex.index(mewct)] + mewcq + issue_serialized + op_drop)
+                # Generate a script that has a valid destination address but switch it with slmeq and the issue_serialized data
+                issue_out.scriptPubKey = hex_str_to_bytes(transfer_script_hex[:transfer_script_hex.index(slmet)] + slmeq + issue_serialized + op_drop)
 
         tx.vout.insert(0, issue_out)  # Insert the issue transaction at the begin on the vouts
 
@@ -1496,9 +1496,9 @@ class RawAssetTransactionsTest(MeowcoinTestFramework):
         balance2 = float(n2.getwalletinfo()['balance'])
 
         ########################################
-        # mewc for assets
+        # slme for assets
 
-        # n1 buys 400 ANDUIN from n2 for 4000 MEWC
+        # n1 buys 400 ANDUIN from n2 for 4000 SLME
         price = 4000
         amount = 400
         fee = 0.01
@@ -1545,9 +1545,9 @@ class RawAssetTransactionsTest(MeowcoinTestFramework):
         assert_equal(starting_amount - amount, int(n2.listmyassets()[anduin]))
 
         ########################################
-        # mewc for owner
+        # slme for owner
 
-        # n2 buys JAINA! from n1 for 20000 MEWC
+        # n2 buys JAINA! from n1 for 20000 SLME
         price = 20000
         amount = 1
         balance1 = newbalance1
@@ -1740,9 +1740,9 @@ class RawAssetTransactionsTest(MeowcoinTestFramework):
         self.log.info("Testing fundrawtransaction with transfer outputs...")
         n0 = self.nodes[0]
         n2 = self.nodes[2]
-        asset_name = "DONT_FUND_MEWC"
+        asset_name = "DONT_FUND_SLME"
         asset_amount = 100
-        mewc_amount = 100
+        slme_amount = 100
 
         n2_address = n2.getnewaddress()
 
@@ -1765,7 +1765,7 @@ class RawAssetTransactionsTest(MeowcoinTestFramework):
         self.sync_all()
 
         for _ in range(0, 5):
-            n0.sendtoaddress(n2_address, mewc_amount / 5)
+            n0.sendtoaddress(n2_address, slme_amount / 5)
         n0.generate(1)
         self.sync_all()
 

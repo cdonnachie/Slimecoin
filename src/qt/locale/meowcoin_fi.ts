@@ -62,12 +62,12 @@
         <translation>Vastaanotto-osoitteet</translation>
     </message>
     <message>
-        <source>These are your Meowcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Nämä ovat Meowcoin-osoitteesi maksujen lähettämistä varten. Tarkista aina määrä ja vastaanotto-osoite ennen kolikoiden lähettämistä.</translation>
+        <source>These are your Slimecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Nämä ovat Slimecoin-osoitteesi maksujen lähettämistä varten. Tarkista aina määrä ja vastaanotto-osoite ennen kolikoiden lähettämistä.</translation>
     </message>
     <message>
-        <source>These are your Meowcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Tässä ovat Meowcoin vastaanotto-osoitteesi. On suositeltavaa käyttää uutta vastaanotto-osoitetta jokaista lähetystä varten.</translation>
+        <source>These are your Slimecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Tässä ovat Slimecoin vastaanotto-osoitteesi. On suositeltavaa käyttää uutta vastaanotto-osoitetta jokaista lähetystä varten.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +168,8 @@
         <translation>Vahvista lompakon salaaminen</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MEOWCOINS&lt;/b&gt;!</source>
-        <translation>Varoitus: Jos salaat lompakkosi ja menetät tunnuslauseesi, &lt;b&gt;MENETÄT KAIKKI MEOWCOINISI&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SLIMECOINS&lt;/b&gt;!</source>
+        <translation>Varoitus: Jos salaat lompakkosi ja menetät tunnuslauseesi, &lt;b&gt;MENETÄT KAIKKI SLIMECOINISI&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -428,8 +428,8 @@
         <translation>Muokkaa lähettävää osoitetta</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Meowcoin address.</source>
-        <translation>Antamasi osoite "%1" ei ole kelvollinen Meowcoin-osoite.</translation>
+        <source>The entered address "%1" is not a valid Slimecoin address.</source>
+        <translation>Antamasi osoite "%1" ei ole kelvollinen Slimecoin-osoite.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -711,16 +711,16 @@
         <translation>&amp;Käytä varmistamattomia vaihtorahoja</translation>
     </message>
     <message>
-        <source>Automatically open the Meowcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Avaa Meowcoin-asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
+        <source>Automatically open the Slimecoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Avaa Slimecoin-asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Portin uudelleenohjaus &amp;UPnP:llä</translation>
     </message>
     <message>
-        <source>Connect to the Meowcoin network through a SOCKS5 proxy.</source>
-        <translation>Yhdistä Meowcoin-verkkoon SOCKS5-välityspalvelimen kautta.</translation>
+        <source>Connect to the Slimecoin network through a SOCKS5 proxy.</source>
+        <translation>Yhdistä Slimecoin-verkkoon SOCKS5-välityspalvelimen kautta.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -755,8 +755,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Meowcoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Yhdistä Meowcoin-verkkoon erillisen SOCKS5-välityspalvelimen kautta piilotettuja Tor-palveluja varten.</translation>
+        <source>Connect to the Slimecoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Yhdistä Slimecoin-verkkoon erillisen SOCKS5-välityspalvelimen kautta piilotettuja Tor-palveluja varten.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -788,11 +788,11 @@
     </message>
     <message>
         <source>&amp;Unit to show amounts in:</source>
-        <translation>Yksikkö jona meowcoin-määrät näytetään</translation>
+        <translation>Yksikkö jona slimecoin-määrät näytetään</translation>
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Valitse mitä yksikköä käytetään ensisijaisesti meowcoin-määrien näyttämiseen.</translation>
+        <translation>Valitse mitä yksikköä käytetään ensisijaisesti slimecoin-määrien näyttämiseen.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -842,8 +842,8 @@
         <translation>Lomake</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Meowcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu Meowcoin-verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Slimecoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu Slimecoin-verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -879,7 +879,7 @@
     </message>
     <message>
         <source>Your current total balance</source>
-        <translation>Tililläsi tällä hetkellä olevien Meowcoinien määrä</translation>
+        <translation>Tililläsi tällä hetkellä olevien Slimecoinien määrä</translation>
     </message>
     <message>
         <source>Your current balance in watch-only addresses</source>
@@ -931,8 +931,8 @@
         <translation>Määrä</translation>
     </message>
     <message>
-        <source>Enter a Meowcoin address (e.g. %1)</source>
-        <translation>Syötä Meowcoin-osoite (esim. %1)</translation>
+        <source>Enter a Slimecoin address (e.g. %1)</source>
+        <translation>Syötä Slimecoin-osoite (esim. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1253,7 +1253,7 @@
     </message>
 </context>
 <context>
-    <name>MeowcoinGUI</name>
+    <name>SlimecoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>&amp;Allekirjoita viesti...</translation>
@@ -1359,8 +1359,8 @@
         <translation>Ladataan lohkoindeksiä...</translation>
     </message>
     <message>
-        <source>Send coins to a Meowcoin address</source>
-        <translation>Lähetä kolikoita Meowcoin-osoitteeseen</translation>
+        <source>Send coins to a Slimecoin address</source>
+        <translation>Lähetä kolikoita Slimecoin-osoitteeseen</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -1379,8 +1379,8 @@
         <translation>Varmista &amp;viesti...</translation>
     </message>
     <message>
-        <source>Meowcoin</source>
-        <translation>Meowcoin</translation>
+        <source>Slimecoin</source>
+        <translation>Slimecoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -1400,19 +1400,19 @@
     </message>
     <message>
         <source>Show or hide the main Window</source>
-        <translation>Näytä tai piilota Meowcoin-ikkuna</translation>
+        <translation>Näytä tai piilota Slimecoin-ikkuna</translation>
     </message>
     <message>
         <source>Encrypt the private keys that belong to your wallet</source>
         <translation>Suojaa yksityiset avaimet, jotka kuuluvat lompakkoosi</translation>
     </message>
     <message>
-        <source>Sign messages with your Meowcoin addresses to prove you own them</source>
-        <translation>Allekirjoita viestisi omalla Meowcoin -osoitteellasi todistaaksesi, että omistat ne</translation>
+        <source>Sign messages with your Slimecoin addresses to prove you own them</source>
+        <translation>Allekirjoita viestisi omalla Slimecoin -osoitteellasi todistaaksesi, että omistat ne</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Meowcoin addresses</source>
-        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä Meowcoin -osoitteella</translation>
+        <source>Verify messages to ensure they were signed with specified Slimecoin addresses</source>
+        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä Slimecoin -osoitteella</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -1423,8 +1423,8 @@
         <translation>&amp;Apua</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and meowcoin: URIs)</source>
-        <translation>Pyydä maksuja (Luo QR koodit ja meowcoin: URIt)</translation>
+        <source>Request payments (generates QR codes and slimecoin: URIs)</source>
+        <translation>Pyydä maksuja (Luo QR koodit ja slimecoin: URIt)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -1435,8 +1435,8 @@
         <translation>Näytä vastaanottamiseen käytettyjen osoitteiden ja nimien lista</translation>
     </message>
     <message>
-        <source>Open a meowcoin: URI or payment request</source>
-        <translation>Avaa meowcoin: URI tai maksupyyntö</translation>
+        <source>Open a slimecoin: URI or payment request</source>
+        <translation>Avaa slimecoin: URI tai maksupyyntö</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1479,8 +1479,8 @@
         <translation>Rahansiirtohistoria on ajan tasalla</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Meowcoin command-line options</source>
-        <translation>Näytä %1 ohjeet saadaksesi listan mahdollisista Meowcoinin komentorivivalinnoista</translation>
+        <source>Show the %1 help message to get a list with possible Slimecoin command-line options</source>
+        <translation>Näytä %1 ohjeet saadaksesi listan mahdollisista Slimecoinin komentorivivalinnoista</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -1549,8 +1549,8 @@
         <translation>Lompakko on &lt;b&gt;salattu&lt;/b&gt; ja tällä hetkellä &lt;b&gt;lukittuna&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Meowcoin can no longer continue safely and will quit.</source>
-        <translation>Peruuttamaton virhe on tapahtunut. Meowcoin ei voi enää jatkaa turvallisesti ja sammutetaan.</translation>
+        <source>A fatal error occurred. Slimecoin can no longer continue safely and will quit.</source>
+        <translation>Peruuttamaton virhe on tapahtunut. Slimecoin ei voi enää jatkaa turvallisesti ja sammutetaan.</translation>
     </message>
 </context>
 <context>
@@ -1576,8 +1576,8 @@
         <translation>&amp;Uudelleenkäytä vastaanotto-osoitetta (ei suositella)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Meowcoin network.</source>
-        <translation>Valinnainen viesti liitetään maksupyyntöön ja näytetään avattaessa. Viestiä ei lähetetä Meowcoin-verkkoon.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Slimecoin network.</source>
+        <translation>Valinnainen viesti liitetään maksupyyntöön ja näytetään avattaessa. Viestiä ei lähetetä Slimecoin-verkkoon.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1711,7 +1711,7 @@
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Lähetä Meowcoineja</translation>
+        <translation>Lähetä Slimecoineja</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -1889,8 +1889,8 @@
         <translation>Tämä on normaali maksu.</translation>
     </message>
     <message>
-        <source>The Meowcoin address to send the payment to</source>
-        <translation>Meowcoin-osoite johon maksu lähetetään</translation>
+        <source>The Slimecoin address to send the payment to</source>
+        <translation>Slimecoin-osoite johon maksu lähetetään</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1933,8 +1933,8 @@
         <translation>Aseta nimi tälle osoitteelle lisätäksesi sen käytettyjen osoitteiden listalle.</translation>
     </message>
     <message>
-        <source>A message that was attached to the meowcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Meowcoin network.</source>
-        <translation>Viesti joka liitettiin meowcoin: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä Meowcoin-verkkoon.</translation>
+        <source>A message that was attached to the slimecoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Slimecoin network.</source>
+        <translation>Viesti joka liitettiin slimecoin: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä Slimecoin-verkkoon.</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -1970,8 +1970,8 @@
         <translation>&amp;Allekirjoita viesti</translation>
     </message>
     <message>
-        <source>The Meowcoin address to sign the message with</source>
-        <translation>Meowcoin-osoite jolla viesti allekirjoitetaan</translation>
+        <source>The Slimecoin address to sign the message with</source>
+        <translation>Slimecoin-osoite jolla viesti allekirjoitetaan</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2002,8 +2002,8 @@
         <translation>Kopioi tämänhetkinen allekirjoitus leikepöydälle</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Meowcoin address</source>
-        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Meowcoin-osoitteen</translation>
+        <source>Sign the message to prove you own this Slimecoin address</source>
+        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Slimecoin-osoitteen</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2022,12 +2022,12 @@
         <translation>&amp;Varmista viesti</translation>
     </message>
     <message>
-        <source>The Meowcoin address the message was signed with</source>
-        <translation>Meowcoin-osoite jolla viesti on allekirjoitettu</translation>
+        <source>The Slimecoin address the message was signed with</source>
+        <translation>Slimecoin-osoite jolla viesti on allekirjoitettu</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Meowcoin address</source>
-        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä Meowcoin-osoitteella</translation>
+        <source>Verify the message to ensure it was signed with the specified Slimecoin address</source>
+        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä Slimecoin-osoitteella</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2317,7 +2317,7 @@
     </message>
     </context>
 <context>
-    <name>meowcoin-core</name>
+    <name>slimecoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Asetukset:</translation>
@@ -2375,8 +2375,8 @@
         <translation>HTTP-palvelinta ei voitu käynnistää. Katso debug-lokista lisätietoja.</translation>
     </message>
     <message>
-        <source>Meowcoin Core</source>
-        <translation>Meowcoin-ydin</translation>
+        <source>Slimecoin Core</source>
+        <translation>Slimecoin-ydin</translation>
     </message>
     <message>
         <source>The %s developers</source>

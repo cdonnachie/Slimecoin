@@ -62,11 +62,11 @@
         <translation>Адреси за получаване</translation>
     </message>
     <message>
-        <source>These are your Meowcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Slimecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Това са адресите на получателите на плащания. Винаги проверявайте размера на сумата и адреса на получателя, преди да изпратите монети.</translation>
     </message>
     <message>
-        <source>These are your Meowcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Slimecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>Това са Вашите Биткойн адреси,благодарение на които ще получавате плащания.Препоръчително е да използвате нови адреси за получаване на всяка транзакция.</translation>
     </message>
     <message>
@@ -168,7 +168,7 @@
         <translation>Потвърдете на шифрирането на портфейла</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MEOWCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SLIMECOINS&lt;/b&gt;!</source>
         <translation>ВНИМАНИЕ: Ако шифрирате вашият портфейл и изгубите паролата си, &lt;b&gt;ЩЕ ИЗГУБИТЕ ВСИЧКИТЕ СИ БИТКОИНИ&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -405,7 +405,7 @@
         <translation>Избери...</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for meowcoin transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for slimecoin transactions than the network can process.</source>
         <translation>Плащане на минимална такса би било достатъчно при слаб трафик и обем на транзакциите по-малък от големината на блока. Бъдете внимателни, транзакцията може да не бъде потвърдена и изпълнена ако заявените Рейвън транзакции са повече от възможността на мрежата да обработи</translation>
     </message>
     <message>
@@ -429,7 +429,7 @@
         <translation>Заплати само изискуемата такса от %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Meowcoin address</source>
+        <source>Warning: Invalid Slimecoin address</source>
         <translation>Внимание! Невалиден Рейвън адрес</translation>
     </message>
     <message>
@@ -676,7 +676,7 @@
         <translation>Редактиране на адрес за изпращане</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Meowcoin address.</source>
+        <source>The entered address "%1" is not a valid Slimecoin address.</source>
         <translation>"%1" не е валиден Биткоин адрес.</translation>
     </message>
     <message>
@@ -829,8 +829,8 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Използване на директория ръчно</translation>
     </message>
     <message>
-        <source>Meowcoin</source>
-        <translation>Meowcoin</translation>
+        <source>Slimecoin</source>
+        <translation>Slimecoin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1005,15 +1005,15 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>&amp;Похарчете непотвърденото ресто</translation>
     </message>
     <message>
-        <source>Automatically open the Meowcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Автоматично отваряне на входящия Meowcoin порт. Работи само с рутери поддържащи UPnP.</translation>
+        <source>Automatically open the Slimecoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Автоматично отваряне на входящия Slimecoin порт. Работи само с рутери поддържащи UPnP.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Отваряне на входящия порт чрез &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Meowcoin network through a SOCKS5 proxy.</source>
+        <source>Connect to the Slimecoin network through a SOCKS5 proxy.</source>
         <translation>Свързване с Биткойн мрежата чрез SOCKS5  прокси.</translation>
     </message>
     <message>
@@ -1116,7 +1116,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Формуляр</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Meowcoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Slimecoin network after a connection is established, but this process has not completed yet.</source>
         <translation>Текущата информация на екрана може да не е актуална. Вашият портфейл ще се синхронизира автоматично с мрежата на Биткоин, щом поне една връзката с нея се установи; този процес все още не е приключил.</translation>
     </message>
     <message>
@@ -1167,7 +1167,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Възникна грешка по време назаявката за плащане</translation>
     </message>
     <message>
-        <source>Cannot start meowcoin: click-to-pay handler</source>
+        <source>Cannot start slimecoin: click-to-pay handler</source>
         <translation>Биткойн не можe да се стартира: click-to-pay handler</translation>
     </message>
     <message>
@@ -1257,7 +1257,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Сума</translation>
     </message>
     <message>
-        <source>Enter a Meowcoin address (e.g. %1)</source>
+        <source>Enter a Slimecoin address (e.g. %1)</source>
         <translation>Въведете Биткойн адрес (например: %1)</translation>
     </message>
     <message>
@@ -1507,7 +1507,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
     </message>
 </context>
 <context>
-    <name>MeowcoinGUI</name>
+    <name>SlimecoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Подписване на &amp;съобщение...</translation>
@@ -1601,8 +1601,8 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>&amp;Wallet</translation>
     </message>
     <message>
-        <source>Meowcoin Market Price</source>
-        <translation>Пазарна цена на Meowcoin</translation>
+        <source>Slimecoin Market Price</source>
+        <translation>Пазарна цена на Slimecoin</translation>
     </message>
     <message>
         <source>Brought to you by binance.com</source>
@@ -1629,7 +1629,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Повторно индексиране на блоковете на диска...</translation>
     </message>
     <message>
-        <source>Send coins to a Meowcoin address</source>
+        <source>Send coins to a Slimecoin address</source>
         <translation>Изпращане към Биткоин адрес</translation>
     </message>
     <message>
@@ -1649,7 +1649,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>&amp;Проверка на съобщение...</translation>
     </message>
     <message>
-        <source>Meowcoin</source>
+        <source>Slimecoin</source>
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -1677,11 +1677,11 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Шифроване на личните ключове,които принадлежат на портфейла Ви.</translation>
     </message>
     <message>
-        <source>Sign messages with your Meowcoin addresses to prove you own them</source>
+        <source>Sign messages with your Slimecoin addresses to prove you own them</source>
         <translation>Пишете съобщения със своя Биткойн адрес за да докажете,че е ваш.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Meowcoin addresses</source>
+        <source>Verify messages to ensure they were signed with specified Slimecoin addresses</source>
         <translation>Потвърждаване на съобщения  за да се знае,че са написани с дадените Биткойн адреси.</translation>
     </message>
     <message>
@@ -1693,7 +1693,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>&amp;Помощ</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and meowcoin: URIs)</source>
+        <source>Request payments (generates QR codes and slimecoin: URIs)</source>
         <translation>Изискване на плащания(генерира QR кодове и биткойн: URIs)</translation>
     </message>
     <message>
@@ -1705,7 +1705,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Покажи списък с използваните адреси и имена.</translation>
     </message>
     <message>
-        <source>Open a meowcoin: URI or payment request</source>
+        <source>Open a slimecoin: URI or payment request</source>
         <translation>Отворете биткойн: URI  или заявка за плащане</translation>
     </message>
     <message>
@@ -1749,7 +1749,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Синхронизиран</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Meowcoin command-line options</source>
+        <source>Show the %1 help message to get a list with possible Slimecoin command-line options</source>
         <translation>Покажи %1 помощно съобщение за да получиш лист с възможни Биткойн команди</translation>
     </message>
     <message>
@@ -1987,8 +1987,8 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Салдо</translation>
     </message>
     <message>
-        <source>123.456 MEWC</source>
-        <translation>123.456 MEWC</translation>
+        <source>123.456 SLME</source>
+        <translation>123.456 SLME</translation>
     </message>
     <message>
         <source>Copy quantity</source>
@@ -2224,7 +2224,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Заявката за плащане е изтекла.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Meowcoin address</source>
+        <source>Warning: Invalid Slimecoin address</source>
         <translation>Внимание: Невалиден Биткойн адрес</translation>
     </message>
     <message>
@@ -2340,7 +2340,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Копиране на текущия подпис</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Meowcoin address</source>
+        <source>Sign the message to prove you own this Slimecoin address</source>
         <translation>Подпишете съобщение като доказателство, че притежавате определен адрес</translation>
     </message>
     <message>
@@ -2356,7 +2356,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>&amp;Провери</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Meowcoin address</source>
+        <source>Verify the message to ensure it was signed with the specified Slimecoin address</source>
         <translation>Проверете съобщение, за да сте сигурни че е подписано с определен Биткоин адрес</translation>
     </message>
     <message>
@@ -2887,7 +2887,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
     </message>
     </context>
 <context>
-    <name>meowcoin-core</name>
+    <name>slimecoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Опции:</translation>
@@ -2909,7 +2909,7 @@ Recommended action: Fully sync your wallet before sending a transaction.
         <translation>Pruning blockstore...</translation>
     </message>
     <message>
-        <source>Meowcoin Core</source>
+        <source>Slimecoin Core</source>
         <translation>Биткойн ядро</translation>
     </message>
     <message>

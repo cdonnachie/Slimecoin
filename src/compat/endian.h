@@ -1,13 +1,13 @@
 // Copyright (c) 2014-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The Meowcoin Core developers
+// Copyright (c) 2017-2019 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_COMPAT_ENDIAN_H
-#define MEOWCOIN_COMPAT_ENDIAN_H
+#ifndef SLIMECOIN_COMPAT_ENDIAN_H
+#define SLIMECOIN_COMPAT_ENDIAN_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/meowcoin-config.h"
+#include "config/slimecoin-config.h"
 #endif
 
 #include "compat/byteswap.h"
@@ -194,4 +194,4 @@ inline uint64_t le64toh(uint64_t little_endian_64bits)
 
 #endif // WORDS_BIGENDIAN
 
-#endif // MEOWCOIN_COMPAT_ENDIAN_H
+#endif // SLIMECOIN_COMPAT_ENDIAN_H

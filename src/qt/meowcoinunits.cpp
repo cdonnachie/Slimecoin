@@ -1,76 +1,76 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The Meowcoin Core developers
+// Copyright (c) 2017-2019 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "meowcoinunits.h"
+#include "slimecoinunits.h"
 
 #include "primitives/transaction.h"
 
 #include <QStringList>
 
-MeowcoinUnits::MeowcoinUnits(QObject *parent):
+SlimecoinUnits::SlimecoinUnits(QObject *parent):
         QAbstractListModel(parent),
         unitlist(availableUnits())
 {
 }
 
-QList<MeowcoinUnits::Unit> MeowcoinUnits::availableUnits()
+QList<SlimecoinUnits::Unit> SlimecoinUnits::availableUnits()
 {
-    QList<MeowcoinUnits::Unit> unitlist;
-    unitlist.append(MEWC);
-    unitlist.append(mMEWC);
-    unitlist.append(uMEWC);
+    QList<SlimecoinUnits::Unit> unitlist;
+    unitlist.append(SLME);
+    unitlist.append(mSLME);
+    unitlist.append(uSLME);
     return unitlist;
 }
 
-bool MeowcoinUnits::valid(int unit)
+bool SlimecoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case MEWC:
-    case mMEWC:
-    case uMEWC:
+    case SLME:
+    case mSLME:
+    case uSLME:
         return true;
     default:
         return false;
     }
 }
 
-QString MeowcoinUnits::name(int unit)
+QString SlimecoinUnits::name(int unit)
 {
     switch(unit)
     {
-    case MEWC: return QString("MEWC");
-    case mMEWC: return QString("mMEWC");
-    case uMEWC: return QString::fromUtf8("μMEWC");
+    case SLME: return QString("SLME");
+    case mSLME: return QString("mSLME");
+    case uSLME: return QString::fromUtf8("μSLME");
     default: return QString("???");
     }
 }
 
-QString MeowcoinUnits::description(int unit)
+QString SlimecoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case MEWC: return QString("Meowcoins");
-    case mMEWC: return QString("Milli-Meowcoins (1 / 1" THIN_SP_UTF8 "000)");
-    case uMEWC: return QString("Micro-Meowcoins (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case SLME: return QString("Slimecoins");
+    case mSLME: return QString("Milli-Slimecoins (1 / 1" THIN_SP_UTF8 "000)");
+    case uSLME: return QString("Micro-Slimecoins (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }
 
-qint64 MeowcoinUnits::factor(int unit)
+qint64 SlimecoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case MEWC:  return 100000000;
-    case mMEWC: return 100000;
-    case uMEWC: return 100;
+    case SLME:  return 100000000;
+    case mSLME: return 100000;
+    case uSLME: return 100;
     default:   return 100000000;
     }
 }
 
-qint64 MeowcoinUnits::factorAsset(int unit)
+qint64 SlimecoinUnits::factorAsset(int unit)
 {
     switch(unit)
     {
@@ -87,18 +87,18 @@ qint64 MeowcoinUnits::factorAsset(int unit)
     }
 }
 
-int MeowcoinUnits::decimals(int unit)
+int SlimecoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case MEWC: return 8;
-    case mMEWC: return 5;
-    case uMEWC: return 2;
+    case SLME: return 8;
+    case mSLME: return 5;
+    case uSLME: return 2;
     default: return 0;
     }
 }
 
-QString MeowcoinUnits::format(int unit, const CAmount& nIn, bool fPlus, SeparatorStyle separators, const int nAssetUnit)
+QString SlimecoinUnits::format(int unit, const CAmount& nIn, bool fPlus, SeparatorStyle separators, const int nAssetUnit)
 {
     // Note: not using straight sprintf here because we do NOT want
     // localized number formatting.
@@ -143,17 +143,17 @@ QString MeowcoinUnits::format(int unit, const CAmount& nIn, bool fPlus, Separato
 // Please take care to use formatHtmlWithUnit instead, when
 // appropriate.
 
-QString MeowcoinUnits::formatWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
+QString SlimecoinUnits::formatWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
 {
     return format(unit, amount, plussign, separators) + QString(" ") + name(unit);
 }
 
-QString MeowcoinUnits::formatWithCustomName(QString customName, const CAmount& amount, int unit, bool plussign, SeparatorStyle separators)
+QString SlimecoinUnits::formatWithCustomName(QString customName, const CAmount& amount, int unit, bool plussign, SeparatorStyle separators)
 {
-    return format(MEWC, amount / factorAsset(MAX_ASSET_UNITS - unit), plussign, separators, unit) + QString(" ") + customName;
+    return format(SLME, amount / factorAsset(MAX_ASSET_UNITS - unit), plussign, separators, unit) + QString(" ") + customName;
 }
 
-QString MeowcoinUnits::formatHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
+QString SlimecoinUnits::formatHtmlWithUnit(int unit, const CAmount& amount, bool plussign, SeparatorStyle separators)
 {
     QString str(formatWithUnit(unit, amount, plussign, separators));
     str.replace(QChar(THIN_SP_CP), QString(THIN_SP_HTML));
@@ -161,7 +161,7 @@ QString MeowcoinUnits::formatHtmlWithUnit(int unit, const CAmount& amount, bool 
 }
 
 
-bool MeowcoinUnits::parse(int unit, const QString &value, CAmount *val_out)
+bool SlimecoinUnits::parse(int unit, const QString &value, CAmount *val_out)
 {
     if(!valid(unit) || value.isEmpty())
         return false; // Refuse to parse invalid unit or empty string
@@ -200,7 +200,7 @@ bool MeowcoinUnits::parse(int unit, const QString &value, CAmount *val_out)
     return ok;
 }
 
-bool MeowcoinUnits::assetParse(int assetUnit, const QString &value, CAmount *val_out)
+bool SlimecoinUnits::assetParse(int assetUnit, const QString &value, CAmount *val_out)
 {
     if(!(assetUnit >= 0 && assetUnit <= 8) || value.isEmpty())
         return false; // Refuse to parse invalid unit or empty string
@@ -239,23 +239,23 @@ bool MeowcoinUnits::assetParse(int assetUnit, const QString &value, CAmount *val
     return ok;
 }
 
-QString MeowcoinUnits::getAmountColumnTitle(int unit)
+QString SlimecoinUnits::getAmountColumnTitle(int unit)
 {
     QString amountTitle = QObject::tr("Amount");
-    if (MeowcoinUnits::valid(unit))
+    if (SlimecoinUnits::valid(unit))
     {
-        amountTitle += " ("+MeowcoinUnits::name(unit) + ")";
+        amountTitle += " ("+SlimecoinUnits::name(unit) + ")";
     }
     return amountTitle;
 }
 
-int MeowcoinUnits::rowCount(const QModelIndex &parent) const
+int SlimecoinUnits::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
     return unitlist.size();
 }
 
-QVariant MeowcoinUnits::data(const QModelIndex &index, int role) const
+QVariant SlimecoinUnits::data(const QModelIndex &index, int role) const
 {
     int row = index.row();
     if(row >= 0 && row < unitlist.size())
@@ -275,7 +275,7 @@ QVariant MeowcoinUnits::data(const QModelIndex &index, int role) const
     return QVariant();
 }
 
-CAmount MeowcoinUnits::maxMoney()
+CAmount SlimecoinUnits::maxMoney()
 {
     return MAX_MONEY;
 }

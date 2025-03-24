@@ -62,12 +62,12 @@
         <translation>Ontvangstadressen</translation>
     </message>
     <message>
-        <source>These are your Meowcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dit zijn uw Meowcoinadressen om betalingen mee te verzenden. Controleer altijd het bedrag en het ontvangstadres voordat u uw meows verzendt.</translation>
+        <source>These are your Slimecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dit zijn uw Slimecoinadressen om betalingen mee te verzenden. Controleer altijd het bedrag en het ontvangstadres voordat u uw meows verzendt.</translation>
     </message>
     <message>
-        <source>These are your Meowcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dit zijn uw Meowcoin-adressen waarmee u betalingen kunt ontvangen. We raden u aan om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
+        <source>These are your Slimecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dit zijn uw Slimecoin-adressen waarmee u betalingen kunt ontvangen. We raden u aan om een nieuw ontvangstadres voor elke transactie te gebruiken.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +168,8 @@
         <translation>Bevestig versleuteling van de portemonnee</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MEOWCOINS&lt;/b&gt;!</source>
-        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW MEOWCOINS VERLIEZEN&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SLIMECOINS&lt;/b&gt;!</source>
+        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW SLIMECOINS VERLIEZEN&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -613,12 +613,12 @@
         <translation>Wis</translation>
     </message>
     <message>
-        <source>123.456 MEWC</source>
-        <translation>123.456 MEWC</translation>
+        <source>123.456 SLME</source>
+        <translation>123.456 SLME</translation>
     </message>
     <message>
-        <source>Warning: Invalid Meowcoin address</source>
-        <translation>Waarschuwing: Ongeldig Meowcoinadres</translation>
+        <source>Warning: Invalid Slimecoin address</source>
+        <translation>Waarschuwing: Ongeldig Slimecoinadres</translation>
     </message>
     <message>
         <source>or</source>
@@ -680,8 +680,8 @@
         <translation>Bewerk verzendadres</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Meowcoin address.</source>
-        <translation>Het opgegeven adres "%1" is een ongeldig Meowcoinadres.</translation>
+        <source>The entered address "%1" is not a valid Slimecoin address.</source>
+        <translation>Het opgegeven adres "%1" is een ongeldig Slimecoinadres.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -833,8 +833,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Gebruik een persoonlijke gegevensmap:</translation>
     </message>
     <message>
-        <source>Meowcoin</source>
-        <translation>Meowcoin</translation>
+        <source>Slimecoin</source>
+        <translation>Slimecoin</translation>
     </message>
     <message>
         <source>Approximately %1 GB of data will be stored in this directory.</source>
@@ -924,8 +924,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Vorm</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the meowcoin network, as detailed below.</source>
-        <translation>Recente transacties zijn mogelijk nog niet zichtbaar. De balans van de geldbeugel is daarom mogelijk niet correct. Deze informatie is correct van zodra de synchronisatie met het Meowcoin-netwerk werd voltooid, zoals onderaan beschreven.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the slimecoin network, as detailed below.</source>
+        <translation>Recente transacties zijn mogelijk nog niet zichtbaar. De balans van de geldbeugel is daarom mogelijk niet correct. Deze informatie is correct van zodra de synchronisatie met het Slimecoin-netwerk werd voltooid, zoals onderaan beschreven.</translation>
     </message>
     <message>
         <source>Attempting to spend meows that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
@@ -1109,8 +1109,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>&amp;Spendeer onbevestigd wisselgeld</translation>
     </message>
     <message>
-        <source>Automatically open the Meowcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Open de Meowcoinpoort automatisch op de router. Dit werkt alleen als de router UPnP ondersteunt en het aanstaat.</translation>
+        <source>Automatically open the Slimecoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Open de Slimecoinpoort automatisch op de router. Dit werkt alleen als de router UPnP ondersteunt en het aanstaat.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1121,8 +1121,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Accepteer inkomende connecties</translation>
     </message>
     <message>
-        <source>Connect to the Meowcoin network through a SOCKS5 proxy.</source>
-        <translation>Verbind met het Meowcoinnetwerk via een SOCKS5 proxy.</translation>
+        <source>Connect to the Slimecoin network through a SOCKS5 proxy.</source>
+        <translation>Verbind met het Slimecoinnetwerk via een SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1157,8 +1157,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Meowcoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Maak verbinding met Meowcoinnetwerk door een aparte SOCKS5-proxy voor verborgen diensten van Tor.</translation>
+        <source>Connect to the Slimecoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Maak verbinding met Slimecoinnetwerk door een aparte SOCKS5-proxy voor verborgen diensten van Tor.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1260,8 +1260,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Vorm</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Meowcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>De weergegeven informatie kan verouderd zijn. Uw portemonnee synchroniseert automatisch met het Meowcoinnetwerk nadat een verbinding is gelegd, maar dit proces is nog niet voltooid.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Slimecoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>De weergegeven informatie kan verouderd zijn. Uw portemonnee synchroniseert automatisch met het Slimecoinnetwerk nadat een verbinding is gelegd, maar dit proces is nog niet voltooid.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1300,8 +1300,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Uw totale saldo</translation>
     </message>
     <message>
-        <source>MEWC Balances</source>
-        <translation>MEWC Balance</translation>
+        <source>SLME Balances</source>
+        <translation>SLME Balance</translation>
     </message>
     <message>
         <source>Your current balance in watch-only addresses</source>
@@ -1351,8 +1351,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Fout bij betalingsverzoek</translation>
     </message>
     <message>
-        <source>Cannot start meowcoin: click-to-pay handler</source>
-        <translation>Kan meowcoin niet starten: click-to-pay handler</translation>
+        <source>Cannot start slimecoin: click-to-pay handler</source>
+        <translation>Kan slimecoin niet starten: click-to-pay handler</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1367,8 +1367,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Ongeldig betalingsadres %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Meowcoin address or malformed URI parameters.</source>
-        <translation>URI kan niet verwerkt worden! Dit kan het gevolg zijn van een ongeldig Meowcoin adres of misvormde URI parameters.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Slimecoin address or malformed URI parameters.</source>
+        <translation>URI kan niet verwerkt worden! Dit kan het gevolg zijn van een ongeldig Slimecoin adres of misvormde URI parameters.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1469,8 +1469,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Bedrag</translation>
     </message>
     <message>
-        <source>Enter a Meowcoin address (e.g. %1)</source>
-        <translation>Voer een Meowcoinadres in (bijv. %1)</translation>
+        <source>Enter a Slimecoin address (e.g. %1)</source>
+        <translation>Voer een Slimecoinadres in (bijv. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1827,7 +1827,7 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
     </message>
 </context>
 <context>
-    <name>MeowcoinGUI</name>
+    <name>SlimecoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>&amp;Onderteken bericht...</translation>
@@ -1937,8 +1937,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Bezig met herindexeren van blokken op harde schijf...</translation>
     </message>
     <message>
-        <source>Send coins to a Meowcoin address</source>
-        <translation>Verstuur munten naar een Meowcoinadres</translation>
+        <source>Send coins to a Slimecoin address</source>
+        <translation>Verstuur munten naar een Slimecoinadres</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -1957,8 +1957,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>&amp;Verifiëer bericht...</translation>
     </message>
     <message>
-        <source>Meowcoin</source>
-        <translation>Meowcoin</translation>
+        <source>Slimecoin</source>
+        <translation>Slimecoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -1985,12 +1985,12 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Versleutel de geheime sleutels die bij uw portemonnee horen</translation>
     </message>
     <message>
-        <source>Sign messages with your Meowcoin addresses to prove you own them</source>
-        <translation>Onderteken berichten met uw Meowcoinadressen om te bewijzen dat u deze adressen bezit</translation>
+        <source>Sign messages with your Slimecoin addresses to prove you own them</source>
+        <translation>Onderteken berichten met uw Slimecoinadressen om te bewijzen dat u deze adressen bezit</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Meowcoin addresses</source>
-        <translation>Verifiëer handtekeningen om zeker te zijn dat de berichten zijn ondertekend met de gespecificeerde Meowcoinadressen</translation>
+        <source>Verify messages to ensure they were signed with specified Slimecoin addresses</source>
+        <translation>Verifiëer handtekeningen om zeker te zijn dat de berichten zijn ondertekend met de gespecificeerde Slimecoinadressen</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -2001,8 +2001,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>&amp;Hulp</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and meowcoin: URIs)</source>
-        <translation>Vraag betaling aan (genereert QR-codes en meowcoin: URI's)</translation>
+        <source>Request payments (generates QR codes and slimecoin: URIs)</source>
+        <translation>Vraag betaling aan (genereert QR-codes en slimecoin: URI's)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -2013,8 +2013,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Toon de lijst met gebruikte ontvangst adressen en labels</translation>
     </message>
     <message>
-        <source>Open a meowcoin: URI or payment request</source>
-        <translation>Open een meowcoin: URI of betalingsverzoek</translation>
+        <source>Open a slimecoin: URI or payment request</source>
+        <translation>Open een slimecoin: URI of betalingsverzoek</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -2057,8 +2057,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Bijgewerkt</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Meowcoin command-line options</source>
-        <translation>Toon het %1 hulpbericht om een lijst te krijgen met mogelijke Meowcoin commandoregelopties</translation>
+        <source>Show the %1 help message to get a list with possible Slimecoin command-line options</source>
+        <translation>Toon het %1 hulpbericht om een lijst te krijgen met mogelijke Slimecoin commandoregelopties</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -2131,8 +2131,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Portemonnee is &lt;b&gt;versleuteld&lt;/b&gt; en momenteel &lt;b&gt;gesloten&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Meowcoin can no longer continue safely and will quit.</source>
-        <translation>Een fatale fout heeft zich voorgedaan. Meowcoin kan niet veilig worden verdergezet en wordt afgesloten.</translation>
+        <source>A fatal error occurred. Slimecoin can no longer continue safely and will quit.</source>
+        <translation>Een fatale fout heeft zich voorgedaan. Slimecoin kan niet veilig worden verdergezet en wordt afgesloten.</translation>
     </message>
 </context>
 <context>
@@ -2158,8 +2158,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>H&amp;ergebruik en bestaand ontvangstadres (niet aanbevolen)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Meowcoin network.</source>
-        <translation>Een optioneel bericht om bij te voegen aan het betalingsverzoek, welke zal getoond worden wanneer het verzoek is geopend. Opmerking: Het bericht zal niet worden verzonden met de betaling over het Meowcoinnetwerk.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Slimecoin network.</source>
+        <translation>Een optioneel bericht om bij te voegen aan het betalingsverzoek, welke zal getoond worden wanneer het verzoek is geopend. Opmerking: Het bericht zal niet worden verzonden met de betaling over het Slimecoinnetwerk.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2500,7 +2500,7 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Verbergen</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for meowcoin transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for slimecoin transactions than the network can process.</source>
         <translation>De minimale toeslag betalen is prima mits het transactievolume kleiner is dan de ruimte in de blokken. Let wel op dat dit tot gevolg kan hebben dat een transactie nooit wordt bevestigd als er meer vraag is naar meowtransacties dan het netwerk kan verwerken.</translation>
     </message>
     <message>
@@ -2648,8 +2648,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Betaal alleen de verplichte transactiekosten van %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Meowcoin address</source>
-        <translation>Waarschuwing: Ongeldig Meowcoinadres</translation>
+        <source>Warning: Invalid Slimecoin address</source>
+        <translation>Waarschuwing: Ongeldig Slimecoinadres</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2687,8 +2687,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Dit is een normale betaling.</translation>
     </message>
     <message>
-        <source>The Meowcoin address to send the payment to</source>
-        <translation>Het Meowcoinadres om betaling aan te versturen</translation>
+        <source>The Slimecoin address to send the payment to</source>
+        <translation>Het Slimecoinadres om betaling aan te versturen</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2731,8 +2731,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Vul een label voor dit adres in om het aan de lijst met gebruikte adressen toe te voegen</translation>
     </message>
     <message>
-        <source>A message that was attached to the meowcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Meowcoin network.</source>
-        <translation>Een bericht dat werd toegevoegd aan de meowcoin: URI welke wordt opgeslagen met de transactie ter referentie. Opmerking: Dit bericht zal niet worden verzonden over het Meowcoinnetwerk.</translation>
+        <source>A message that was attached to the slimecoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Slimecoin network.</source>
+        <translation>Een bericht dat werd toegevoegd aan de slimecoin: URI welke wordt opgeslagen met de transactie ter referentie. Opmerking: Dit bericht zal niet worden verzonden over het Slimecoinnetwerk.</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -2773,11 +2773,11 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
     </message>
     <message>
         <source>You can sign messages/agreements with your addresses to prove you can receive meows sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>U kunt berichten/overeenkomsten ondertekenen met uw adres om te bewijzen dat u Meowcoins kunt versturen. Wees voorzichtig met het ondertekenen van iets vaags of willekeurigs, omdat phishingaanvallen u kunnen proberen te misleiden tot het ondertekenen van overeenkomsten om uw identiteit aan hen toe te vertrouwen. Onderteken alleen volledig gedetailleerde verklaringen voordat u akkoord gaat.</translation>
+        <translation>U kunt berichten/overeenkomsten ondertekenen met uw adres om te bewijzen dat u Slimecoins kunt versturen. Wees voorzichtig met het ondertekenen van iets vaags of willekeurigs, omdat phishingaanvallen u kunnen proberen te misleiden tot het ondertekenen van overeenkomsten om uw identiteit aan hen toe te vertrouwen. Onderteken alleen volledig gedetailleerde verklaringen voordat u akkoord gaat.</translation>
     </message>
     <message>
-        <source>The Meowcoin address to sign the message with</source>
-        <translation>Het Meowcoinadres om bericht mee te ondertekenen</translation>
+        <source>The Slimecoin address to sign the message with</source>
+        <translation>Het Slimecoinadres om bericht mee te ondertekenen</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2808,8 +2808,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Kopieer de huidige handtekening naar het systeemklembord</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Meowcoin address</source>
-        <translation>Onderteken een bericht om te bewijzen dat u een bepaald Meowcoinadres bezit</translation>
+        <source>Sign the message to prove you own this Slimecoin address</source>
+        <translation>Onderteken een bericht om te bewijzen dat u een bepaald Slimecoinadres bezit</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2832,12 +2832,12 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Voer het adres van de ontvanger in, bericht (zorg ervoor dat de regeleinden, spaties, tabs etc. precies kloppen) en onderteken onderaan om het bericht te verifiëren. Wees voorzicht om niet meer in de ondertekening te lezen dan in het getekende bericht zelf, om te voorkomen dat je wordt aangevallen met een man-in-the-middle attack. Houd er mee rekening dat dit alleen de ondertekende partij bewijst met het ontvangen adres, er kan niet bewezen worden dat er een transactie heeft plaatsgevonden!</translation>
     </message>
     <message>
-        <source>The Meowcoin address the message was signed with</source>
-        <translation>Het Meowcoinadres waarmee het bericht ondertekend is</translation>
+        <source>The Slimecoin address the message was signed with</source>
+        <translation>Het Slimecoinadres waarmee het bericht ondertekend is</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Meowcoin address</source>
-        <translation>Controleer een bericht om te verifiëren dat het gespecificeerde Meowcoinadres het bericht heeft ondertekend.</translation>
+        <source>Verify the message to ensure it was signed with the specified Slimecoin address</source>
+        <translation>Controleer een bericht om te verifiëren dat het gespecificeerde Slimecoinadres het bericht heeft ondertekend.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3411,7 +3411,7 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
     </message>
     </context>
 <context>
-    <name>meowcoin-core</name>
+    <name>slimecoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opties:</translation>
@@ -3473,8 +3473,8 @@ Aanbevolen actie: Synchroniseer uw wallet volledig vooraleer uw transactie te ve
         <translation>Niet mogelijk ok HTTP-server te starten. Zie debuglogboek voor details.</translation>
     </message>
     <message>
-        <source>Meowcoin Core</source>
-        <translation>Meowcoin Core</translation>
+        <source>Slimecoin Core</source>
+        <translation>Slimecoin Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

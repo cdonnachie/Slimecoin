@@ -62,12 +62,12 @@
         <translation>Ontvanger adresse</translation>
     </message>
     <message>
-        <source>These are your Meowcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Hierdie is die adresse vanwaar u Meowcoin betalings stuur. U moet altyd die bedrag en die adres van die ontvanger nagaan voordat u enige munte stuur.</translation>
+        <source>These are your Slimecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Hierdie is die adresse vanwaar u Slimecoin betalings stuur. U moet altyd die bedrag en die adres van die ontvanger nagaan voordat u enige munte stuur.</translation>
     </message>
     <message>
-        <source>These are your Meowcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Hierdie is die adresse waar u Meowcoins sal ontvang. Ons beveel aan dat u 'n nuwe adres kies vir elke transaksie</translation>
+        <source>These are your Slimecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Hierdie is die adresse waar u Slimecoins sal ontvang. Ons beveel aan dat u 'n nuwe adres kies vir elke transaksie</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +168,8 @@
         <translation>Bevestig dat die beursie gekodifiseer is</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MEOWCOINS&lt;/b&gt;!</source>
-        <translation>Waarskuwing: Indien u die beursie kodifiseer en u vergeet u wagwoord &lt;b&gt;VERLOOR U AL U MEOWCOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SLIMECOINS&lt;/b&gt;!</source>
+        <translation>Waarskuwing: Indien u die beursie kodifiseer en u vergeet u wagwoord &lt;b&gt;VERLOOR U AL U SLIMECOINS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -621,7 +621,7 @@
     </message>
     </context>
 <context>
-    <name>MeowcoinGUI</name>
+    <name>SlimecoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Teken &amp;boodskap...</translation>
@@ -723,8 +723,8 @@
         <translation>Besig met herindeksering van blokke op hardeskyf...</translation>
     </message>
     <message>
-        <source>Send coins to a Meowcoin address</source>
-        <translation>Stuur munte na 'n Meowcoin adres</translation>
+        <source>Send coins to a Slimecoin address</source>
+        <translation>Stuur munte na 'n Slimecoin adres</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -739,8 +739,8 @@
         <translation>Maak ontfouting en diagnostiese konsole oop</translation>
     </message>
     <message>
-        <source>Meowcoin</source>
-        <translation>Meowcoin</translation>
+        <source>Slimecoin</source>
+        <translation>Slimecoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -767,12 +767,12 @@
         <translation>Kodifiseer die private sleutes wat aan jou beursie gekoppel is.</translation>
     </message>
     <message>
-        <source>Sign messages with your Meowcoin addresses to prove you own them</source>
-        <translation>Onderteken boodskappe met u Meowcoin adresse om u eienaarskap te bewys</translation>
+        <source>Sign messages with your Slimecoin addresses to prove you own them</source>
+        <translation>Onderteken boodskappe met u Slimecoin adresse om u eienaarskap te bewys</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Meowcoin addresses</source>
-        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde Meowcoin adresse</translation>
+        <source>Verify messages to ensure they were signed with specified Slimecoin addresses</source>
+        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde Slimecoin adresse</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -783,8 +783,8 @@
         <translation>&amp;Help</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and meowcoin: URIs)</source>
-        <translation>Versoek betalings (genereer QR-kodes en meowcoin: URI's)</translation>
+        <source>Request payments (generates QR codes and slimecoin: URIs)</source>
+        <translation>Versoek betalings (genereer QR-kodes en slimecoin: URI's)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -795,8 +795,8 @@
         <translation>Vertoon die lys van gebruikte ontvangers-adresse en etikette</translation>
     </message>
     <message>
-        <source>Open a meowcoin: URI or payment request</source>
-        <translation>Skep 'n meowcoin: URI of betalingsversoek</translation>
+        <source>Open a slimecoin: URI or payment request</source>
+        <translation>Skep 'n slimecoin: URI of betalingsversoek</translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -1031,10 +1031,10 @@
     </message>
     </context>
 <context>
-    <name>meowcoin-core</name>
+    <name>slimecoin-core</name>
     <message>
-        <source>Meowcoin Core</source>
-        <translation>Meowcoin Kern</translation>
+        <source>Slimecoin Core</source>
+        <translation>Slimecoin Kern</translation>
     </message>
     <message>
         <source>Information</source>

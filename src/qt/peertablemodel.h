@@ -1,10 +1,10 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The Meowcoin Core developers
+// Copyright (c) 2017-2019 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_QT_PEERTABLEMODEL_H
-#define MEOWCOIN_QT_PEERTABLEMODEL_H
+#ifndef SLIMECOIN_QT_PEERTABLEMODEL_H
+#define SLIMECOIN_QT_PEERTABLEMODEL_H
 
 #include "net_processing.h" // For CNodeStateStats
 #include "net.h"
@@ -83,4 +83,4 @@ private:
     QTimer *timer;
 };
 
-#endif // MEOWCOIN_QT_PEERTABLEMODEL_H
+#endif // SLIMECOIN_QT_PEERTABLEMODEL_H

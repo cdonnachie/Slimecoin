@@ -1,9 +1,9 @@
-// Copyright (c) 2019 The Meowcoin Core developers
+// Copyright (c) 2019 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_QT_ASSIGNQUALIFIER_H
-#define MEOWCOIN_QT_ASSIGNQUALIFIER_H
+#ifndef SLIMECOIN_QT_ASSIGNQUALIFIER_H
+#define SLIMECOIN_QT_ASSIGNQUALIFIER_H
 
 #include "amount.h"
 
@@ -64,4 +64,4 @@ private Q_SLOTS:
     void changeAddressChanged(int);
 };
 
-#endif // MEOWCOIN_QT_ASSIGNQUALIFIER_H
+#endif // SLIMECOIN_QT_ASSIGNQUALIFIER_H

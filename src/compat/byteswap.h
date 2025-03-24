@@ -1,13 +1,13 @@
 // Copyright (c) 2014-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The Meowcoin Core developers
+// Copyright (c) 2017-2019 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_COMPAT_BYTESWAP_H
-#define MEOWCOIN_COMPAT_BYTESWAP_H
+#ifndef SLIMECOIN_COMPAT_BYTESWAP_H
+#define SLIMECOIN_COMPAT_BYTESWAP_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/meowcoin-config.h"
+#include "config/slimecoin-config.h"
 #endif
 
 #include <stdint.h>
@@ -64,4 +64,4 @@ inline uint64_t bswap_64(uint64_t x)
 
 #endif // defined(__APPLE__)
 
-#endif // MEOWCOIN_COMPAT_BYTESWAP_H
+#endif // SLIMECOIN_COMPAT_BYTESWAP_H

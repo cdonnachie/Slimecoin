@@ -1,10 +1,10 @@
 // Copyright (c) 2012-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2020 The Meowcoin Core developers
+// Copyright (c) 2017-2020 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_VERSION_H
-#define MEOWCOIN_VERSION_H
+#ifndef SLIMECOIN_VERSION_H
+#define SLIMECOIN_VERSION_H
 
 /**
  * network protocol versioning
@@ -63,4 +63,4 @@ static const int ASSETDATA_VERSION_UPDATED = 70020;
 static const int MESSAGING_RESTRICTED_ASSETS_VERSION = 70026;
 
 
-#endif // MEOWCOIN_VERSION_H
+#endif // SLIMECOIN_VERSION_H

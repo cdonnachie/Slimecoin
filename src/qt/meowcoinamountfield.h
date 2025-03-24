@@ -1,10 +1,10 @@
 // Copyright (c) 2011-2015 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Meowcoin Core developers
+// Copyright (c) 2017-2021 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_QT_MEOWCOINAMOUNTFIELD_H
-#define MEOWCOIN_QT_MEOWCOINAMOUNTFIELD_H
+#ifndef SLIMECOIN_QT_SLIMECOINAMOUNTFIELD_H
+#define SLIMECOIN_QT_SLIMECOINAMOUNTFIELD_H
 
 #include "amount.h"
 
@@ -16,9 +16,9 @@ QT_BEGIN_NAMESPACE
 class QValueComboBox;
 QT_END_NAMESPACE
 
-/** Widget for entering meowcoin amounts.
+/** Widget for entering slimecoin amounts.
   */
-class MeowcoinAmountField: public QWidget
+class SlimecoinAmountField: public QWidget
 {
     Q_OBJECT
 
@@ -27,7 +27,7 @@ class MeowcoinAmountField: public QWidget
     Q_PROPERTY(qint64 value READ value WRITE setValue NOTIFY valueChanged USER true)
 
 public:
-    explicit MeowcoinAmountField(QWidget *parent = 0);
+    explicit SlimecoinAmountField(QWidget *parent = 0);
 
     CAmount value(bool *value=0) const;
     void setValue(const CAmount& value);
@@ -127,4 +127,4 @@ private:
 };
 
 
-#endif // MEOWCOIN_QT_MEOWCOINAMOUNTFIELD_H
+#endif // SLIMECOIN_QT_SLIMECOINAMOUNTFIELD_H

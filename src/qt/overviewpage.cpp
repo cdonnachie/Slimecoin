@@ -1,12 +1,12 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Meowcoin Core developers
+// Copyright (c) 2017-2021 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "overviewpage.h"
 #include "ui_overviewpage.h"
 
-#include "meowcoinunits.h"
+#include "slimecoinunits.h"
 #include "clientmodel.h"
 #include "guiconstants.h"
 #include "guiutil.h"
@@ -46,7 +46,7 @@ class TxViewDelegate : public QAbstractItemDelegate
     Q_OBJECT
 public:
     explicit TxViewDelegate(const PlatformStyle *_platformStyle, QObject *parent=nullptr):
-        QAbstractItemDelegate(parent), unit(MeowcoinUnits::MEWC),
+        QAbstractItemDelegate(parent), unit(SlimecoinUnits::SLME),
         platformStyle(_platformStyle)
     {
 
@@ -155,7 +155,7 @@ class AssetViewDelegate : public QAbstractItemDelegate
 Q_OBJECT
 public:
     explicit AssetViewDelegate(const PlatformStyle *_platformStyle, QObject *parent=nullptr):
-            QAbstractItemDelegate(parent), unit(MeowcoinUnits::MEWC),
+            QAbstractItemDelegate(parent), unit(SlimecoinUnits::SLME),
             platformStyle(_platformStyle)
     {
 
@@ -299,7 +299,7 @@ public:
 
 };
 #include "overviewpage.moc"
-#include "meowcoingui.h"
+#include "slimecoingui.h"
 #include <QFontDatabase>
 
 OverviewPage::OverviewPage(const PlatformStyle *platformStyle, QWidget *parent) :
@@ -368,7 +368,7 @@ OverviewPage::OverviewPage(const PlatformStyle *platformStyle, QWidget *parent) 
 
     /** Update the labels colors */
     ui->assetBalanceLabel->setStyleSheet(STRING_LABEL_COLOR);
-    ui->mewcBalancesLabel->setStyleSheet(STRING_LABEL_COLOR);
+    ui->slmeBalancesLabel->setStyleSheet(STRING_LABEL_COLOR);
     ui->labelBalanceText->setStyleSheet(STRING_LABEL_COLOR);
     ui->labelPendingText->setStyleSheet(STRING_LABEL_COLOR);
     ui->labelImmatureText->setStyleSheet(STRING_LABEL_COLOR);
@@ -378,7 +378,7 @@ OverviewPage::OverviewPage(const PlatformStyle *platformStyle, QWidget *parent) 
     ui->recentTransactionsLabel->setStyleSheet(STRING_LABEL_COLOR);
 
     /** Update the labels font */
-    ui->mewcBalancesLabel->setFont(GUIUtil::getTopLabelFont());
+    ui->slmeBalancesLabel->setFont(GUIUtil::getTopLabelFont());
     ui->assetBalanceLabel->setFont(GUIUtil::getTopLabelFont());
     ui->recentTransactionsLabel->setFont(GUIUtil::getTopLabelFont());
 
@@ -561,14 +561,14 @@ void OverviewPage::setBalance(const CAmount& balance, const CAmount& unconfirmed
     currentWatchOnlyBalance = watchOnlyBalance;
     currentWatchUnconfBalance = watchUnconfBalance;
     currentWatchImmatureBalance = watchImmatureBalance;
-    ui->labelBalance->setText(MeowcoinUnits::formatWithUnit(unit, balance, false, MeowcoinUnits::separatorAlways));
-    ui->labelUnconfirmed->setText(MeowcoinUnits::formatWithUnit(unit, unconfirmedBalance, false, MeowcoinUnits::separatorAlways));
-    ui->labelImmature->setText(MeowcoinUnits::formatWithUnit(unit, immatureBalance, false, MeowcoinUnits::separatorAlways));
-    ui->labelTotal->setText(MeowcoinUnits::formatWithUnit(unit, balance + unconfirmedBalance + immatureBalance, false, MeowcoinUnits::separatorAlways));
-    ui->labelWatchAvailable->setText(MeowcoinUnits::formatWithUnit(unit, watchOnlyBalance, false, MeowcoinUnits::separatorAlways));
-    ui->labelWatchPending->setText(MeowcoinUnits::formatWithUnit(unit, watchUnconfBalance, false, MeowcoinUnits::separatorAlways));
-    ui->labelWatchImmature->setText(MeowcoinUnits::formatWithUnit(unit, watchImmatureBalance, false, MeowcoinUnits::separatorAlways));
-    ui->labelWatchTotal->setText(MeowcoinUnits::formatWithUnit(unit, watchOnlyBalance + watchUnconfBalance + watchImmatureBalance, false, MeowcoinUnits::separatorAlways));
+    ui->labelBalance->setText(SlimecoinUnits::formatWithUnit(unit, balance, false, SlimecoinUnits::separatorAlways));
+    ui->labelUnconfirmed->setText(SlimecoinUnits::formatWithUnit(unit, unconfirmedBalance, false, SlimecoinUnits::separatorAlways));
+    ui->labelImmature->setText(SlimecoinUnits::formatWithUnit(unit, immatureBalance, false, SlimecoinUnits::separatorAlways));
+    ui->labelTotal->setText(SlimecoinUnits::formatWithUnit(unit, balance + unconfirmedBalance + immatureBalance, false, SlimecoinUnits::separatorAlways));
+    ui->labelWatchAvailable->setText(SlimecoinUnits::formatWithUnit(unit, watchOnlyBalance, false, SlimecoinUnits::separatorAlways));
+    ui->labelWatchPending->setText(SlimecoinUnits::formatWithUnit(unit, watchUnconfBalance, false, SlimecoinUnits::separatorAlways));
+    ui->labelWatchImmature->setText(SlimecoinUnits::formatWithUnit(unit, watchImmatureBalance, false, SlimecoinUnits::separatorAlways));
+    ui->labelWatchTotal->setText(SlimecoinUnits::formatWithUnit(unit, watchOnlyBalance + watchUnconfBalance + watchImmatureBalance, false, SlimecoinUnits::separatorAlways));
 
     // only show immature (newly mined) balance if it's non-zero, so as not to complicate things
     // for the non-mining users
@@ -644,7 +644,7 @@ void OverviewPage::setWalletModel(WalletModel *model)
         connect(model, SIGNAL(notifyWatchonlyChanged(bool)), this, SLOT(updateWatchOnlyLabels(bool)));
     }
 
-    // update the display unit, to not use the default ("MEWC")
+    // update the display unit, to not use the default ("SLME")
     updateDisplayUnit();
 }
 
@@ -693,7 +693,7 @@ void OverviewPage::showAssets()
         ui->assetBalanceLabel->hide();
         ui->labelAssetStatus->hide();
 
-        // This keeps the MEWC balance grid from expanding and looking terrible when asset balance is hidden
+        // This keeps the SLME balance grid from expanding and looking terrible when asset balance is hidden
         ui->assetVerticalSpaceWidget->show();
         ui->assetVerticalSpaceWidget2->show();
     }

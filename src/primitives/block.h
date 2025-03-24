@@ -1,11 +1,11 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2020 The Meowcoin Core developers
+// Copyright (c) 2017-2020 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_PRIMITIVES_BLOCK_H
-#define MEOWCOIN_PRIMITIVES_BLOCK_H
+#ifndef SLIMECOIN_PRIMITIVES_BLOCK_H
+#define SLIMECOIN_PRIMITIVES_BLOCK_H
 
 #include "primitives/transaction.h"
 #include "serialize.h"
@@ -257,4 +257,4 @@ public:
     }
 };
 
-#endif // MEOWCOIN_PRIMITIVES_BLOCK_H
+#endif // SLIMECOIN_PRIMITIVES_BLOCK_H

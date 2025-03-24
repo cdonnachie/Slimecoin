@@ -398,8 +398,8 @@
         <translation>Шакл</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Meowcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Кўрсатилган маълумот эскирган бўлиши мумкин. Ҳамёнингиз алоқа ўрнатилгандан сўнг Meowcoin тармоқ билан автоматик тарзда синхронланади, аммо жараён ҳалигача тугалланмади.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Slimecoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Кўрсатилган маълумот эскирган бўлиши мумкин. Ҳамёнингиз алоқа ўрнатилгандан сўнг Slimecoin тармоқ билан автоматик тарзда синхронланади, аммо жараён ҳалигача тугалланмади.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -475,8 +475,8 @@
         <translation>Миқдори</translation>
     </message>
     <message>
-        <source>Enter a Meowcoin address (e.g. %1)</source>
-        <translation>Meowcoin манзилини киритинг (масалан.  %1)</translation>
+        <source>Enter a Slimecoin address (e.g. %1)</source>
+        <translation>Slimecoin манзилини киритинг (масалан.  %1)</translation>
     </message>
     <message>
         <source>%1 m</source>
@@ -661,7 +661,7 @@
     </message>
 </context>
 <context>
-    <name>MeowcoinGUI</name>
+    <name>SlimecoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>&amp;Хабар ёзиш...</translation>
@@ -739,8 +739,8 @@
         <translation>Дискдаги блоклар қайта индексланмоқда...</translation>
     </message>
     <message>
-        <source>Send coins to a Meowcoin address</source>
-        <translation>Тангаларни Meowcoin манзилига жўнатиш</translation>
+        <source>Send coins to a Slimecoin address</source>
+        <translation>Тангаларни Slimecoin манзилига жўнатиш</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -759,8 +759,8 @@
         <translation>Хабарни &amp;тасдиқлаш...</translation>
     </message>
     <message>
-        <source>Meowcoin</source>
-        <translation>Meowcoin</translation>
+        <source>Slimecoin</source>
+        <translation>Slimecoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -787,12 +787,12 @@
         <translation>Ҳамёнингизга тегишли махфий калитларни кодлаш</translation>
     </message>
     <message>
-        <source>Sign messages with your Meowcoin addresses to prove you own them</source>
-        <translation>Meowcoin манзилидан унинг эгаси эканлигингизни исботлаш учун хабарлар ёзинг</translation>
+        <source>Sign messages with your Slimecoin addresses to prove you own them</source>
+        <translation>Slimecoin манзилидан унинг эгаси эканлигингизни исботлаш учун хабарлар ёзинг</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Meowcoin addresses</source>
-        <translation>Хабарларни махсус Meowcoin манзилларингиз билан ёзилганлигига ишонч ҳосил қилиш учун уларни тасдиқланг</translation>
+        <source>Verify messages to ensure they were signed with specified Slimecoin addresses</source>
+        <translation>Хабарларни махсус Slimecoin манзилларингиз билан ёзилганлигига ишонч ҳосил қилиш учун уларни тасдиқланг</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -803,8 +803,8 @@
         <translation>&amp;Ёрдам</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and meowcoin: URIs)</source>
-        <translation>Тўловлар (QR кодлари ва meowcoin ёрдамида яратишлар: URI’лар) сўраш</translation>
+        <source>Request payments (generates QR codes and slimecoin: URIs)</source>
+        <translation>Тўловлар (QR кодлари ва slimecoin ёрдамида яратишлар: URI’лар) сўраш</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -815,8 +815,8 @@
         <translation>Фойдаланилган қабул қилинган манзиллар ва ёрлиқлар рўйхатини кўрсатиш</translation>
     </message>
     <message>
-        <source>Open a meowcoin: URI or payment request</source>
-        <translation>Meowcoin’ни очиш: URI ёки тўлов сўрови</translation>
+        <source>Open a slimecoin: URI or payment request</source>
+        <translation>Slimecoin’ни очиш: URI ёки тўлов сўрови</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1163,7 +1163,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>meowcoin-core</name>
+    <name>slimecoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Танламалар:</translation>
@@ -1181,8 +1181,8 @@
         <translation>Демон сифатида орқа фонда ишга туширинг ва буйруқларга рози бўлинг</translation>
     </message>
     <message>
-        <source>Meowcoin Core</source>
-        <translation>Meowcoin Core</translation>
+        <source>Slimecoin Core</source>
+        <translation>Slimecoin Core</translation>
     </message>
     <message>
         <source>Connection options:</source>

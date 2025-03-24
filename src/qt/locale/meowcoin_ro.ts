@@ -62,12 +62,12 @@
         <translation>Primește Adrese</translation>
     </message>
     <message>
-        <source>These are your Meowcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Acestea sunt adresele Meowcoin pentru efectuarea plăților . Intotdeauna verifică cantitatea si adresa de primire inainte de a efectua tranzactia</translation>
+        <source>These are your Slimecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Acestea sunt adresele Slimecoin pentru efectuarea plăților . Intotdeauna verifică cantitatea si adresa de primire inainte de a efectua tranzactia</translation>
     </message>
     <message>
-        <source>These are your Meowcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Acestea sunt adresele Meowcoin pentru a primi plățile.Este recomandat să folosești o noua adresă pentru fiecare tranzacție</translation>
+        <source>These are your Slimecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Acestea sunt adresele Slimecoin pentru a primi plățile.Este recomandat să folosești o noua adresă pentru fiecare tranzacție</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -164,7 +164,7 @@
         <translation>Confirmă criptarea portofelului</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MEOWCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SLIMECOINS&lt;/b&gt;!</source>
         <translation>Atenţie: dacă criptezi portofelul şi pierzi parola, &lt;b&gt;VEI PIERDE TOATE MONEDELE&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -593,7 +593,7 @@
     </message>
 </context>
 <context>
-    <name>MeowcoinGUI</name>
+    <name>SlimecoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Semnează &amp;mesajul...</translation>
@@ -659,8 +659,8 @@
         <translation>Deschide &amp;URI...</translation>
     </message>
     <message>
-        <source>Send coins to a Meowcoin address</source>
-        <translation>Trimite monedele către o adresă Meowcoin</translation>
+        <source>Send coins to a Slimecoin address</source>
+        <translation>Trimite monedele către o adresă Slimecoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -679,8 +679,8 @@
         <translation>&amp;Verifică mesajul...</translation>
     </message>
     <message>
-        <source>Meowcoin</source>
-        <translation>Meowcoin</translation>
+        <source>Slimecoin</source>
+        <translation>Slimecoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -707,12 +707,12 @@
         <translation>Criptează cheile private care aparțin portofelului tău.</translation>
     </message>
     <message>
-        <source>Sign messages with your Meowcoin addresses to prove you own them</source>
-        <translation>Semnează mesajele cu adresa ta de Meowcoin pentru a face dovada că îți aparțin.</translation>
+        <source>Sign messages with your Slimecoin addresses to prove you own them</source>
+        <translation>Semnează mesajele cu adresa ta de Slimecoin pentru a face dovada că îți aparțin.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Meowcoin addresses</source>
-        <translation>Verifică mesajele cu scopul de a asigura faptul că au fost semnate cu adresa de Meowcoin specificată.</translation>
+        <source>Verify messages to ensure they were signed with specified Slimecoin addresses</source>
+        <translation>Verifică mesajele cu scopul de a asigura faptul că au fost semnate cu adresa de Slimecoin specificată.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -723,12 +723,12 @@
         <translation>&amp;Ajutor</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and meowcoin: URIs)</source>
-        <translation>Cerere plată (generează coduri QR și meowcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and slimecoin: URIs)</source>
+        <translation>Cerere plată (generează coduri QR și slimecoin: URIs)</translation>
     </message>
     <message>
-        <source>Open a meowcoin: URI or payment request</source>
-        <translation>Deschide un meowcoin: URI sau cerere de plată</translation>
+        <source>Open a slimecoin: URI or payment request</source>
+        <translation>Deschide un slimecoin: URI sau cerere de plată</translation>
     </message>
     <message>
         <source>%1 behind</source>
@@ -899,10 +899,10 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>meowcoin-core</name>
+    <name>slimecoin-core</name>
     <message>
-        <source>Meowcoin Core</source>
-        <translation>Meowcoin Core</translation>
+        <source>Slimecoin Core</source>
+        <translation>Slimecoin Core</translation>
     </message>
     <message>
         <source>Information</source>

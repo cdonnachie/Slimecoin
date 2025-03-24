@@ -421,7 +421,7 @@
     </message>
 </context>
 <context>
-    <name>MeowcoinGUI</name>
+    <name>SlimecoinGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation>&amp;கண்ணோட்டம்</translation>
@@ -459,8 +459,8 @@
         <translation>&amp;செய்தியை சரிசெய்...</translation>
     </message>
     <message>
-        <source>Meowcoin</source>
-        <translation>Meowcoin</translation>
+        <source>Slimecoin</source>
+        <translation>Slimecoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -715,10 +715,10 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>meowcoin-core</name>
+    <name>slimecoin-core</name>
     <message>
-        <source>Meowcoin Core</source>
-        <translation>Meowcoin மையம்</translation>
+        <source>Slimecoin Core</source>
+        <translation>Slimecoin மையம்</translation>
     </message>
     <message>
         <source>(default: %u)</source>

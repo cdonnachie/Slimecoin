@@ -1,5 +1,5 @@
-Building Meowcoin
+Building Slimecoin
 ================
 
 See doc/build-*.md for instructions on building the various
-elements of the Meowcoin Core reference implementation of Meowcoin.
+elements of the Slimecoin Core reference implementation of Slimecoin.

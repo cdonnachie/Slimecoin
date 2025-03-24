@@ -1,4 +1,4 @@
-Build instructions for Meowcoin 
+Build instructions for Slimecoin 
 =================================
 FreeBSD 13.0
 ---------------------------------
@@ -25,12 +25,12 @@ libqrencode for QR Code support.
 
 Directory structure
 ------------------
-Meowcoin sources in `$HOME/src`
+Slimecoin sources in `$HOME/src`
 
 Berkeley DB will be installed to `$HOME/src/db4`
 
 
-Meowcoin
+Slimecoin
 ------------------
 
 Start in $HOME
@@ -41,11 +41,11 @@ Make the directory for sources and go into it.
 
 `cd src`
 
-__Download Meowcoin source.__
+__Download Slimecoin source.__
 
-`git clone https://github.com/JustAResearcher/Meowcoin`
+`git clone https://github.com/JustAResearcher/Slimecoin`
 
-`cd Meowcoin`
+`cd Slimecoin`
 
 `git checkout develop` # this checks out the develop branch.
 
@@ -68,11 +68,11 @@ _Adjust to own needs. `--prefix=/usr/local` will install the binaries to `/usr/l
 
 `gmake -j8`  # 8 for 8 build threads, adjust to fit your setup.
 
-You can now start meowcoin-qt from the build directory.
+You can now start slimecoin-qt from the build directory.
 
-`src/qt/meowcoin-qt`
+`src/qt/slimecoin-qt`
 
-meowcoind and meowcoin-cli are in `src/`
+slimecoind and slimecoin-cli are in `src/`
 
 
 __Optional:__

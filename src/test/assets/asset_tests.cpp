@@ -1,10 +1,10 @@
-// Copyright (c) 2017-2019 The Meowcoin Core developers
+// Copyright (c) 2017-2019 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include <assets/assets.h>
 
-#include <test/test_meowcoin.h>
+#include <test/test_slimecoin.h>
 
 #include <boost/test/unit_test.hpp>
 #include "core_write.cpp"
@@ -47,20 +47,20 @@ BOOST_FIXTURE_TEST_SUITE(asset_tests, BasicTestingSetup)
         BOOST_CHECK(!IsAssetNameValid("A._BC", type));
         BOOST_CHECK(!IsAssetNameValid("AB_.C", type));
 
-        //- Versions of MEOWCOINCOIN NOT allowed
-        BOOST_CHECK(!IsAssetNameValid("MEWC", type));
-        BOOST_CHECK(!IsAssetNameValid("MEOWCOIN", type));
-        BOOST_CHECK(!IsAssetNameValid("MEOWCOINCOIN", type));
+        //- Versions of SLIMECOINCOIN NOT allowed
+        BOOST_CHECK(!IsAssetNameValid("SLME", type));
+        BOOST_CHECK(!IsAssetNameValid("SLIMECOIN", type));
+        BOOST_CHECK(!IsAssetNameValid("SLIMECOINCOIN", type));
 
-        //- Versions of MEOWCOINCOIN ALLOWED
-        BOOST_CHECK(IsAssetNameValid("MEOWCOIN.COIN", type));
-        BOOST_CHECK(IsAssetNameValid("MEOWCOIN_COIN", type));
-        BOOST_CHECK(IsAssetNameValid("MEWCSPYDER", type));
-        BOOST_CHECK(IsAssetNameValid("SPYDERMEWC", type));
-        BOOST_CHECK(IsAssetNameValid("MEOWCOINSPYDER", type));
-        BOOST_CHECK(IsAssetNameValid("SPYDEMEOWCOIN", type));
-        BOOST_CHECK(IsAssetNameValid("BLACK_MEOWCOINS", type));
-        BOOST_CHECK(IsAssetNameValid("SEMEWCOT", type));
+        //- Versions of SLIMECOINCOIN ALLOWED
+        BOOST_CHECK(IsAssetNameValid("SLIMECOIN.COIN", type));
+        BOOST_CHECK(IsAssetNameValid("SLIMECOIN_COIN", type));
+        BOOST_CHECK(IsAssetNameValid("SLMESPYDER", type));
+        BOOST_CHECK(IsAssetNameValid("SPYDERSLME", type));
+        BOOST_CHECK(IsAssetNameValid("SLIMECOINSPYDER", type));
+        BOOST_CHECK(IsAssetNameValid("SPYDESLIMECOIN", type));
+        BOOST_CHECK(IsAssetNameValid("BLACK_SLIMECOINS", type));
+        BOOST_CHECK(IsAssetNameValid("SESLMEOT", type));
 
         // subs
         BOOST_CHECK(IsAssetNameValid("ABC/A", type));
@@ -227,7 +227,7 @@ BOOST_FIXTURE_TEST_SUITE(asset_tests, BasicTestingSetup)
         SelectParams(CBaseChainParams::MAIN);
 
         // Create the asset scriptPubKey
-        CAssetTransfer asset("MEOWCOIN", 1000);
+        CAssetTransfer asset("SLIMECOIN", 1000);
         CScript scriptPubKey = GetScriptForDestination(DecodeDestination(GetParams().GlobalBurnAddress()));
         asset.ConstructTransaction(scriptPubKey);
 
@@ -248,7 +248,7 @@ BOOST_FIXTURE_TEST_SUITE(asset_tests, BasicTestingSetup)
         SelectParams(CBaseChainParams::MAIN);
 
         // Create the asset scriptPubKey
-        CNewAsset asset("MEOWCOIN", 1000, 8, 1, 0, "");
+        CNewAsset asset("SLIMECOIN", 1000, 8, 1, 0, "");
         CScript scriptPubKey = GetScriptForDestination(DecodeDestination(GetParams().GlobalBurnAddress()));
         asset.ConstructTransaction(scriptPubKey);
 

@@ -62,12 +62,12 @@
         <translation>Vastuvõtvad aadressid</translation>
     </message>
     <message>
-        <source>These are your Meowcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Need on sinu Meowcoin aadressid maksete saatmiseks. Ennem müntide saatmist kontrolli alati summat ja makse saaja aadressi.</translation>
+        <source>These are your Slimecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Need on sinu Slimecoin aadressid maksete saatmiseks. Ennem müntide saatmist kontrolli alati summat ja makse saaja aadressi.</translation>
     </message>
     <message>
-        <source>These are your Meowcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Need on sinu Meowcoin aadressid sisenevate maksete vastu võtmiseks. Soovitav on iga tehingu tarbeks kasutada uut aadressi.</translation>
+        <source>These are your Slimecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Need on sinu Slimecoin aadressid sisenevate maksete vastu võtmiseks. Soovitav on iga tehingu tarbeks kasutada uut aadressi.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +168,8 @@
         <translation>Kinnita rahakoti krüpteerimine.</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MEOWCOINS&lt;/b&gt;!</source>
-        <translation>Hoiatus:Kui sa krüpteerid oma rahakoti ja kaotad salafraasi, siis sa&lt;b&gt;KAOTAD OMA MEOWCOINID&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SLIMECOINS&lt;/b&gt;!</source>
+        <translation>Hoiatus:Kui sa krüpteerid oma rahakoti ja kaotad salafraasi, siis sa&lt;b&gt;KAOTAD OMA SLIMECOINID&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -384,8 +384,8 @@
         <translation>Muuda saatvat aadressi</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Meowcoin address.</source>
-        <translation>Sisestatud aadress "%1" ei ole korrektne Meowcoin aadress.</translation>
+        <source>The entered address "%1" is not a valid Slimecoin address.</source>
+        <translation>Sisestatud aadress "%1" ei ole korrektne Slimecoin aadress.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -535,8 +535,8 @@
         <translation>Ekspert</translation>
     </message>
     <message>
-        <source>Automatically open the Meowcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Meowcoini kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
+        <source>Automatically open the Slimecoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Slimecoini kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -630,7 +630,7 @@
         <translation>Vorm</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Meowcoin network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Slimecoin network after a connection is established, but this process has not completed yet.</source>
         <translation>Kuvatav info ei pruugi olla ajakohane. Ühenduse loomisel süngitakse sinu rahakott automaatselt Bitconi võrgustikuga, kuid see toiming on hetkel lõpetamata.</translation>
     </message>
     <message>
@@ -833,7 +833,7 @@
     </message>
 </context>
 <context>
-    <name>MeowcoinGUI</name>
+    <name>SlimecoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Signeeri &amp;sõnum</translation>
@@ -903,8 +903,8 @@
         <translation>Kettal olevate blokkide re-indekseerimine...</translation>
     </message>
     <message>
-        <source>Send coins to a Meowcoin address</source>
-        <translation>Saada münte Meowcoini aadressile</translation>
+        <source>Send coins to a Slimecoin address</source>
+        <translation>Saada münte Slimecoini aadressile</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -923,8 +923,8 @@
         <translation>&amp;Kontrolli sõnumit...</translation>
     </message>
     <message>
-        <source>Meowcoin</source>
-        <translation>Meowcoin</translation>
+        <source>Slimecoin</source>
+        <translation>Slimecoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -951,12 +951,12 @@
         <translation>Krüpteeri oma rahakoti privaatvõtmed</translation>
     </message>
     <message>
-        <source>Sign messages with your Meowcoin addresses to prove you own them</source>
-        <translation>Omandi tõestamiseks allkirjasta sõnumid oma Meowcoini aadressiga</translation>
+        <source>Sign messages with your Slimecoin addresses to prove you own them</source>
+        <translation>Omandi tõestamiseks allkirjasta sõnumid oma Slimecoini aadressiga</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Meowcoin addresses</source>
-        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud Meowcoini aadressiga</translation>
+        <source>Verify messages to ensure they were signed with specified Slimecoin addresses</source>
+        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud Slimecoini aadressiga</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -967,11 +967,11 @@
         <translation>&amp;Abi</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and meowcoin: URIs)</source>
+        <source>Request payments (generates QR codes and slimecoin: URIs)</source>
         <translation>Loo maksepäring (genereerib QR koodid ja meowi: URId)</translation>
     </message>
     <message>
-        <source>Open a meowcoin: URI or payment request</source>
+        <source>Open a slimecoin: URI or payment request</source>
         <translation>Ava meowi: URI või maksepäring</translation>
     </message>
     <message>
@@ -1314,8 +1314,8 @@
         <translation>Maksepäring aegunud.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Meowcoin address</source>
-        <translation>Hoiatus: Ebakorrektne Meowcoin aadress</translation>
+        <source>Warning: Invalid Slimecoin address</source>
+        <translation>Hoiatus: Ebakorrektne Slimecoin aadress</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -1386,8 +1386,8 @@
         <translation>&amp;Allkirjastamise teade</translation>
     </message>
     <message>
-        <source>The Meowcoin address to sign the message with</source>
-        <translation>Meowcoin aadress millega sõnum allkirjastada</translation>
+        <source>The Slimecoin address to sign the message with</source>
+        <translation>Slimecoin aadress millega sõnum allkirjastada</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1418,8 +1418,8 @@
         <translation>Kopeeri praegune signatuur vahemällu</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Meowcoin address</source>
-        <translation>Allkirjasta sõnum Meowcoini aadressi sulle kuulumise tõestamiseks</translation>
+        <source>Sign the message to prove you own this Slimecoin address</source>
+        <translation>Allkirjasta sõnum Slimecoini aadressi sulle kuulumise tõestamiseks</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1438,12 +1438,12 @@
         <translation>&amp;Kinnita Sõnum</translation>
     </message>
     <message>
-        <source>The Meowcoin address the message was signed with</source>
-        <translation>Meowcoin aadress millega sõnum on allkirjastatud</translation>
+        <source>The Slimecoin address the message was signed with</source>
+        <translation>Slimecoin aadress millega sõnum on allkirjastatud</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Meowcoin address</source>
-        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud Meowcoini aadressiga.</translation>
+        <source>Verify the message to ensure it was signed with the specified Slimecoin address</source>
+        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud Slimecoini aadressiga.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1701,7 +1701,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>meowcoin-core</name>
+    <name>slimecoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Valikud:</translation>
@@ -1727,8 +1727,8 @@
         <translation>Tööta taustal ning aktsepteeri käsklusi</translation>
     </message>
     <message>
-        <source>Meowcoin Core</source>
-        <translation>Meowcoini tuumik</translation>
+        <source>Slimecoin Core</source>
+        <translation>Slimecoini tuumik</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>

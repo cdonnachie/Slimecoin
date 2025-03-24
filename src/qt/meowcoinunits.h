@@ -1,10 +1,10 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Meowcoin Core developers
+// Copyright (c) 2017-2021 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_QT_MEOWCOINUNITS_H
-#define MEOWCOIN_QT_MEOWCOINUNITS_H
+#ifndef SLIMECOIN_QT_SLIMECOINUNITS_H
+#define SLIMECOIN_QT_SLIMECOINUNITS_H
 
 #include "amount.h"
 
@@ -47,24 +47,24 @@
 #define THIN_SP_UTF8 REAL_THIN_SP_UTF8
 #define THIN_SP_HTML HTML_HACK_SP
 
-/** Meowcoin unit definitions. Encapsulates parsing and formatting
+/** Slimecoin unit definitions. Encapsulates parsing and formatting
    and serves as list model for drop-down selection boxes.
 */
-class MeowcoinUnits: public QAbstractListModel
+class SlimecoinUnits: public QAbstractListModel
 {
     Q_OBJECT
 
 public:
-    explicit MeowcoinUnits(QObject *parent);
+    explicit SlimecoinUnits(QObject *parent);
 
-    /** Meowcoin units.
+    /** Slimecoin units.
       @note Source: https://en.bitcoin.it/wiki/Units . Please add only sensible ones
      */
     enum Unit
     {
-        MEWC,
-        mMEWC,
-        uMEWC
+        SLME,
+        mSLME,
+        uSLME
     };
 
     enum SeparatorStyle
@@ -132,8 +132,8 @@ public:
     static CAmount maxMoney();
 
 private:
-    QList<MeowcoinUnits::Unit> unitlist;
+    QList<SlimecoinUnits::Unit> unitlist;
 };
-typedef MeowcoinUnits::Unit MeowcoinUnit;
+typedef SlimecoinUnits::Unit SlimecoinUnit;
 
-#endif // MEOWCOIN_QT_MEOWCOINUNITS_H
+#endif // SLIMECOIN_QT_SLIMECOINUNITS_H

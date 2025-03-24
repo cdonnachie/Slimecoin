@@ -1,15 +1,15 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Meowcoin Core developers
+// Copyright (c) 2017-2021 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_QT_WALLETFRAME_H
-#define MEOWCOIN_QT_WALLETFRAME_H
+#ifndef SLIMECOIN_QT_WALLETFRAME_H
+#define SLIMECOIN_QT_WALLETFRAME_H
 
 #include <QFrame>
 #include <QMap>
 
-class MeowcoinGUI;
+class SlimecoinGUI;
 class ClientModel;
 class PlatformStyle;
 class SendCoinsRecipient;
@@ -22,9 +22,9 @@ QT_END_NAMESPACE
 
 /**
  * A container for embedding all wallet-related
- * controls into MeowcoinGUI. The purpose of this class is to allow future
+ * controls into SlimecoinGUI. The purpose of this class is to allow future
  * refinements of the wallet controls with minimal need for further
- * modifications to MeowcoinGUI, thus greatly simplifying merges while
+ * modifications to SlimecoinGUI, thus greatly simplifying merges while
  * reducing the risk of breaking top-level stuff.
  */
 class WalletFrame : public QFrame
@@ -32,7 +32,7 @@ class WalletFrame : public QFrame
     Q_OBJECT
 
 public:
-    explicit WalletFrame(const PlatformStyle *platformStyle, MeowcoinGUI *_gui = 0);
+    explicit WalletFrame(const PlatformStyle *platformStyle, SlimecoinGUI *_gui = 0);
     ~WalletFrame();
 
     void setClientModel(ClientModel *clientModel);
@@ -52,7 +52,7 @@ Q_SIGNALS:
 
 private:
     QStackedWidget *walletStack;
-    MeowcoinGUI *gui;
+    SlimecoinGUI *gui;
     ClientModel *clientModel;
     QMap<QString, WalletView*> mapWalletViews;
 
@@ -96,14 +96,14 @@ public Q_SLOTS:
     /** Pass on signal over requested out-of-sync-warning information */
     void outOfSyncWarningClicked();
 
-    /** MEWC START */
+    /** SLME START */
 
     /** Switch to assets page */
     void gotoAssetsPage();
     void gotoCreateAssetsPage();
     void gotoManageAssetsPage();
     void gotoRestrictedAssetsPage();
-    /** MEWC END */
+    /** SLME END */
 };
 
-#endif // MEOWCOIN_QT_WALLETFRAME_H
+#endif // SLIMECOIN_QT_WALLETFRAME_H

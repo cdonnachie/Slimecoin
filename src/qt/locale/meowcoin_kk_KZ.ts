@@ -189,7 +189,7 @@
     </message>
     </context>
 <context>
-    <name>MeowcoinGUI</name>
+    <name>SlimecoinGUI</name>
     <message>
         <source>&amp;Transactions</source>
         <translation>&amp;Транзакциялар</translation>
@@ -211,7 +211,7 @@
         <translation>Құпия сөзді өзгерту</translation>
     </message>
     <message>
-        <source>Meowcoin</source>
+        <source>Slimecoin</source>
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -343,7 +343,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>meowcoin-core</name>
+    <name>slimecoin-core</name>
     <message>
         <source>Information</source>
         <translation>Информация</translation>

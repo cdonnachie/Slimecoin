@@ -1,4 +1,4 @@
-name: Build Meowcoin
+name: Build Slimecoin
 
 on:
   push:
@@ -95,7 +95,7 @@ jobs:
       run: ${SCRIPTS}/04-configure-build.sh ${{ MATRIX.OS }} ${{ GITHUB.WORKSPACE }}
 
     - if: ${{ needs.check-jobs.outputs.should_skip != 'true' }}
-      name: Build Meowcoin
+      name: Build Slimecoin
       run: make -j2
 
     - if: ${{ needs.check-jobs.outputs.should_skip != 'true' }}

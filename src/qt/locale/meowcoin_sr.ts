@@ -62,12 +62,12 @@
         <translation>Adresa za primanje</translation>
     </message>
     <message>
-        <source>These are your Meowcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Ovo su vase Meowcoin adrese za slanje. Uvek proverite iznos i adresu primaoca pre slanja novcica.</translation>
+        <source>These are your Slimecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Ovo su vase Slimecoin adrese za slanje. Uvek proverite iznos i adresu primaoca pre slanja novcica.</translation>
     </message>
     <message>
-        <source>These are your Meowcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Ovo su vase Meowcoin adrese za prijem.  Preporucljivo je da za svaki prijem novcica kreirate novu adresu za prijem.</translation>
+        <source>These are your Slimecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Ovo su vase Slimecoin adrese za prijem.  Preporucljivo je da za svaki prijem novcica kreirate novu adresu za prijem.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -160,7 +160,7 @@
         <translation>Potvrdite enkripciju novčanika</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MEOWCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SLIMECOINS&lt;/b&gt;!</source>
         <translation>Pažnja: Ukoliko enkriptujete novčanik a zatim izgubite vašu lozinku, izgubićete&lt;b&gt;SVA VAŠA SREDSTVA&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -450,7 +450,7 @@ Zapamtite da enkripcija vašeg novčanika ne može u potpunosti zaštititi vaša
     </message>
     </context>
 <context>
-    <name>MeowcoinGUI</name>
+    <name>SlimecoinGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Синхронизација са мрежом у току...</translation>
@@ -504,8 +504,8 @@ Zapamtite da enkripcija vašeg novčanika ne može u potpunosti zaštititi vaša
         <translation>Промени &amp;лозинку...</translation>
     </message>
     <message>
-        <source>Send coins to a Meowcoin address</source>
-        <translation>Пошаљите новац на meowcoin адресу</translation>
+        <source>Send coins to a Slimecoin address</source>
+        <translation>Пошаљите новац на slimecoin адресу</translation>
     </message>
     <message>
         <source>Change the passphrase used for wallet encryption</source>
@@ -696,7 +696,7 @@ Zapamtite da enkripcija vašeg novčanika ne može u potpunosti zaštititi vaša
     <name>WalletView</name>
     </context>
 <context>
-    <name>meowcoin-core</name>
+    <name>slimecoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opcije</translation>

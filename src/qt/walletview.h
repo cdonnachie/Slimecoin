@@ -1,16 +1,16 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Meowcoin Core developers
+// Copyright (c) 2017-2021 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_QT_WALLETVIEW_H
-#define MEOWCOIN_QT_WALLETVIEW_H
+#ifndef SLIMECOIN_QT_WALLETVIEW_H
+#define SLIMECOIN_QT_WALLETVIEW_H
 
 #include "amount.h"
 
 #include <QStackedWidget>
 
-class MeowcoinGUI;
+class SlimecoinGUI;
 class ClientModel;
 class OverviewPage;
 class PlatformStyle;
@@ -44,13 +44,13 @@ public:
     explicit WalletView(const PlatformStyle *platformStyle, QWidget *parent);
     ~WalletView();
 
-    void setMeowcoinGUI(MeowcoinGUI *gui);
+    void setSlimecoinGUI(SlimecoinGUI *gui);
     /** Set the client model.
         The client model represents the part of the core that communicates with the P2P network, and is wallet-agnostic.
     */
     void setClientModel(ClientModel *clientModel);
     /** Set the wallet model.
-        The wallet model represents a meowcoin wallet, and offers access to the list of transactions, address book and sending
+        The wallet model represents a slimecoin wallet, and offers access to the list of transactions, address book and sending
         functionality.
     */
     void setWalletModel(WalletModel *walletModel);
@@ -76,12 +76,12 @@ private:
     const PlatformStyle *platformStyle;
 
 
-    /** MEWC START */
+    /** SLME START */
     AssetsDialog *assetsPage;
     CreateAssetDialog *createAssetsPage;
     ReissueAssetDialog *manageAssetsPage;
     RestrictedAssetsDialog *restrictedAssetsPage;
-    /** MEWC END */
+    /** SLME END */
 
 public Q_SLOTS:
     /** Switch to overview (home) page */
@@ -130,7 +130,7 @@ public Q_SLOTS:
     void requestedSyncWarningInfo();
 
 
-    /** MEWC START */
+    /** SLME START */
     /** Switch to assets page */
 
     void gotoAssetsPage();
@@ -138,7 +138,7 @@ public Q_SLOTS:
     void gotoManageAssetsPage();
     void gotoRestrictedAssetsPage();
 
-    /** MEWC END */
+    /** SLME END */
 
 Q_SIGNALS:
     /** Signal that we want to show the main window */
@@ -157,4 +157,4 @@ Q_SIGNALS:
     void checkAssets();
 };
 
-#endif // MEOWCOIN_QT_WALLETVIEW_H
+#endif // SLIMECOIN_QT_WALLETVIEW_H

@@ -1,11 +1,11 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Meowcoin Core developers
+// Copyright (c) 2017-2021 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_RANDOM_H
-#define MEOWCOIN_RANDOM_H
+#ifndef SLIMECOIN_RANDOM_H
+#define SLIMECOIN_RANDOM_H
 
 #include "crypto/chacha20.h"
 #include "crypto/common.h"
@@ -167,4 +167,4 @@ bool Random_SanityCheck();
 /** Initialize the RNG. */
 void RandomInit();
 
-#endif // MEOWCOIN_RANDOM_H
+#endif // SLIMECOIN_RANDOM_H

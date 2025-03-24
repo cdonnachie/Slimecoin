@@ -62,12 +62,12 @@
         <translation>S'estan rebent les adreces</translation>
     </message>
     <message>
-        <source>These are your Meowcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estes són les vostres adreces de Meowcoin per enviar els pagaments. Sempre reviseu l'import i l'adreça del destinatari abans de transferir monedes.</translation>
+        <source>These are your Slimecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estes són les vostres adreces de Slimecoin per enviar els pagaments. Sempre reviseu l'import i l'adreça del destinatari abans de transferir monedes.</translation>
     </message>
     <message>
-        <source>These are your Meowcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estes són les vostres adreces Meowcoin per rebre pagaments. Es recomana utilitzar una adreça nova de recepció per a cada transacció.</translation>
+        <source>These are your Slimecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estes són les vostres adreces Slimecoin per rebre pagaments. Es recomana utilitzar una adreça nova de recepció per a cada transacció.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +168,8 @@
         <translation>Confirma l'encriptació del moneder</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MEOWCOINS&lt;/b&gt;!</source>
-        <translation>Avís: si encripteu el vostre moneder i perdeu la contrasenya, &lt;b&gt;PERDREU TOTS ELS VOSTRES MEOWCOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SLIMECOINS&lt;/b&gt;!</source>
+        <translation>Avís: si encripteu el vostre moneder i perdeu la contrasenya, &lt;b&gt;PERDREU TOTS ELS VOSTRES SLIMECOINS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -420,8 +420,8 @@
         <translation>Edita les adreces d'enviament</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Meowcoin address.</source>
-        <translation>L'adreça introduïda «%1» no és una adreça de Meowcoin vàlida.</translation>
+        <source>The entered address "%1" is not a valid Slimecoin address.</source>
+        <translation>L'adreça introduïda «%1» no és una adreça de Slimecoin vàlida.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -655,16 +655,16 @@
         <translation>&amp;Gasta el canvi sense confirmar</translation>
     </message>
     <message>
-        <source>Automatically open the Meowcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Obri el port del client de Meowcoin al router de forma automàtica. Això només funciona quan el router implementa UPnP i l'opció està activada.</translation>
+        <source>Automatically open the Slimecoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Obri el port del client de Slimecoin al router de forma automàtica. Això només funciona quan el router implementa UPnP i l'opció està activada.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Port obert amb &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Meowcoin network through a SOCKS5 proxy.</source>
-        <translation>Connecta a la xarxa Meowcoin a través d'un proxy SOCKS5.</translation>
+        <source>Connect to the Slimecoin network through a SOCKS5 proxy.</source>
+        <translation>Connecta a la xarxa Slimecoin a través d'un proxy SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -762,8 +762,8 @@
         <translation>Formulari</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Meowcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>La informació mostrada pot no estar al día. El teu moneder es sincronitza automàticament amb la xarxa Meowcoin un cop s'ha establit connexió, però este proces no s'ha completat encara.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Slimecoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>La informació mostrada pot no estar al día. El teu moneder es sincronitza automàticament amb la xarxa Slimecoin un cop s'ha establit connexió, però este proces no s'ha completat encara.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -833,8 +833,8 @@
         <translation>Error en la sol·licitud de pagament</translation>
     </message>
     <message>
-        <source>Cannot start meowcoin: click-to-pay handler</source>
-        <translation>No es pot iniciar meowcoin: gestor clica-per-pagar</translation>
+        <source>Cannot start slimecoin: click-to-pay handler</source>
+        <translation>No es pot iniciar slimecoin: gestor clica-per-pagar</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -849,8 +849,8 @@
         <translation>Adreça de pagament no vàlida %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Meowcoin address or malformed URI parameters.</source>
-        <translation>L'URI no pot ser analitzat! Això pot ser a causa d'una adreça de Meowcoin no vàlida o per paràmetres URI amb mal format.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Slimecoin address or malformed URI parameters.</source>
+        <translation>L'URI no pot ser analitzat! Això pot ser a causa d'una adreça de Slimecoin no vàlida o per paràmetres URI amb mal format.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -935,8 +935,8 @@
         <translation>Import</translation>
     </message>
     <message>
-        <source>Enter a Meowcoin address (e.g. %1)</source>
-        <translation>Introduïu una adreça de Meowcoin (p. ex. %1)</translation>
+        <source>Enter a Slimecoin address (e.g. %1)</source>
+        <translation>Introduïu una adreça de Slimecoin (p. ex. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1169,7 +1169,7 @@
     </message>
 </context>
 <context>
-    <name>MeowcoinGUI</name>
+    <name>SlimecoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Signa el &amp;missatge...</translation>
@@ -1247,8 +1247,8 @@
         <translation>S'estan reindexant els blocs al disc...</translation>
     </message>
     <message>
-        <source>Send coins to a Meowcoin address</source>
-        <translation>Envia monedes a una adreça Meowcoin</translation>
+        <source>Send coins to a Slimecoin address</source>
+        <translation>Envia monedes a una adreça Slimecoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -1267,8 +1267,8 @@
         <translation>&amp;Verifica el missatge...</translation>
     </message>
     <message>
-        <source>Meowcoin</source>
-        <translation>Meowcoin</translation>
+        <source>Slimecoin</source>
+        <translation>Slimecoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -1295,12 +1295,12 @@
         <translation>Encripta les claus privades pertanyents al moneder</translation>
     </message>
     <message>
-        <source>Sign messages with your Meowcoin addresses to prove you own them</source>
-        <translation>Signa el missatges amb la seua adreça de Meowcoin per provar que les poseeixes</translation>
+        <source>Sign messages with your Slimecoin addresses to prove you own them</source>
+        <translation>Signa el missatges amb la seua adreça de Slimecoin per provar que les poseeixes</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Meowcoin addresses</source>
-        <translation>Verifiqueu els missatges per assegurar-vos que han estat signats amb una adreça Meowcoin específica.</translation>
+        <source>Verify messages to ensure they were signed with specified Slimecoin addresses</source>
+        <translation>Verifiqueu els missatges per assegurar-vos que han estat signats amb una adreça Slimecoin específica.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -1311,8 +1311,8 @@
         <translation>&amp;Ajuda</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and meowcoin: URIs)</source>
-        <translation>Sol·licita pagaments (genera codis QR i meowcoin: URI)</translation>
+        <source>Request payments (generates QR codes and slimecoin: URIs)</source>
+        <translation>Sol·licita pagaments (genera codis QR i slimecoin: URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -1323,8 +1323,8 @@
         <translation>Mostra la llista d'adreces de recepció i etiquetes utilitzades</translation>
     </message>
     <message>
-        <source>Open a meowcoin: URI or payment request</source>
-        <translation>Obri una meowcoin: sol·licitud d'URI o pagament</translation>
+        <source>Open a slimecoin: URI or payment request</source>
+        <translation>Obri una slimecoin: sol·licitud d'URI o pagament</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1432,8 +1432,8 @@
         <translation>R&amp;eutilitza una adreça de recepció anterior (no recomanat)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Meowcoin network.</source>
-        <translation>Un missatge opcional que s'adjuntarà a la sol·licitud de pagament, que es mostrarà quan s'òbriga la sol·licitud. Nota: El missatge no s'enviarà amb el pagament per la xarxa Meowcoin.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Slimecoin network.</source>
+        <translation>Un missatge opcional que s'adjuntarà a la sol·licitud de pagament, que es mostrarà quan s'òbriga la sol·licitud. Nota: El missatge no s'enviarà amb el pagament per la xarxa Slimecoin.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1658,7 +1658,7 @@
         <translation>Amaga</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for meowcoin transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for slimecoin transactions than the network can process.</source>
         <translation>No hi ha cap problema en pagar només la comissió mínima sempre que hi haja menys volum de transacció que espai en els blocs. Però tingueu present que això pot acabar en una transacció que mai es confirme una vegada hi haja més demanda de transaccions de meows que la xarxa puga processar.</translation>
     </message>
     <message>
@@ -1790,8 +1790,8 @@
         <translation>La sol·licitud de pagament ha vençut.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Meowcoin address</source>
-        <translation>Avís: adreça Meowcoin no vàlida</translation>
+        <source>Warning: Invalid Slimecoin address</source>
+        <translation>Avís: adreça Slimecoin no vàlida</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -1821,8 +1821,8 @@
         <translation>Això és un pagament normal.</translation>
     </message>
     <message>
-        <source>The Meowcoin address to send the payment to</source>
-        <translation>L'adreça Meowcoin on enviar el pagament</translation>
+        <source>The Slimecoin address to send the payment to</source>
+        <translation>L'adreça Slimecoin on enviar el pagament</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1865,8 +1865,8 @@
         <translation>Introduïu una etiqueta per a esta adreça per afegir-la a la llista d'adreces utilitzades</translation>
     </message>
     <message>
-        <source>A message that was attached to the meowcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Meowcoin network.</source>
-        <translation>Un missatge que s'ha adjuntat al meowcoin: URI que s'emmagatzemarà amb la transacció per a la vostra referència. Nota: el missatge no s'enviarà a través de la xarxa Meowcoin.</translation>
+        <source>A message that was attached to the slimecoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Slimecoin network.</source>
+        <translation>Un missatge que s'ha adjuntat al slimecoin: URI que s'emmagatzemarà amb la transacció per a la vostra referència. Nota: el missatge no s'enviarà a través de la xarxa Slimecoin.</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -1906,8 +1906,8 @@
         <translation>Podeu signar missatges/acords amb les vostres adreces per provar que rebeu les meows que s'hi envien. Aneu amb compte no signar res que siga vague o aleatori, perquè en alguns atacs de suplantació es pot provar que hi signeu la vostra identitat. Només signeu aquelles declaracions completament detallades en què hi esteu d'acord. </translation>
     </message>
     <message>
-        <source>The Meowcoin address to sign the message with</source>
-        <translation>L'adreça Meowcoin amb què signar el missatge</translation>
+        <source>The Slimecoin address to sign the message with</source>
+        <translation>L'adreça Slimecoin amb què signar el missatge</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1938,8 +1938,8 @@
         <translation>Copia la signatura actual al porta-retalls del sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Meowcoin address</source>
-        <translation>Signa el missatge per provar que ets propietari d'esta adreça Meowcoin</translation>
+        <source>Sign the message to prove you own this Slimecoin address</source>
+        <translation>Signa el missatge per provar que ets propietari d'esta adreça Slimecoin</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1962,12 +1962,12 @@
         <translation>Introduïu l'adreça del receptor, el missatge (assegureu-vos de copiar els salts de línia, espais, tabuladors, etc. exactament) i signatura de sota per verificar el missatge. Tingueu cura de no llegir més en la signatura del que està al missatge signat, per evitar ser enganyat per un atac d'home-en-el-mig. Tingueu en compte que això només demostra que la part que signa rep amb l'adreça, i no es pot provar l'enviament de qualsevol transacció!</translation>
     </message>
     <message>
-        <source>The Meowcoin address the message was signed with</source>
-        <translation>L'adreça Meowcoin amb què va ser signat el missatge</translation>
+        <source>The Slimecoin address the message was signed with</source>
+        <translation>L'adreça Slimecoin amb què va ser signat el missatge</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Meowcoin address</source>
-        <translation>Verificar el missatge per assegurar-se que ha estat signat amb una adreça Meowcoin específica</translation>
+        <source>Verify the message to ensure it was signed with the specified Slimecoin address</source>
+        <translation>Verificar el missatge per assegurar-se que ha estat signat amb una adreça Slimecoin específica</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2493,7 +2493,7 @@
     </message>
     </context>
 <context>
-    <name>meowcoin-core</name>
+    <name>slimecoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opcions:</translation>
@@ -2527,8 +2527,8 @@
         <translation>Executa en segon pla com a programa dimoni i accepta ordes</translation>
     </message>
     <message>
-        <source>Meowcoin Core</source>
-        <translation>Meowcoin Core</translation>
+        <source>Slimecoin Core</source>
+        <translation>Slimecoin Core</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>

@@ -1,9 +1,9 @@
 // Copyright (c) 2011-2014 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The Meowcoin Core developers
+// Copyright (c) 2017-2019 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "meowcoinaddressvalidator.h"
+#include "slimecoinaddressvalidator.h"
 
 #include "base58.h"
 
@@ -16,12 +16,12 @@
   - All lower-case letters except for 'l'
 */
 
-MeowcoinAddressEntryValidator::MeowcoinAddressEntryValidator(QObject *parent) :
+SlimecoinAddressEntryValidator::SlimecoinAddressEntryValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State MeowcoinAddressEntryValidator::validate(QString &input, int &pos) const
+QValidator::State SlimecoinAddressEntryValidator::validate(QString &input, int &pos) const
 {
     Q_UNUSED(pos);
 
@@ -81,15 +81,15 @@ QValidator::State MeowcoinAddressEntryValidator::validate(QString &input, int &p
     return state;
 }
 
-MeowcoinAddressCheckValidator::MeowcoinAddressCheckValidator(QObject *parent) :
+SlimecoinAddressCheckValidator::SlimecoinAddressCheckValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State MeowcoinAddressCheckValidator::validate(QString &input, int &pos) const
+QValidator::State SlimecoinAddressCheckValidator::validate(QString &input, int &pos) const
 {
     Q_UNUSED(pos);
-    // Validate the passed Meowcoin address
+    // Validate the passed Slimecoin address
     if (IsValidDestinationString(input.toStdString())) {
         return QValidator::Acceptable;
     }

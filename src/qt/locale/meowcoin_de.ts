@@ -43,11 +43,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Wählen Sie die Adresse aus, an die Sie Meowcoin überweisen möchten</translation>
+        <translation>Wählen Sie die Adresse aus, an die Sie Slimecoin überweisen möchten</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Wählen Sie die Adresse aus, über die Sie Meowcoin empfangen wollen</translation>
+        <translation>Wählen Sie die Adresse aus, über die Sie Slimecoin empfangen wollen</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -62,12 +62,12 @@
         <translation>Empfangsadressen</translation>
     </message>
     <message>
-        <source>These are your Meowcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dies sind ihre Meowcoin-Adressen zum Tätigen von Überweisungen. Bitte prüfen Sie den Betrag und die Empfangsadresse, bevor Sie Meowcoins überweisen.</translation>
+        <source>These are your Slimecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dies sind ihre Slimecoin-Adressen zum Tätigen von Überweisungen. Bitte prüfen Sie den Betrag und die Empfangsadresse, bevor Sie Slimecoins überweisen.</translation>
     </message>
     <message>
-        <source>These are your Meowcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dies sind Ihre Meowcoin-Adressen zum Empfangen von Zahlungen. Es wird empfohlen, für jede Transaktion eine neue Empfangsadresse zu verwenden.</translation>
+        <source>These are your Slimecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dies sind Ihre Slimecoin-Adressen zum Empfangen von Zahlungen. Es wird empfohlen, für jede Transaktion eine neue Empfangsadresse zu verwenden.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +168,8 @@
         <translation>Wallet-Verschlüsselung bestätigen</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MEOWCOINS&lt;/b&gt;!</source>
-        <translation>Warnung: Wenn Sie Ihre Wallet verschlüsseln und Ihre Passphrase verlieren, werden Sie &lt;b&gt;alle Ihre Meowcoins verlieren&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SLIMECOINS&lt;/b&gt;!</source>
+        <translation>Warnung: Wenn Sie Ihre Wallet verschlüsseln und Ihre Passphrase verlieren, werden Sie &lt;b&gt;alle Ihre Slimecoins verlieren&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -181,7 +181,7 @@
     </message>
     <message>
         <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your meows from being stolen by malware infecting your computer.</source>
-        <translation>%1 wird jetzt beendet, um den Verschlüsselungsprozess abzuschließen. Bitte beachten Sie, dass die Wallet-Verschlüsselung nicht vollständig vor Diebstahl Ihrer Meowcoin durch Schadprogramme schützt, die Ihren Computer befällt.</translation>
+        <translation>%1 wird jetzt beendet, um den Verschlüsselungsprozess abzuschließen. Bitte beachten Sie, dass die Wallet-Verschlüsselung nicht vollständig vor Diebstahl Ihrer Slimecoin durch Schadprogramme schützt, die Ihren Computer befällt.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -398,7 +398,7 @@
     <name>AssetsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Meowcoin überweisen</translation>
+        <translation>Slimecoin überweisen</translation>
     </message>
     <message>
         <source>Asset Control Features</source>
@@ -485,8 +485,8 @@
         <translation>pro Kilobyte</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for meowcoin transactions than the network can process.</source>
-        <translation>Nur die minimale Gebühr zu bezahlen ist so lange in Ordnung, wie weniger Transaktionsvolumen als Platz in den Blöcken vorhanden ist. Aber Vorsicht, diese Option kann dazu führen, dass Transaktionen nicht bestätigt werden, wenn mehr Bedarf an Meowcoin-Transaktionen besteht als das Netzwerk verarbeiten kann.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for slimecoin transactions than the network can process.</source>
+        <translation>Nur die minimale Gebühr zu bezahlen ist so lange in Ordnung, wie weniger Transaktionsvolumen als Platz in den Blöcken vorhanden ist. Aber Vorsicht, diese Option kann dazu führen, dass Transaktionen nicht bestätigt werden, wenn mehr Bedarf an Slimecoin-Transaktionen besteht als das Netzwerk verarbeiten kann.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -621,8 +621,8 @@
         <translation><numerusform>Voraussichtlicher Beginn der Bestätigung innerhalb von %n Block.</numerusform><numerusform>Voraussichtlicher Beginn der Bestätigung innerhalb von %n Blöcken.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Meowcoin address</source>
-        <translation>Warnung: Ungültige Meowcoin-Adresse</translation>
+        <source>Warning: Invalid Slimecoin address</source>
+        <translation>Warnung: Ungültige Slimecoin-Adresse</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -945,8 +945,8 @@
         <translation>Adresse:</translation>
     </message>
     <message>
-        <source>The MEWC address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
-        <translation>Die MEWC-Adresse, die dieses Asset halten wird (Sie müssen diese Adresse besitzen). Das Feld Leer lassen, um eine neue Adresse zu erstellen.</translation>
+        <source>The SLME address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+        <translation>Die SLME-Adresse, die dieses Asset halten wird (Sie müssen diese Adresse besitzen). Das Feld Leer lassen, um eine neue Adresse zu erstellen.</translation>
     </message>
     <message>
         <source>Verifier String:</source>
@@ -1037,8 +1037,8 @@
         <translation>pro Kilobyte</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for meowcoin transactions than the network can process.</source>
-        <translation>Nur die minimale Gebühr zu bezahlen ist so lange in Ordnung, wie weniger Transaktionsvolumen als Platz in den Blöcken vorhanden ist. Aber Vorsicht, diese Option kann dazu führen, dass Transaktionen nicht bestätigt werden, wenn mehr Bedarf an Meowcoin-Transaktionen besteht als das Netzwerk verarbeiten kann.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for slimecoin transactions than the network can process.</source>
+        <translation>Nur die minimale Gebühr zu bezahlen ist so lange in Ordnung, wie weniger Transaktionsvolumen als Platz in den Blöcken vorhanden ist. Aber Vorsicht, diese Option kann dazu führen, dass Transaktionen nicht bestätigt werden, wenn mehr Bedarf an Slimecoin-Transaktionen besteht als das Netzwerk verarbeiten kann.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -1081,8 +1081,8 @@
         <translation>Kontostand:</translation>
     </message>
     <message>
-        <source>123.456 MEWC</source>
-        <translation>123.456 MEWC</translation>
+        <source>123.456 SLME</source>
+        <translation>123.456 SLME</translation>
     </message>
     <message>
         <source>Copy quantity</source>
@@ -1161,8 +1161,8 @@
         <translation>Der IPFS/Txid Hash ist nicht gültig. Bitte benutzen Sie einen gültigen IPFS/Txid Hash.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Meowcoin address</source>
-        <translation>Warnung: Ungültige Meowcoin-Adresse</translation>
+        <source>Warning: Invalid Slimecoin address</source>
+        <translation>Warnung: Ungültige Slimecoin-Adresse</translation>
     </message>
     <message>
         <source>Warning: Restricted Assets Reissuance requires an address</source>
@@ -1284,8 +1284,8 @@
         <translation>Zahlungsadresse bearbeiten</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Meowcoin address.</source>
-        <translation>Die eingegebene Adresse "%1" ist keine gültige Meowcoin-Adresse.</translation>
+        <source>The entered address "%1" is not a valid Slimecoin address.</source>
+        <translation>Die eingegebene Adresse "%1" ist keine gültige Slimecoin-Adresse.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1517,12 +1517,12 @@ Empfohlene Aktion: Vollständige Synchronisation bevor eine Transaktion gesendet
         <translation>Ein benutzerdefiniertes Datenverzeichnis verwenden:</translation>
     </message>
     <message>
-        <source>Meowcoin</source>
-        <translation>Meowcoin</translation>
+        <source>Slimecoin</source>
+        <translation>Slimecoin</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Meowcoin block chain.</source>
-        <translation>%1 wird eine Kopie der Meowcoin-Blockchain herunterladen und speichern.</translation>
+        <source>%1 will download and store a copy of the Slimecoin block chain.</source>
+        <translation>%1 wird eine Kopie der Slimecoin-Blockchain herunterladen und speichern.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1563,8 +1563,8 @@ Empfohlene Aktion: Vollständige Synchronisation bevor eine Transaktion gesendet
         <translation>Wählen Sie den Typ der zu erstellenden Wallet aus.</translation>
     </message>
     <message>
-        <source>Since no wallet.dat file was found in the Meowcoin block chain data directory, a wallet file will be created.</source>
-        <translation>Eine neue Wallet-Datei wird erstellt, da am Speicherort der Meowcoin-Blockchain  keine wallet.dat gefunden wurde.</translation>
+        <source>Since no wallet.dat file was found in the Slimecoin block chain data directory, a wallet file will be created.</source>
+        <translation>Eine neue Wallet-Datei wird erstellt, da am Speicherort der Slimecoin-Blockchain  keine wallet.dat gefunden wurde.</translation>
     </message>
     <message>
         <source>Please choose what you would like to do:</source>
@@ -1644,12 +1644,12 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Formular</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the meowcoin network, as detailed below.</source>
-        <translation>Neueste Transaktionen werden eventuell noch nicht angezeigt, daher könnte Ihr Kontostand veraltet sein. Er wird korrigiert, sobald Ihre Wallet die Synchronisation mit dem Meowcoin-Netzwerk erfolgreich abgeschlossen hat. Details dazu finden sich weiter unten.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the slimecoin network, as detailed below.</source>
+        <translation>Neueste Transaktionen werden eventuell noch nicht angezeigt, daher könnte Ihr Kontostand veraltet sein. Er wird korrigiert, sobald Ihre Wallet die Synchronisation mit dem Slimecoin-Netzwerk erfolgreich abgeschlossen hat. Details dazu finden sich weiter unten.</translation>
     </message>
     <message>
         <source>Attempting to spend meows that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Versuche, Meowcoins aus noch nicht angezeigten Transaktionen auszugeben, werden vom Netzwerk nicht akzeptiert.</translation>
+        <translation>Versuche, Slimecoins aus noch nicht angezeigten Transaktionen auszugeben, werden vom Netzwerk nicht akzeptiert.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1727,8 +1727,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Benutzerdefinierte Absicht bzw. Verwendungszweck der Transaktion</translation>
     </message>
     <message>
-        <source>The asset (or MEWC) removed or added to balance.</source>
-        <translation>Das Asset (oder MEWC), das entfernt oder zum Bestand hinzugefügt wurde.</translation>
+        <source>The asset (or SLME) removed or added to balance.</source>
+        <translation>Das Asset (oder SLME), das entfernt oder zum Bestand hinzugefügt wurde.</translation>
     </message>
 </context>
 <context>
@@ -1805,8 +1805,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>&amp;Währungseinheit:</translation>
     </message>
     <message>
-        <source>Choose which currency to display the realtime value of MEWC in (ie: BTC/MEWC).</source>
-        <translation>Wählen Sie, in welcher Währung der Echtzeitwert von MEWC angezeigt wird (z.B.: BTC/MEWC).</translation>
+        <source>Choose which currency to display the realtime value of SLME in (ie: BTC/SLME).</source>
+        <translation>Wählen Sie, in welcher Währung der Echtzeitwert von SLME angezeigt wird (z.B.: BTC/SLME).</translation>
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
@@ -1857,8 +1857,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>&amp;Unbestätigtes Wechselgeld darf ausgegeben werden</translation>
     </message>
     <message>
-        <source>Automatically open the Meowcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatisch den Meowcoin-Clientport auf dem Router öffnen. Dies funktioniert nur, wenn Ihr Router UPnP unterstützt und dies aktiviert ist.</translation>
+        <source>Automatically open the Slimecoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatisch den Slimecoin-Clientport auf dem Router öffnen. Dies funktioniert nur, wenn Ihr Router UPnP unterstützt und dies aktiviert ist.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1869,8 +1869,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Eingehende Verbindungen zulassen.</translation>
     </message>
     <message>
-        <source>Connect to the Meowcoin network through a SOCKS5 proxy.</source>
-        <translation>Über einen SOCKS5-Proxy mit dem Meowcoin-Netzwerk verbinden.</translation>
+        <source>Connect to the Slimecoin network through a SOCKS5 proxy.</source>
+        <translation>Über einen SOCKS5-Proxy mit dem Slimecoin-Netzwerk verbinden.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1905,8 +1905,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Meowcoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Über einen separaten SOCKS5 Proxy für Tor Services mit dem Meowcoin Netzwerk verbinden.</translation>
+        <source>Connect to the Slimecoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Über einen separaten SOCKS5 Proxy für Tor Services mit dem Slimecoin Netzwerk verbinden.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1942,7 +1942,7 @@ Sie sind nicht wiederherstellbar!</translation>
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Wählen Sie die standardmäßige Untereinheit, die in der Benutzeroberfläche und beim Überweisen von Meowcoins angezeigt werden soll.</translation>
+        <translation>Wählen Sie die standardmäßige Untereinheit, die in der Benutzeroberfläche und beim Überweisen von Slimecoins angezeigt werden soll.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -2008,8 +2008,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Formular</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Meowcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Die angezeigten Informationen sind möglicherweise nicht mehr aktuell. Ihre Wallet wird automatisch synchronisiert, nachdem eine Verbindung zum Meowcoin-Netzwerk hergestellt wurde. Dieser Prozess ist jedoch derzeit noch nicht abgeschlossen.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Slimecoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Die angezeigten Informationen sind möglicherweise nicht mehr aktuell. Ihre Wallet wird automatisch synchronisiert, nachdem eine Verbindung zum Slimecoin-Netzwerk hergestellt wurde. Dieser Prozess ist jedoch derzeit noch nicht abgeschlossen.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -2048,8 +2048,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Aktueller Gesamtbetrag aus obigen Kategorien</translation>
     </message>
     <message>
-        <source>MEWC Balances</source>
-        <translation>MEWC Kontostände</translation>
+        <source>SLME Balances</source>
+        <translation>SLME Kontostände</translation>
     </message>
     <message>
         <source>Your current balance in watch-only addresses</source>
@@ -2119,8 +2119,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Fehlerhafte Zahlungsanforderung</translation>
     </message>
     <message>
-        <source>Cannot start meowcoin: click-to-pay handler</source>
-        <translation>Kann Meowcoin nicht starten: Klicken-zum-Bezahlen-Handler</translation>
+        <source>Cannot start slimecoin: click-to-pay handler</source>
+        <translation>Kann Slimecoin nicht starten: Klicken-zum-Bezahlen-Handler</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -2135,8 +2135,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Ungültige Zahlungsadresse %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Meowcoin address or malformed URI parameters.</source>
-        <translation>URI kann nicht analysiert werden! Dies kann durch eine ungültige Meowcoin-Adresse oder fehlerhafte URI-Parameter verursacht werden.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Slimecoin address or malformed URI parameters.</source>
+        <translation>URI kann nicht analysiert werden! Dies kann durch eine ungültige Slimecoin-Adresse oder fehlerhafte URI-Parameter verursacht werden.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -2229,8 +2229,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Betrag</translation>
     </message>
     <message>
-        <source>Enter a Meowcoin address (e.g. %1)</source>
-        <translation>Meowcoin-Adresse eingeben (z.B. %1)</translation>
+        <source>Enter a Slimecoin address (e.g. %1)</source>
+        <translation>Slimecoin-Adresse eingeben (z.B. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -2651,7 +2651,7 @@ Sie sind nicht wiederherstellbar!</translation>
     </message>
 </context>
 <context>
-    <name>MeowcoinGUI</name>
+    <name>SlimecoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Nachricht s&amp;ignieren...</translation>
@@ -2693,8 +2693,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>&amp;Assets verschicken</translation>
     </message>
     <message>
-        <source>Transfer assets to MEWC addresses</source>
-        <translation>Assets an MEWC Adressen verschicken</translation>
+        <source>Transfer assets to SLME addresses</source>
+        <translation>Assets an SLME Adressen verschicken</translation>
     </message>
     <message>
         <source>&amp;Manage Assets</source>
@@ -2777,8 +2777,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>&amp;Wallet</translation>
     </message>
     <message>
-        <source>Meowcoin Market Price</source>
-        <translation>Meowcoin Marktpreis</translation>
+        <source>Slimecoin Market Price</source>
+        <translation>Slimecoin Marktpreis</translation>
     </message>
     <message>
         <source>Brought to you by binance.com</source>
@@ -2805,8 +2805,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Reindiziere Blöcke auf Datenträger...</translation>
     </message>
     <message>
-        <source>Send coins to a Meowcoin address</source>
-        <translation>Meowcoins an eine Meowcoin-Adresse überweisen</translation>
+        <source>Send coins to a Slimecoin address</source>
+        <translation>Slimecoins an eine Slimecoin-Adresse überweisen</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -2825,8 +2825,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Nachricht &amp;verifizieren...</translation>
     </message>
     <message>
-        <source>Meowcoin</source>
-        <translation>Meowcoin</translation>
+        <source>Slimecoin</source>
+        <translation>Slimecoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -2853,12 +2853,12 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Verschlüsselt die zu Ihrer Wallet gehörenden privaten Schlüssel</translation>
     </message>
     <message>
-        <source>Sign messages with your Meowcoin addresses to prove you own them</source>
-        <translation>Nachrichten signieren, um den Besitz Ihrer Meowcoin-Adressen zu beweisen</translation>
+        <source>Sign messages with your Slimecoin addresses to prove you own them</source>
+        <translation>Nachrichten signieren, um den Besitz Ihrer Slimecoin-Adressen zu beweisen</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Meowcoin addresses</source>
-        <translation>Nachrichten verifizieren, um sicherzustellen, dass diese mit den angegebenen Meowcoin-Adressen signiert wurden</translation>
+        <source>Verify messages to ensure they were signed with specified Slimecoin addresses</source>
+        <translation>Nachrichten verifizieren, um sicherzustellen, dass diese mit den angegebenen Slimecoin-Adressen signiert wurden</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -2869,8 +2869,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>&amp;Hilfe</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and meowcoin: URIs)</source>
-        <translation>Zahlungen anfordern (erzeugt QR-Codes und "meowcoin:"-URIs)</translation>
+        <source>Request payments (generates QR codes and slimecoin: URIs)</source>
+        <translation>Zahlungen anfordern (erzeugt QR-Codes und "slimecoin:"-URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -2881,16 +2881,16 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Liste verwendeter Empfangsadressen und Bezeichnungen anzeigen</translation>
     </message>
     <message>
-        <source>Open a meowcoin: URI or payment request</source>
-        <translation>Eine "meowcoin:"-URI oder Zahlungsanforderung öffnen</translation>
+        <source>Open a slimecoin: URI or payment request</source>
+        <translation>Eine "slimecoin:"-URI oder Zahlungsanforderung öffnen</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Kommandozeilenoptionen</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Meowcoin network</source>
-        <translation><numerusform>%n aktive Verbindungen zum Meowcoin-Netzwerk</numerusform><numerusform>%n aktive Verbindungen zum Meowcoin-Netzwerk</numerusform></translation>
+        <source>%n active connection(s) to Slimecoin network</source>
+        <translation><numerusform>%n aktive Verbindungen zum Slimecoin-Netzwerk</numerusform><numerusform>%n aktive Verbindungen zum Slimecoin-Netzwerk</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -2933,7 +2933,7 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Auf aktuellem Stand</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Meowcoin command-line options</source>
+        <source>Show the %1 help message to get a list with possible Slimecoin command-line options</source>
         <translation>Zeige den "%1"-Hilfetext, um eine Liste mit möglichen Kommandozeilenoptionen zu erhalten</translation>
     </message>
     <message>
@@ -3011,8 +3011,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Wallet ist &lt;b&gt;verschlüsselt&lt;/b&gt; und aktuell &lt;b&gt;gesperrt&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Meowcoin can no longer continue safely and will quit.</source>
-        <translation>Ein schwerer Fehler ist aufgetreten. Meowcoin kann nicht stabil weiter ausgeführt werden und wird beendet.</translation>
+        <source>A fatal error occurred. Slimecoin can no longer continue safely and will quit.</source>
+        <translation>Ein schwerer Fehler ist aufgetreten. Slimecoin kann nicht stabil weiter ausgeführt werden und wird beendet.</translation>
     </message>
 </context>
 <context>
@@ -3038,8 +3038,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Vorhandene Empfangsadresse &amp;wiederverwenden (nicht empfohlen)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Meowcoin network.</source>
-        <translation>Eine optionale Nachricht, die an die Zahlungsanforderung angehängt wird. Sie wird angezeigt, wenn die Anforderung geöffnet wird. Hinweis: Diese Nachricht wird nicht mit der Zahlung über das Meowcoin-Netzwerk gesendet.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Slimecoin network.</source>
+        <translation>Eine optionale Nachricht, die an die Zahlungsanforderung angehängt wird. Sie wird angezeigt, wenn die Anforderung geöffnet wird. Hinweis: Diese Nachricht wird nicht mit der Zahlung über das Slimecoin-Netzwerk gesendet.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -3251,8 +3251,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Adresse:</translation>
     </message>
     <message>
-        <source>The MEWC address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
-        <translation>Die MEWC-Adresse, die dieses Asset halten wird (Sie müssen diese Adresse besitzen). Das Feld leer lassen, um eine neue Adresse zu erstellen.</translation>
+        <source>The SLME address that will hold this asset (You must own this address). Leave blank to create a new address.</source>
+        <translation>Die SLME-Adresse, die dieses Asset halten wird (Sie müssen diese Adresse besitzen). Das Feld leer lassen, um eine neue Adresse zu erstellen.</translation>
     </message>
     <message>
         <source>Verifier String:</source>
@@ -3331,8 +3331,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>pro Kilobyte</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for meowcoin transactions than the network can process.</source>
-        <translation>Nur die minimale Gebühr zu bezahlen ist so lange in Ordnung, wie weniger Transaktionsvolumen als Platz in den Blöcken vorhanden ist. Aber Vorsicht, diese Option kann dazu führen, dass Transaktionen nicht bestätigt werden, wenn mehr Bedarf an Meowcoin-Transaktionen besteht als das Netzwerk verarbeiten kann.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for slimecoin transactions than the network can process.</source>
+        <translation>Nur die minimale Gebühr zu bezahlen ist so lange in Ordnung, wie weniger Transaktionsvolumen als Platz in den Blöcken vorhanden ist. Aber Vorsicht, diese Option kann dazu führen, dass Transaktionen nicht bestätigt werden, wenn mehr Bedarf an Slimecoin-Transaktionen besteht als das Netzwerk verarbeiten kann.</translation>
     </message>
     <message>
         <source>Recommended:</source>
@@ -3359,8 +3359,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Kontostand:</translation>
     </message>
     <message>
-        <source>123.456 MEWC</source>
-        <translation>123,456 MEWC</translation>
+        <source>123.456 SLME</source>
+        <translation>123,456 SLME</translation>
     </message>
     <message>
         <source>Copy quantity</source>
@@ -3403,16 +3403,16 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Anzahl zu groß. Maximal 21.000.000.000</translation>
     </message>
     <message>
-        <source>Invalid Meowcoin Destination Address</source>
-        <translation>Ungültige Meowcoin-Zieladresse</translation>
+        <source>Invalid Slimecoin Destination Address</source>
+        <translation>Ungültige Slimecoin-Zieladresse</translation>
     </message>
     <message>
         <source>Warning: Restricted Assets Issuance requires an address</source>
         <translation>Warnung: Die Ausgabe eingeschränkter Assets erfordert eine Adresse</translation>
     </message>
     <message>
-        <source>Warning: Invalid Meowcoin address</source>
-        <translation>Warnung: Ungültige Meowcoin-Adresse</translation>
+        <source>Warning: Invalid Slimecoin address</source>
+        <translation>Warnung: Ungültige Slimecoin-Adresse</translation>
     </message>
     <message>
         <source>Yes</source>
@@ -3501,8 +3501,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Dies ist eine Asset-Zahlung</translation>
     </message>
     <message>
-        <source>A message that was attached to the meowcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Meowcoin network.</source>
-        <translation>Eine an die "meowcoin:"-URI angefügte Nachricht, die zusammen mit der Transaktion gespeichert wird. Hinweis: Diese Nachricht wird nicht über das Meowcoin-Netzwerk gesendet.</translation>
+        <source>A message that was attached to the slimecoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Slimecoin network.</source>
+        <translation>Eine an die "slimecoin:"-URI angefügte Nachricht, die zusammen mit der Transaktion gespeichert wird. Hinweis: Diese Nachricht wird nicht über das Slimecoin-Netzwerk gesendet.</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -3549,7 +3549,7 @@ Sie sind nicht wiederherstellbar!</translation>
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Meowcoins überweisen</translation>
+        <translation>Slimecoins überweisen</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -3624,8 +3624,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Ausblenden</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for meowcoin transactions than the network can process.</source>
-        <translation>Nur die minimale Gebühr zu bezahlen ist so lange in Ordnung, wie weniger Transaktionsvolumen als Platz in den Blöcken vorhanden ist. Aber Vorsicht, diese Option kann dazu führen, dass Transaktionen nicht bestätigt werden, wenn mehr Bedarf an Meowcoin-Transaktionen besteht als das Netzwerk verarbeiten kann.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for slimecoin transactions than the network can process.</source>
+        <translation>Nur die minimale Gebühr zu bezahlen ist so lange in Ordnung, wie weniger Transaktionsvolumen als Platz in den Blöcken vorhanden ist. Aber Vorsicht, diese Option kann dazu führen, dass Transaktionen nicht bestätigt werden, wenn mehr Bedarf an Slimecoin-Transaktionen besteht als das Netzwerk verarbeiten kann.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -3776,8 +3776,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Nur die notwendige Gebühr in Höhe von %1 zahlen</translation>
     </message>
     <message>
-        <source>Warning: Invalid Meowcoin address</source>
-        <translation>Warnung: Ungültige Meowcoin-Adresse</translation>
+        <source>Warning: Invalid Slimecoin address</source>
+        <translation>Warnung: Ungültige Slimecoin-Adresse</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -3815,7 +3815,7 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Dies ist eine normale Überweisung.</translation>
     </message>
     <message>
-        <source>The Meowcoin address to send the payment to</source>
+        <source>The Slimecoin address to send the payment to</source>
         <translation>Die Zahlungsadresse der Überweisung</translation>
     </message>
     <message>
@@ -3836,7 +3836,7 @@ Sie sind nicht wiederherstellbar!</translation>
     </message>
     <message>
         <source>The fee will be deducted from the amount being sent. The recipient will receive less meows than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Die Gebühr wird vom zu überweisenden Betrag abgezogen. Der Empfänger wird also weniger Meowcoins erhalten, als Sie im Betrags-Feld eingegeben haben. Falls mehrere Empfänger ausgewählt wurden, wird die Gebühr gleichmäßig verteilt.</translation>
+        <translation>Die Gebühr wird vom zu überweisenden Betrag abgezogen. Der Empfänger wird also weniger Slimecoins erhalten, als Sie im Betrags-Feld eingegeben haben. Falls mehrere Empfänger ausgewählt wurden, wird die Gebühr gleichmäßig verteilt.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -3859,8 +3859,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Adressbezeichnung eingeben, die dann zusammen mit der Adresse der Liste bereits verwendeter Adressen hinzugefügt wird.</translation>
     </message>
     <message>
-        <source>A message that was attached to the meowcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Meowcoin network.</source>
-        <translation>Eine an die "meowcoin:"-URI angefügte Nachricht, die zusammen mit der Transaktion gespeichert wird. Hinweis: Diese Nachricht wird nicht über das Meowcoin-Netzwerk gesendet.</translation>
+        <source>A message that was attached to the slimecoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Slimecoin network.</source>
+        <translation>Eine an die "slimecoin:"-URI angefügte Nachricht, die zusammen mit der Transaktion gespeichert wird. Hinweis: Diese Nachricht wird nicht über das Slimecoin-Netzwerk gesendet.</translation>
     </message>
     <message>
         <source>Memo:</source>
@@ -3901,11 +3901,11 @@ Sie sind nicht wiederherstellbar!</translation>
     </message>
     <message>
         <source>You can sign messages/agreements with your addresses to prove you can receive meows sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Sie können Nachrichten/Vereinbarungen mit Hilfe Ihrer Adressen signieren, um zu beweisen, dass Sie Meowcoins empfangen können, die an diese Adressen überwiesen werden. Seien Sie vorsichtig und signieren Sie nichts Vages oder Willkürliches, um Ihre Indentität vor Phishingangriffen zu schützen. Signieren Sie nur vollständig-detaillierte Aussagen, mit denen Sie auch einverstanden sind.</translation>
+        <translation>Sie können Nachrichten/Vereinbarungen mit Hilfe Ihrer Adressen signieren, um zu beweisen, dass Sie Slimecoins empfangen können, die an diese Adressen überwiesen werden. Seien Sie vorsichtig und signieren Sie nichts Vages oder Willkürliches, um Ihre Indentität vor Phishingangriffen zu schützen. Signieren Sie nur vollständig-detaillierte Aussagen, mit denen Sie auch einverstanden sind.</translation>
     </message>
     <message>
-        <source>The Meowcoin address to sign the message with</source>
-        <translation>Die Meowcoin-Adresse mit der die Nachricht signiert wird</translation>
+        <source>The Slimecoin address to sign the message with</source>
+        <translation>Die Slimecoin-Adresse mit der die Nachricht signiert wird</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -3936,8 +3936,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Aktuelle Signatur in die Zwischenablage kopieren</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Meowcoin address</source>
-        <translation>Die Nachricht signieren, um den Besitz dieser Meowcoin-Adresse zu beweisen</translation>
+        <source>Sign the message to prove you own this Slimecoin address</source>
+        <translation>Die Nachricht signieren, um den Besitz dieser Slimecoin-Adresse zu beweisen</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -3960,12 +3960,12 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Geben Sie die Zahlungsadresse des Empfängers, Nachricht (achten Sie darauf Zeilenumbrüche, Leerzeichen, Tabulatoren usw. exakt zu kopieren) und Signatur unten ein, um die Nachricht zu verifizieren. Vorsicht, interpretieren Sie nicht mehr in die Signatur hinein, als in der signierten Nachricht selber enthalten ist, um nicht von einem Man-in-the-middle-Angriff hinters Licht geführt zu werden. Beachten Sie dass dies nur beweist, dass die signierende Partei über diese Adresse Überweisungen empfangen kann.</translation>
     </message>
     <message>
-        <source>The Meowcoin address the message was signed with</source>
-        <translation>Die Meowcoin-Adresse mit der die Nachricht signiert wurde</translation>
+        <source>The Slimecoin address the message was signed with</source>
+        <translation>Die Slimecoin-Adresse mit der die Nachricht signiert wurde</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Meowcoin address</source>
-        <translation>Die Nachricht verifizieren, um sicherzustellen, dass diese mit der angegebenen Meowcoin-Adresse signiert wurde</translation>
+        <source>Verify the message to ensure it was signed with the specified Slimecoin address</source>
+        <translation>Die Nachricht verifizieren, um sicherzustellen, dass diese mit der angegebenen Slimecoin-Adresse signiert wurde</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -4182,7 +4182,7 @@ Sie sind nicht wiederherstellbar!</translation>
     </message>
     <message>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to "not accepted" and it won't be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Erzeugte Meowcoins müssen %1 Blöcke lang reifen, bevor sie ausgegeben werden können. Als Sie diesen Block erzeugt haben, wurde er an das Netzwerk übertragen, um ihn der Blockchain hinzuzufügen. Falls dies fehlschlägt, wird der Status in "nicht angenommen" geändert und Sie werden keine Meowcoins gutgeschrieben bekommen. Das kann gelegentlich passieren, wenn ein anderer Knoten einen Block fast zeitgleich erzeugt.</translation>
+        <translation>Erzeugte Slimecoins müssen %1 Blöcke lang reifen, bevor sie ausgegeben werden können. Als Sie diesen Block erzeugt haben, wurde er an das Netzwerk übertragen, um ihn der Blockchain hinzuzufügen. Falls dies fehlschlägt, wird der Status in "nicht angenommen" geändert und Sie werden keine Slimecoins gutgeschrieben bekommen. Das kann gelegentlich passieren, wenn ein anderer Knoten einen Block fast zeitgleich erzeugt.</translation>
     </message>
     <message>
         <source>Debug information</source>
@@ -4516,7 +4516,7 @@ Sie sind nicht wiederherstellbar!</translation>
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>Meowcoins überweisen</translation>
+        <translation>Slimecoins überweisen</translation>
     </message>
     </context>
 <context>
@@ -4555,7 +4555,7 @@ Sie sind nicht wiederherstellbar!</translation>
     </message>
     </context>
 <context>
-    <name>meowcoin-core</name>
+    <name>slimecoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Optionen:</translation>
@@ -4617,8 +4617,8 @@ Sie sind nicht wiederherstellbar!</translation>
         <translation>Kann HTTP Server nicht starten. Siehe debug log für Details.</translation>
     </message>
     <message>
-        <source>Meowcoin Core</source>
-        <translation>Meowcoin Core</translation>
+        <source>Slimecoin Core</source>
+        <translation>Slimecoin Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

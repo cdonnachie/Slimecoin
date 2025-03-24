@@ -1,6 +1,6 @@
-# `meowcoin.conf` Configuration File
+# `slimecoin.conf` Configuration File
 
-The configuration file is used by `meowcoind`, `meowcoin-qt` and `meowcoin-cli`.
+The configuration file is used by `slimecoind`, `slimecoin-qt` and `slimecoin-cli`.
 
 All command-line options (except for `-?`, `-help`, `-version` and `-conf`) may be specified in a configuration file, and all configuration file options (except for `includeconf`) may also be specified on the command line. Command-line options override values set in the configuration file and configuration file options override values set in the GUI.
 
@@ -46,16 +46,16 @@ rpcport=4000
 
 ## Configuration File Path
 
-The configuration file is not automatically created; you can create it using your favorite text editor. By default, the configuration file name is `meowcoin.conf` and it is located in the Meowcoin data directory, but both the Meowcoin data directory and the configuration file path may be changed using the `-datadir` and `-conf` command-line options.
+The configuration file is not automatically created; you can create it using your favorite text editor. By default, the configuration file name is `slimecoin.conf` and it is located in the Slimecoin data directory, but both the Slimecoin data directory and the configuration file path may be changed using the `-datadir` and `-conf` command-line options.
 
-The `includeconf=<file>` option in the `meowcoin.conf` file can be used to include additional configuration files.
+The `includeconf=<file>` option in the `slimecoin.conf` file can be used to include additional configuration files.
 
 ### Default configuration file locations
 
 Operating System | Data Directory | Example Path
 -- | -- | --
-Windows | `%APPDATA%\Meowcoin\` | `C:\Users\username\AppData\Roaming\Meowcoin\meowcoin.conf`
-Linux | `$HOME/.meowcoin/` | `/home/username/.meowcoin/meowcoin.conf`
-macOS | `$HOME/Library/Application Support/Rave /` | `/Users/username/Library/Application Support/Meowcoin/meowcoin.conf`
+Windows | `%APPDATA%\Slimecoin\` | `C:\Users\username\AppData\Roaming\Slimecoin\slimecoin.conf`
+Linux | `$HOME/.slimecoin/` | `/home/username/.slimecoin/slimecoin.conf`
+macOS | `$HOME/Library/Application Support/Rave /` | `/Users/username/Library/Application Support/Slimecoin/slimecoin.conf`
 
-You can find an example meowcoin.conf file in [share/examples/meowcoin.conf](../share/examples/meowcoin.conf).
+You can find an example slimecoin.conf file in [share/examples/slimecoin.conf](../share/examples/slimecoin.conf).

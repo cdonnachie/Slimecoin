@@ -339,8 +339,8 @@
         <translation>Пробросить порт через &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Meowcoin network through a SOCKS5 proxy.</source>
-        <translation>Подключится к сети Meowcoin через SOCKS5 прокси.</translation>
+        <source>Connect to the Slimecoin network through a SOCKS5 proxy.</source>
+        <translation>Подключится к сети Slimecoin через SOCKS5 прокси.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -411,8 +411,8 @@
 <context>
     <name>QObject</name>
     <message>
-        <source>Enter a Meowcoin address (e.g. %1)</source>
-        <translation>Введите Meowcoin-адрес (напр. %1)</translation>
+        <source>Enter a Slimecoin address (e.g. %1)</source>
+        <translation>Введите Slimecoin-адрес (напр. %1)</translation>
     </message>
     <message>
         <source>%1 and %2</source>
@@ -509,7 +509,7 @@
     </message>
 </context>
 <context>
-    <name>MeowcoinGUI</name>
+    <name>SlimecoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Подписать &amp;сообщение...</translation>
@@ -583,8 +583,8 @@
         <translation>&amp;Проверить сообщение...</translation>
     </message>
     <message>
-        <source>Meowcoin</source>
-        <translation>Meowcoin Core</translation>
+        <source>Slimecoin</source>
+        <translation>Slimecoin Core</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -823,14 +823,14 @@
     </message>
     </context>
 <context>
-    <name>meowcoin-core</name>
+    <name>slimecoin-core</name>
     <message>
-        <source>Meowcoin Core</source>
-        <translation>Meowcoin Core</translation>
+        <source>Slimecoin Core</source>
+        <translation>Slimecoin Core</translation>
     </message>
     <message>
         <source>Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway</source>
-        <translation>meowcoin-core</translation>
+        <translation>slimecoin-core</translation>
     </message>
     <message>
         <source>Information</source>

@@ -1,15 +1,15 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Meowcoin Core developers
+// Copyright (c) 2017-2021 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/meowcoin-config.h"
+#include "config/slimecoin-config.h"
 #endif
 
-#include "meowcoingui.h"
+#include "slimecoingui.h"
 
-#include "meowcoinunits.h"
+#include "slimecoinunits.h"
 #include "clientmodel.h"
 #include "guiconstants.h"
 #include "guiutil.h"
@@ -91,7 +91,7 @@ using namespace boost::placeholders;
 #define QTversionPreFiveEleven
 #endif
 
-const std::string MeowcoinGUI::DEFAULT_UIPLATFORM =
+const std::string SlimecoinGUI::DEFAULT_UIPLATFORM =
 #if defined(Q_OS_MAC)
         "macosx"
 #elif defined(Q_OS_WIN)
@@ -103,7 +103,7 @@ const std::string MeowcoinGUI::DEFAULT_UIPLATFORM =
 
 /** Display name for default wallet name. Uses tilde to avoid name
  * collisions in the future with additional wallets */
-const QString MeowcoinGUI::DEFAULT_WALLET = "~Default";
+const QString SlimecoinGUI::DEFAULT_WALLET = "~Default";
 
 /* Bit of a bodge, c++ really doesn't want you to predefine values
  * in only header files, so we do one-time value assignment here. */
@@ -112,9 +112,9 @@ std::array<CurrencyUnitDetails, 5> CurrencyUnits::CurrencyOptions = { {
     { "LTC",    "LTC"  , 1,          8}
 } };
 
-static bool ThreadSafeMessageBox(MeowcoinGUI *gui, const std::string& message, const std::string& caption, unsigned int style);
+static bool ThreadSafeMessageBox(SlimecoinGUI *gui, const std::string& message, const std::string& caption, unsigned int style);
 
-MeowcoinGUI::MeowcoinGUI(const PlatformStyle *_platformStyle, const NetworkStyle *networkStyle, QWidget *parent) :
+SlimecoinGUI::SlimecoinGUI(const PlatformStyle *_platformStyle, const NetworkStyle *networkStyle, QWidget *parent) :
     QMainWindow(parent),
     enableWallet(false),
     platformStyle(_platformStyle)
@@ -168,7 +168,7 @@ MeowcoinGUI::MeowcoinGUI(const PlatformStyle *_platformStyle, const NetworkStyle
         setCentralWidget(rpcConsole);
     }
 
-    /** MEWC START */
+    /** SLME START */
     labelCurrentMarket = new QLabel();
     labelCurrentPrice = new QLabel();
     headerWidget = new QWidget();
@@ -178,7 +178,7 @@ MeowcoinGUI::MeowcoinGUI(const PlatformStyle *_platformStyle, const NetworkStyle
     labelVersionUpdate = new QLabel();
     networkVersionManager = new QNetworkAccessManager();
     versionRequest = new QNetworkRequest();
-    /** MEWC END */
+    /** SLME END */
 
     // Accept D&D of URIs
     setAcceptDrops(true);
@@ -279,7 +279,7 @@ MeowcoinGUI::MeowcoinGUI(const PlatformStyle *_platformStyle, const NetworkStyle
 #endif
 }
 
-MeowcoinGUI::~MeowcoinGUI()
+SlimecoinGUI::~SlimecoinGUI()
 {
     // Unsubscribe from notifications from core
     unsubscribeFromCoreSignals();
@@ -296,7 +296,7 @@ MeowcoinGUI::~MeowcoinGUI()
     delete rpcConsole;
 }
 
-void MeowcoinGUI::loadFonts()
+void SlimecoinGUI::loadFonts()
 {
     QFontDatabase::addApplicationFont(":/fonts/opensans-bold");
     QFontDatabase::addApplicationFont(":/fonts/opensans-bolditalic");
@@ -311,7 +311,7 @@ void MeowcoinGUI::loadFonts()
 }
 
 
-void MeowcoinGUI::createActions()
+void SlimecoinGUI::createActions()
 {
     QFont font = QFont();
     font.setPixelSize(22);
@@ -332,7 +332,7 @@ void MeowcoinGUI::createActions()
     tabGroup->addAction(overviewAction);
 
     sendCoinsAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/send_selected", ":/icons/send"), tr("&Send"), this);
-    sendCoinsAction->setStatusTip(tr("Send coins to a Meowcoin address"));
+    sendCoinsAction->setStatusTip(tr("Send coins to a Slimecoin address"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
@@ -344,7 +344,7 @@ void MeowcoinGUI::createActions()
     sendCoinsMenuAction->setToolTip(sendCoinsMenuAction->statusTip());
 
     receiveCoinsAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/receiving_addresses_selected", ":/icons/receiving_addresses"), tr("&Receive"), this);
-    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and meowcoin: URIs)"));
+    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and slimecoin: URIs)"));
     receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
     receiveCoinsAction->setCheckable(true);
     receiveCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
@@ -363,7 +363,7 @@ void MeowcoinGUI::createActions()
     historyAction->setFont(font);
     tabGroup->addAction(historyAction);
 
-    /** MEWC START */
+    /** SLME START */
     createAssetAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/asset_create_selected", ":/icons/asset_create"), tr("&Create Assets"), this);
     createAssetAction->setStatusTip(tr("Create new assets"));
     createAssetAction->setToolTip(createAssetAction->statusTip());
@@ -373,7 +373,7 @@ void MeowcoinGUI::createActions()
     tabGroup->addAction(createAssetAction);
 
     transferAssetAction = new QAction(platformStyle->SingleColorIconOnOff(":/icons/asset_transfer_selected", ":/icons/asset_transfer"), tr("&Transfer Assets"), this);
-    transferAssetAction->setStatusTip(tr("Transfer assets to MEWC addresses"));
+    transferAssetAction->setStatusTip(tr("Transfer assets to SLME addresses"));
     transferAssetAction->setToolTip(transferAssetAction->statusTip());
     transferAssetAction->setCheckable(true);
     transferAssetAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_6));
@@ -412,7 +412,7 @@ void MeowcoinGUI::createActions()
     restrictedAssetAction->setFont(font);
     tabGroup->addAction(restrictedAssetAction);
 
-    /** MEWC END */
+    /** SLME END */
 
 #ifdef ENABLE_WALLET
     // These showNormalIfMinimized are needed because Send Coins and Receive Coins
@@ -471,9 +471,9 @@ void MeowcoinGUI::createActions()
     getMyWordsAction->setStatusTip(tr("Show the recoverywords for this wallet"));
 
     signMessageAction = new QAction(platformStyle->TextColorIcon(":/icons/edit"), tr("Sign &message..."), this);
-    signMessageAction->setStatusTip(tr("Sign messages with your Meowcoin addresses to prove you own them"));
+    signMessageAction->setStatusTip(tr("Sign messages with your Slimecoin addresses to prove you own them"));
     verifyMessageAction = new QAction(platformStyle->TextColorIcon(":/icons/verify"), tr("&Verify message..."), this);
-    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Meowcoin addresses"));
+    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Slimecoin addresses"));
 
     openRPCConsoleAction = new QAction(platformStyle->TextColorIcon(":/icons/debugwindow"), tr("&Debug Window"), this);
     openRPCConsoleAction->setStatusTip(tr("Open debugging and diagnostic console"));
@@ -489,11 +489,11 @@ void MeowcoinGUI::createActions()
     usedReceivingAddressesAction->setStatusTip(tr("Show the list of used receiving addresses and labels"));
 
     openAction = new QAction(platformStyle->TextColorIcon(":/icons/open"), tr("Open &URI..."), this);
-    openAction->setStatusTip(tr("Open a meowcoin: URI or payment request"));
+    openAction->setStatusTip(tr("Open a slimecoin: URI or payment request"));
 
     showHelpMessageAction = new QAction(platformStyle->TextColorIcon(":/icons/info"), tr("&Command-line options"), this);
     showHelpMessageAction->setMenuRole(QAction::NoRole);
-    showHelpMessageAction->setStatusTip(tr("Show the %1 help message to get a list with possible Meowcoin command-line options").arg(tr(PACKAGE_NAME)));
+    showHelpMessageAction->setStatusTip(tr("Show the %1 help message to get a list with possible Slimecoin command-line options").arg(tr(PACKAGE_NAME)));
 
     connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
     connect(aboutAction, SIGNAL(triggered()), this, SLOT(aboutClicked()));
@@ -527,7 +527,7 @@ void MeowcoinGUI::createActions()
     new QShortcut(QKeySequence(Qt::CTRL + Qt::SHIFT + Qt::Key_D), this, SLOT(showDebugWindow()));
 }
 
-void MeowcoinGUI::createMenuBar()
+void SlimecoinGUI::createMenuBar()
 {
 #ifdef Q_OS_MAC
     // Create a decoupled menu bar on Mac which stays even if the window is closed
@@ -574,14 +574,14 @@ void MeowcoinGUI::createMenuBar()
     help->addAction(aboutQtAction);
 }
 
-void MeowcoinGUI::createToolBars()
+void SlimecoinGUI::createToolBars()
 {
     if(walletFrame)
     {
         QSettings settings;
         bool IconsOnly = settings.value("fToolbarIconsOnly", false).toBool();
 
-        /** MEWC START */
+        /** SLME START */
         // Create the background and the vertical tool bar
         QWidget* toolbarWidget = new QWidget();
 
@@ -594,14 +594,14 @@ void MeowcoinGUI::createToolBars()
         labelToolbar->setAlignment(Qt::AlignCenter);
 
         if(IconsOnly) {
-            labelToolbar->setPixmap(QPixmap::fromImage(QImage(":/icons/mewctext")));
+            labelToolbar->setPixmap(QPixmap::fromImage(QImage(":/icons/slmetext")));
         }
         else {
-            labelToolbar->setPixmap(QPixmap::fromImage(QImage(":/icons/meowcointext")));
+            labelToolbar->setPixmap(QPixmap::fromImage(QImage(":/icons/slimecointext")));
         }
         labelToolbar->setStyleSheet(".QLabel{background-color: transparent; margin-top: 20px; border: none; padding-left: 0px; padding-right: 0px;}");
 
-        /** MEWC END */
+        /** SLME END */
 
         m_toolbar = new QToolBar();
         m_toolbar->setStyle(style());
@@ -643,7 +643,7 @@ void MeowcoinGUI::createToolBars()
         stringToUse = normalString;
 #endif
 
-        /** MEWC START */
+        /** SLME START */
 QString tbStyleSheet = ".QToolBar {background-color: transparent; border-color: transparent; }  "
                        ".QToolButton {background-color: transparent; border-color: transparent; width: 249px; color: white; border: none; padding-left: 0px; padding-right: 0px; border-radius: 10px; margin-bottom: 4px;} "
                        ".QToolButton:checked, .QToolButton:hover {background: #ce9005; color: white; border: none; border-radius: 10px;} "
@@ -666,9 +666,9 @@ QString tbStyleSheet = ".QToolBar {background-color: transparent; border-color: 
 
         overviewAction->setChecked(true);
 
-        QLabel* meowcoinLabel = new QLabel("MEOWCOIN");
-        meowcoinLabel->setAlignment(Qt::AlignCenter);
-        meowcoinLabel->setStyleSheet("color: white; font-weight: bold; font-size: 20px;"); // Adjust the font size as needed
+        QLabel* slimecoinLabel = new QLabel("SLIMECOIN");
+        slimecoinLabel->setAlignment(Qt::AlignCenter);
+        slimecoinLabel->setStyleSheet("color: white; font-weight: bold; font-size: 20px;"); // Adjust the font size as needed
 
         // Create a QLabel for version information
         QString currentVersion = QString("Version: %1.%2.%3").arg(CLIENT_VERSION_MAJOR).arg(CLIENT_VERSION_MINOR).arg(CLIENT_VERSION_REVISION);
@@ -680,7 +680,7 @@ QString tbStyleSheet = ".QToolBar {background-color: transparent; border-color: 
         meowLabelLayout->addWidget(labelToolbar);
         meowLabelLayout->addWidget(m_toolbar);
         meowLabelLayout->addStretch(1);
-        meowLabelLayout->addWidget(meowcoinLabel);
+        meowLabelLayout->addWidget(slimecoinLabel);
         meowLabelLayout->addWidget(versionLabel);  // Add the QLabel for version
         meowLabelLayout->setDirection(QBoxLayout::TopToBottom);
 
@@ -722,7 +722,7 @@ QString tbStyleSheet = ".QToolBar {background-color: transparent; border-color: 
         labelCurrentMarket->setAlignment(Qt::AlignVCenter);
         labelCurrentMarket->setStyleSheet(STRING_LABEL_COLOR);
         labelCurrentMarket->setFont(currentMarketFont);
-        labelCurrentMarket->setText(tr("Meowcoin Market Price"));
+        labelCurrentMarket->setText(tr("Slimecoin Market Price"));
 
         QString currentPriceStyleSheet = ".QLabel{color: %1;}";
         labelCurrentPrice->setContentsMargins(25,0,0,0);
@@ -730,18 +730,18 @@ QString tbStyleSheet = ".QToolBar {background-color: transparent; border-color: 
         labelCurrentPrice->setStyleSheet(currentPriceStyleSheet.arg(COLOR_LABELS.name()));
         labelCurrentPrice->setFont(currentMarketFont);
 
-        comboMewcUnit = new QComboBox(headerWidget);
+        comboSlmeUnit = new QComboBox(headerWidget);
         QStringList list;
         for(int unitNum = 0; unitNum < CurrencyUnits::count(); unitNum++) {
             list.append(QString(CurrencyUnits::CurrencyOptions[unitNum].Header));
         }
-        comboMewcUnit->addItems(list);
-        comboMewcUnit->setFixedHeight(26);
-        comboMewcUnit->setContentsMargins(5,0,0,0);
-        comboMewcUnit->setStyleSheet(STRING_LABEL_COLOR);
-        comboMewcUnit->setFont(currentMarketFont);
+        comboSlmeUnit->addItems(list);
+        comboSlmeUnit->setFixedHeight(26);
+        comboSlmeUnit->setContentsMargins(5,0,0,0);
+        comboSlmeUnit->setStyleSheet(STRING_LABEL_COLOR);
+        comboSlmeUnit->setFont(currentMarketFont);
 
-        labelVersionUpdate->setText("<a href=\"https://github.com/JustAResearcher/Meowcoin/releases\">New Wallet Version Available</a>");
+        labelVersionUpdate->setText("<a href=\"https://github.com/JustAResearcher/Slimecoin/releases\">New Wallet Version Available</a>");
         labelVersionUpdate->setTextFormat(Qt::RichText);
         labelVersionUpdate->setTextInteractionFlags(Qt::TextBrowserInteraction);
         labelVersionUpdate->setOpenExternalLinks(true);
@@ -754,7 +754,7 @@ QString tbStyleSheet = ".QToolBar {background-color: transparent; border-color: 
         priceLayout->setGeometry(headerWidget->rect());
         priceLayout->addWidget(labelCurrentMarket, 0, Qt::AlignVCenter | Qt::AlignLeft);
         priceLayout->addWidget(labelCurrentPrice, 0,  Qt::AlignVCenter | Qt::AlignLeft);
-        priceLayout->addWidget(comboMewcUnit, 0 , Qt::AlignBottom| Qt::AlignLeft);
+        priceLayout->addWidget(comboSlmeUnit, 0 , Qt::AlignBottom| Qt::AlignLeft);
         priceLayout->addStretch();
         priceLayout->addWidget(labelVersionUpdate, 0 , Qt::AlignVCenter | Qt::AlignRight);
 
@@ -827,14 +827,14 @@ QString tbStyleSheet = ".QToolBar {background-color: transparent; border-color: 
 
 
         // Signal change of displayed price units, must get new conversion ratio
-        connect(comboMewcUnit, SIGNAL(activated(int)), this, SLOT(currencySelectionChanged(int)));
+        connect(comboSlmeUnit, SIGNAL(activated(int)), this, SLOT(currencySelectionChanged(int)));
         // Create the timer
         connect(pricingTimer, SIGNAL(timeout()), this, SLOT(getPriceInfo()));
         pricingTimer->start(10000);
         getPriceInfo();
-        /** MEWC END */
+        /** SLME END */
 
-        // Get the latest Meowcoin release and let the user know if they are using the latest version
+        // Get the latest Slimecoin release and let the user know if they are using the latest version
         // Network request code for the header widget
         QObject::connect(networkVersionManager, &QNetworkAccessManager::finished,
                          this, [=](QNetworkReply *reply) {
@@ -915,7 +915,7 @@ QString tbStyleSheet = ".QToolBar {background-color: transparent; border-color: 
                                            "New Wallet Version Found",
                                            CClientUIInterface::MSG_VERSION | CClientUIInterface::BTN_NO);
                                    if (fRet) {
-                                       QString link = "https://github.com/JustAResearcher/Meowcoin/releases";
+                                       QString link = "https://github.com/JustAResearcher/Slimecoin/releases";
                                        QDesktopServices::openUrl(QUrl(link));
                                    }
                                }
@@ -931,21 +931,21 @@ QString tbStyleSheet = ".QToolBar {background-color: transparent; border-color: 
     }
 }
 
-void MeowcoinGUI::updateIconsOnlyToolbar(bool IconsOnly)
+void SlimecoinGUI::updateIconsOnlyToolbar(bool IconsOnly)
 {
     if(IconsOnly) {
-        labelToolbar->setPixmap(QPixmap::fromImage(QImage(":/icons/mewctext")));
+        labelToolbar->setPixmap(QPixmap::fromImage(QImage(":/icons/slmetext")));
         m_toolbar->setMaximumWidth(65);
         m_toolbar->setToolButtonStyle(Qt::ToolButtonIconOnly);
     }
     else {
-        labelToolbar->setPixmap(QPixmap::fromImage(QImage(":/icons/meowcointext")));
+        labelToolbar->setPixmap(QPixmap::fromImage(QImage(":/icons/slimecointext")));
         m_toolbar->setMinimumWidth(labelToolbar->width());
         m_toolbar->setMaximumWidth(255);
         m_toolbar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);        
     }
 }
-void MeowcoinGUI::setClientModel(ClientModel *_clientModel)
+void SlimecoinGUI::setClientModel(ClientModel *_clientModel)
 {
     this->clientModel = _clientModel;
     if(_clientModel)
@@ -1018,7 +1018,7 @@ void MeowcoinGUI::setClientModel(ClientModel *_clientModel)
 }
 
 #ifdef ENABLE_WALLET
-bool MeowcoinGUI::addWallet(const QString& name, WalletModel *walletModel)
+bool SlimecoinGUI::addWallet(const QString& name, WalletModel *walletModel)
 {
     if(!walletFrame)
         return false;
@@ -1026,14 +1026,14 @@ bool MeowcoinGUI::addWallet(const QString& name, WalletModel *walletModel)
     return walletFrame->addWallet(name, walletModel);
 }
 
-bool MeowcoinGUI::setCurrentWallet(const QString& name)
+bool SlimecoinGUI::setCurrentWallet(const QString& name)
 {
     if(!walletFrame)
         return false;
     return walletFrame->setCurrentWallet(name);
 }
 
-void MeowcoinGUI::removeAllWallets()
+void SlimecoinGUI::removeAllWallets()
 {
     if(!walletFrame)
         return;
@@ -1042,7 +1042,7 @@ void MeowcoinGUI::removeAllWallets()
 }
 #endif // ENABLE_WALLET
 
-void MeowcoinGUI::setWalletActionsEnabled(bool enabled)
+void SlimecoinGUI::setWalletActionsEnabled(bool enabled)
 {
     overviewAction->setEnabled(enabled);
     sendCoinsAction->setEnabled(enabled);
@@ -1060,17 +1060,17 @@ void MeowcoinGUI::setWalletActionsEnabled(bool enabled)
     usedReceivingAddressesAction->setEnabled(enabled);
     openAction->setEnabled(enabled);
 
-    /** MEWC START */
+    /** SLME START */
     transferAssetAction->setEnabled(false);
     createAssetAction->setEnabled(false);
     manageAssetAction->setEnabled(false);
     messagingAction->setEnabled(false);
     votingAction->setEnabled(false);
     restrictedAssetAction->setEnabled(false);
-    /** MEWC END */
+    /** SLME END */
 }
 
-void MeowcoinGUI::createTrayIcon(const NetworkStyle *networkStyle)
+void SlimecoinGUI::createTrayIcon(const NetworkStyle *networkStyle)
 {
 #ifndef Q_OS_MAC
     trayIcon = new QSystemTrayIcon(this);
@@ -1083,7 +1083,7 @@ void MeowcoinGUI::createTrayIcon(const NetworkStyle *networkStyle)
     notificator = new Notificator(QApplication::applicationName(), trayIcon, this);
 }
 
-void MeowcoinGUI::createTrayIconMenu()
+void SlimecoinGUI::createTrayIconMenu()
 {
 #ifndef Q_OS_MAC
     // return if trayIcon is unset (only on non-Mac OSes)
@@ -1120,7 +1120,7 @@ void MeowcoinGUI::createTrayIconMenu()
 }
 
 #ifndef Q_OS_MAC
-void MeowcoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
+void SlimecoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 {
     if(reason == QSystemTrayIcon::Trigger)
     {
@@ -1130,7 +1130,7 @@ void MeowcoinGUI::trayIconActivated(QSystemTrayIcon::ActivationReason reason)
 }
 #endif
 
-void MeowcoinGUI::optionsClicked()
+void SlimecoinGUI::optionsClicked()
 {
     if(!clientModel || !clientModel->getOptionsModel())
         return;
@@ -1140,7 +1140,7 @@ void MeowcoinGUI::optionsClicked()
     dlg.exec();
 }
 
-void MeowcoinGUI::aboutClicked()
+void SlimecoinGUI::aboutClicked()
 {
     if(!clientModel)
         return;
@@ -1149,7 +1149,7 @@ void MeowcoinGUI::aboutClicked()
     dlg.exec();
 }
 
-void MeowcoinGUI::showDebugWindow()
+void SlimecoinGUI::showDebugWindow()
 {
     rpcConsole->showNormal();
     rpcConsole->show();
@@ -1157,25 +1157,25 @@ void MeowcoinGUI::showDebugWindow()
     rpcConsole->activateWindow();
 }
 
-void MeowcoinGUI::showDebugWindowActivateConsole()
+void SlimecoinGUI::showDebugWindowActivateConsole()
 {
     rpcConsole->setTabFocus(RPCConsole::TAB_CONSOLE);
     showDebugWindow();
 }
 
-void MeowcoinGUI::showWalletRepair()
+void SlimecoinGUI::showWalletRepair()
 {
     rpcConsole->setTabFocus(RPCConsole::TAB_REPAIR);
     showDebugWindow();
 }
 
-void MeowcoinGUI::showHelpMessageClicked()
+void SlimecoinGUI::showHelpMessageClicked()
 {
     helpMessageDialog->show();
 }
 
 #ifdef ENABLE_WALLET
-void MeowcoinGUI::openClicked()
+void SlimecoinGUI::openClicked()
 {
     OpenURIDialog dlg(this);
     if(dlg.exec())
@@ -1184,68 +1184,68 @@ void MeowcoinGUI::openClicked()
     }
 }
 
-void MeowcoinGUI::gotoOverviewPage()
+void SlimecoinGUI::gotoOverviewPage()
 {
     overviewAction->setChecked(true);
     if (walletFrame) walletFrame->gotoOverviewPage();
 }
 
-void MeowcoinGUI::gotoHistoryPage()
+void SlimecoinGUI::gotoHistoryPage()
 {
     historyAction->setChecked(true);
     if (walletFrame) walletFrame->gotoHistoryPage();
 }
 
-void MeowcoinGUI::gotoReceiveCoinsPage()
+void SlimecoinGUI::gotoReceiveCoinsPage()
 {
     receiveCoinsAction->setChecked(true);
     if (walletFrame) walletFrame->gotoReceiveCoinsPage();
 }
 
-void MeowcoinGUI::gotoSendCoinsPage(QString addr)
+void SlimecoinGUI::gotoSendCoinsPage(QString addr)
 {
     sendCoinsAction->setChecked(true);
     if (walletFrame) walletFrame->gotoSendCoinsPage(addr);
 }
 
-void MeowcoinGUI::gotoSignMessageTab(QString addr)
+void SlimecoinGUI::gotoSignMessageTab(QString addr)
 {
     if (walletFrame) walletFrame->gotoSignMessageTab(addr);
 }
 
-void MeowcoinGUI::gotoVerifyMessageTab(QString addr)
+void SlimecoinGUI::gotoVerifyMessageTab(QString addr)
 {
     if (walletFrame) walletFrame->gotoVerifyMessageTab(addr);
 }
 
-/** MEWC START */
-void MeowcoinGUI::gotoAssetsPage()
+/** SLME START */
+void SlimecoinGUI::gotoAssetsPage()
 {
     transferAssetAction->setChecked(true);
     if (walletFrame) walletFrame->gotoAssetsPage();
 };
 
-void MeowcoinGUI::gotoCreateAssetsPage()
+void SlimecoinGUI::gotoCreateAssetsPage()
 {
     createAssetAction->setChecked(true);
     if (walletFrame) walletFrame->gotoCreateAssetsPage();
 };
 
-void MeowcoinGUI::gotoManageAssetsPage()
+void SlimecoinGUI::gotoManageAssetsPage()
 {
     manageAssetAction->setChecked(true);
     if (walletFrame) walletFrame->gotoManageAssetsPage();
 };
 
-void MeowcoinGUI::gotoRestrictedAssetsPage()
+void SlimecoinGUI::gotoRestrictedAssetsPage()
 {
     restrictedAssetAction->setChecked(true);
     if (walletFrame) walletFrame->gotoRestrictedAssetsPage();
 };
-/** MEWC END */
+/** SLME END */
 #endif // ENABLE_WALLET
 
-void MeowcoinGUI::updateNetworkState()
+void SlimecoinGUI::updateNetworkState()
 {
     int count = clientModel->getNumConnections();
     QString icon;
@@ -1261,7 +1261,7 @@ void MeowcoinGUI::updateNetworkState()
     QString tooltip;
 
     if (clientModel->getNetworkActive()) {
-        tooltip = tr("%n active connection(s) to Meowcoin network", "", count) + QString(".<br>") + tr("Click to disable network activity.");
+        tooltip = tr("%n active connection(s) to Slimecoin network", "", count) + QString(".<br>") + tr("Click to disable network activity.");
     } else {
         tooltip = tr("Network activity disabled.") + QString("<br>") + tr("Click to enable network activity again.");
         icon = ":/icons/network_disabled";
@@ -1274,17 +1274,17 @@ void MeowcoinGUI::updateNetworkState()
     connectionsControl->setPixmap(platformStyle->SingleColorIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
 }
 
-void MeowcoinGUI::setNumConnections(int count)
+void SlimecoinGUI::setNumConnections(int count)
 {
     updateNetworkState();
 }
 
-void MeowcoinGUI::setNetworkActive(bool networkActive)
+void SlimecoinGUI::setNetworkActive(bool networkActive)
 {
     updateNetworkState();
 }
 
-void MeowcoinGUI::updateHeadersSyncProgressLabel()
+void SlimecoinGUI::updateHeadersSyncProgressLabel()
 {
     int64_t headersTipTime = clientModel->getHeaderTipTime();
     int headersTipHeight = clientModel->getHeaderTipHeight();
@@ -1293,7 +1293,7 @@ void MeowcoinGUI::updateHeadersSyncProgressLabel()
         progressBarLabel->setText(tr("Syncing Headers (%1%)...").arg(QString::number(100.0 / (headersTipHeight+estHeadersLeft)*headersTipHeight, 'f', 1)));
 }
 
-void MeowcoinGUI::setNumBlocks(int count, const QDateTime& blockDate, double nVerificationProgress, bool header)
+void SlimecoinGUI::setNumBlocks(int count, const QDateTime& blockDate, double nVerificationProgress, bool header)
 {
     if (modalOverlay)
     {
@@ -1404,9 +1404,9 @@ void MeowcoinGUI::setNumBlocks(int count, const QDateTime& blockDate, double nVe
     progressBar->setToolTip(tooltip);
 }
 
-void MeowcoinGUI::message(const QString &title, const QString &message, unsigned int style, bool *ret)
+void SlimecoinGUI::message(const QString &title, const QString &message, unsigned int style, bool *ret)
 {
-    QString strTitle = tr("Meowcoin"); // default title
+    QString strTitle = tr("Slimecoin"); // default title
     // Default to information icon
     int nMBoxIcon = QMessageBox::Information;
     int nNotifyIcon = Notificator::Information;
@@ -1432,7 +1432,7 @@ void MeowcoinGUI::message(const QString &title, const QString &message, unsigned
             break;
         }
     }
-    // Append title to "Meowcoin - "
+    // Append title to "Slimecoin - "
     if (!msgType.isEmpty())
         strTitle += " - " + msgType;
 
@@ -1463,7 +1463,7 @@ void MeowcoinGUI::message(const QString &title, const QString &message, unsigned
         notificator->notify((Notificator::Class)nNotifyIcon, strTitle, message);
 }
 
-void MeowcoinGUI::changeEvent(QEvent *e)
+void SlimecoinGUI::changeEvent(QEvent *e)
 {
     QMainWindow::changeEvent(e);
 #ifndef Q_OS_MAC // Ignored on Mac
@@ -1482,7 +1482,7 @@ void MeowcoinGUI::changeEvent(QEvent *e)
 #endif
 }
 
-void MeowcoinGUI::closeEvent(QCloseEvent *event)
+void SlimecoinGUI::closeEvent(QCloseEvent *event)
 {
 #ifndef Q_OS_MAC // Ignored on Mac
     if(clientModel && clientModel->getOptionsModel())
@@ -1505,7 +1505,7 @@ void MeowcoinGUI::closeEvent(QCloseEvent *event)
 #endif
 }
 
-void MeowcoinGUI::showEvent(QShowEvent *event)
+void SlimecoinGUI::showEvent(QShowEvent *event)
 {
     // enable the debug window when the main window shows up
     openRPCConsoleAction->setEnabled(true);
@@ -1514,14 +1514,14 @@ void MeowcoinGUI::showEvent(QShowEvent *event)
 }
 
 #ifdef ENABLE_WALLET
-void MeowcoinGUI::incomingTransaction(const QString& date, int unit, const CAmount& amount, const QString& type, const QString& address, const QString& label, const QString& assetName)
+void SlimecoinGUI::incomingTransaction(const QString& date, int unit, const CAmount& amount, const QString& type, const QString& address, const QString& label, const QString& assetName)
 {
     // On new transaction, make an info balloon
     QString msg = tr("Date: %1\n").arg(date);
-    if (assetName == "MEWC")
-        msg += tr("Amount: %1\n").arg(MeowcoinUnits::formatWithUnit(unit, amount, true));
+    if (assetName == "SLME")
+        msg += tr("Amount: %1\n").arg(SlimecoinUnits::formatWithUnit(unit, amount, true));
     else
-        msg += tr("Amount: %1\n").arg(MeowcoinUnits::formatWithCustomName(assetName, amount, MAX_ASSET_UNITS, true));
+        msg += tr("Amount: %1\n").arg(SlimecoinUnits::formatWithCustomName(assetName, amount, MAX_ASSET_UNITS, true));
 
     msg += tr("Type: %1\n").arg(type);
 
@@ -1533,12 +1533,12 @@ void MeowcoinGUI::incomingTransaction(const QString& date, int unit, const CAmou
              msg, CClientUIInterface::MSG_INFORMATION);
 }
 
-void MeowcoinGUI::checkAssets()
+void SlimecoinGUI::checkAssets()
 {
     // Check that status of HIP2 and activate the assets icon if it is active
     if(AreAssetsDeployed()) {
         transferAssetAction->setDisabled(false);
-        transferAssetAction->setToolTip(tr("Transfer assets to MEWC addresses"));
+        transferAssetAction->setToolTip(tr("Transfer assets to SLME addresses"));
         createAssetAction->setDisabled(false);
         createAssetAction->setToolTip(tr("Create new assets"));
         manageAssetAction->setDisabled(false);
@@ -1562,14 +1562,14 @@ void MeowcoinGUI::checkAssets()
 }
 #endif // ENABLE_WALLET
 
-void MeowcoinGUI::dragEnterEvent(QDragEnterEvent *event)
+void SlimecoinGUI::dragEnterEvent(QDragEnterEvent *event)
 {
     // Accept only URIs
     if(event->mimeData()->hasUrls())
         event->acceptProposedAction();
 }
 
-void MeowcoinGUI::dropEvent(QDropEvent *event)
+void SlimecoinGUI::dropEvent(QDropEvent *event)
 {
     if(event->mimeData()->hasUrls())
     {
@@ -1581,7 +1581,7 @@ void MeowcoinGUI::dropEvent(QDropEvent *event)
     event->acceptProposedAction();
 }
 
-bool MeowcoinGUI::eventFilter(QObject *object, QEvent *event)
+bool SlimecoinGUI::eventFilter(QObject *object, QEvent *event)
 {
     // Catch status tip events
     if (event->type() == QEvent::StatusTip)
@@ -1594,7 +1594,7 @@ bool MeowcoinGUI::eventFilter(QObject *object, QEvent *event)
 }
 
 #ifdef ENABLE_WALLET
-bool MeowcoinGUI::handlePaymentRequest(const SendCoinsRecipient& recipient)
+bool SlimecoinGUI::handlePaymentRequest(const SendCoinsRecipient& recipient)
 {
     // URI has to be valid
     if (walletFrame && walletFrame->handlePaymentRequest(recipient))
@@ -1606,7 +1606,7 @@ bool MeowcoinGUI::handlePaymentRequest(const SendCoinsRecipient& recipient)
     return false;
 }
 
-void MeowcoinGUI::setHDStatus(int hdEnabled)
+void SlimecoinGUI::setHDStatus(int hdEnabled)
 {
     QString icon = "";
     if (hdEnabled == HD_DISABLED) {
@@ -1624,7 +1624,7 @@ void MeowcoinGUI::setHDStatus(int hdEnabled)
     labelWalletHDStatusIcon->setEnabled(hdEnabled);
 }
 
-void MeowcoinGUI::setEncryptionStatus(int status)
+void SlimecoinGUI::setEncryptionStatus(int status)
 {
     switch(status)
     {
@@ -1654,7 +1654,7 @@ void MeowcoinGUI::setEncryptionStatus(int status)
 }
 #endif // ENABLE_WALLET
 
-void MeowcoinGUI::showNormalIfMinimized(bool fToggleHidden)
+void SlimecoinGUI::showNormalIfMinimized(bool fToggleHidden)
 {
     if(!clientModel)
         return;
@@ -1679,12 +1679,12 @@ void MeowcoinGUI::showNormalIfMinimized(bool fToggleHidden)
         hide();
 }
 
-void MeowcoinGUI::toggleHidden()
+void SlimecoinGUI::toggleHidden()
 {
     showNormalIfMinimized(true);
 }
 
-void MeowcoinGUI::detectShutdown()
+void SlimecoinGUI::detectShutdown()
 {
     if (ShutdownRequested())
     {
@@ -1694,7 +1694,7 @@ void MeowcoinGUI::detectShutdown()
     }
 }
 
-void MeowcoinGUI::showProgress(const QString &title, int nProgress)
+void SlimecoinGUI::showProgress(const QString &title, int nProgress)
 {
     if (nProgress == 0)
     {
@@ -1717,7 +1717,7 @@ void MeowcoinGUI::showProgress(const QString &title, int nProgress)
         progressDialog->setValue(nProgress);
 }
 
-void MeowcoinGUI::setTrayIconVisible(bool fHideTrayIcon)
+void SlimecoinGUI::setTrayIconVisible(bool fHideTrayIcon)
 {
     if (trayIcon)
     {
@@ -1725,13 +1725,13 @@ void MeowcoinGUI::setTrayIconVisible(bool fHideTrayIcon)
     }
 }
 
-void MeowcoinGUI::showModalOverlay()
+void SlimecoinGUI::showModalOverlay()
 {
     if (modalOverlay && (progressBar->isVisible() || modalOverlay->isLayerVisible()))
         modalOverlay->toggleVisibility();
 }
 
-static bool ThreadSafeMessageBox(MeowcoinGUI *gui, const std::string& message, const std::string& caption, unsigned int style)
+static bool ThreadSafeMessageBox(SlimecoinGUI *gui, const std::string& message, const std::string& caption, unsigned int style)
 {
     bool modal = (style & CClientUIInterface::MODAL);
     // The SECURE flag has no effect in the Qt GUI.
@@ -1748,7 +1748,7 @@ static bool ThreadSafeMessageBox(MeowcoinGUI *gui, const std::string& message, c
     return ret;
 }
 
-static bool ThreadSafeMnemonic(MeowcoinGUI *gui, unsigned int style)
+static bool ThreadSafeMnemonic(SlimecoinGUI *gui, unsigned int style)
 {
     bool modal = (style & CClientUIInterface::MODAL);
     // The SECURE flag has no effect in the Qt GUI.
@@ -1761,7 +1761,7 @@ static bool ThreadSafeMnemonic(MeowcoinGUI *gui, unsigned int style)
     return ret;
 }
 
-void MeowcoinGUI::subscribeToCoreSignals()
+void SlimecoinGUI::subscribeToCoreSignals()
 {
     // Connect signals to client
     uiInterface.ThreadSafeMessageBox.connect(boost::bind(ThreadSafeMessageBox, this, _1, _2, _3));
@@ -1769,7 +1769,7 @@ void MeowcoinGUI::subscribeToCoreSignals()
     uiInterface.ShowMnemonic.connect(boost::bind(ThreadSafeMnemonic, this, _1));
 }
 
-void MeowcoinGUI::unsubscribeFromCoreSignals()
+void SlimecoinGUI::unsubscribeFromCoreSignals()
 {
     // Disconnect signals from client
     uiInterface.ThreadSafeMessageBox.disconnect(boost::bind(ThreadSafeMessageBox, this, _1, _2, _3));
@@ -1777,7 +1777,7 @@ void MeowcoinGUI::unsubscribeFromCoreSignals()
     uiInterface.ShowMnemonic.disconnect(boost::bind(ThreadSafeMnemonic, this, _1));
 }
 
-void MeowcoinGUI::toggleNetworkActive()
+void SlimecoinGUI::toggleNetworkActive()
 {
     if (clientModel) {
         clientModel->setNetworkActive(!clientModel->getNetworkActive());
@@ -1785,7 +1785,7 @@ void MeowcoinGUI::toggleNetworkActive()
 }
 
 /** Get restart command-line parameters and request restart */
-void MeowcoinGUI::handleRestart(QStringList args)
+void SlimecoinGUI::handleRestart(QStringList args)
 {
     if (!ShutdownRequested())
         Q_EMIT requestedRestart(args);
@@ -1797,15 +1797,15 @@ UnitDisplayStatusBarControl::UnitDisplayStatusBarControl(const PlatformStyle *pl
 {
     createContextMenu(platformStyle);
     setToolTip(tr("Unit to show amounts in. Click to select another unit."));
-    QList<MeowcoinUnits::Unit> units = MeowcoinUnits::availableUnits();
+    QList<SlimecoinUnits::Unit> units = SlimecoinUnits::availableUnits();
     int max_width = 0;
     const QFontMetrics fm(font());
-    for (const MeowcoinUnits::Unit unit : units)
+    for (const SlimecoinUnits::Unit unit : units)
     {
     #ifndef QTversionPreFiveEleven
-        max_width = qMax(max_width, fm.horizontalAdvance(MeowcoinUnits::name(unit)));
+        max_width = qMax(max_width, fm.horizontalAdvance(SlimecoinUnits::name(unit)));
     #else
-        max_width = qMax(max_width, fm.width(MeowcoinUnits::name(unit)));
+        max_width = qMax(max_width, fm.width(SlimecoinUnits::name(unit)));
     #endif
     }
     setMinimumSize(max_width, 0);
@@ -1823,9 +1823,9 @@ void UnitDisplayStatusBarControl::mousePressEvent(QMouseEvent *event)
 void UnitDisplayStatusBarControl::createContextMenu(const PlatformStyle *platformStyle)
 {
     menu = new QMenu(this);
-    for (MeowcoinUnits::Unit u : MeowcoinUnits::availableUnits())
+    for (SlimecoinUnits::Unit u : SlimecoinUnits::availableUnits())
     {
-        QAction *menuAction = new QAction(QString(MeowcoinUnits::name(u)), this);
+        QAction *menuAction = new QAction(QString(SlimecoinUnits::name(u)), this);
         menuAction->setData(QVariant(u));
         menu->addAction(menuAction);
     }
@@ -1851,7 +1851,7 @@ void UnitDisplayStatusBarControl::setOptionsModel(OptionsModel *_optionsModel)
 /** When Display Units are changed on OptionsModel it will refresh the display text of the control on the status bar */
 void UnitDisplayStatusBarControl::updateDisplayUnit(int newUnits)
 {
-    setText(MeowcoinUnits::name(newUnits));
+    setText(SlimecoinUnits::name(newUnits));
 }
 
 /** Shows context menu with Display Unit options by the mouse coordinates */
@@ -1871,7 +1871,7 @@ void UnitDisplayStatusBarControl::onMenuSelection(QAction* action)
 }
 
 /** Triggered only when the user changes the combobox on the main GUI */
-void MeowcoinGUI::currencySelectionChanged(int unitIndex)
+void SlimecoinGUI::currencySelectionChanged(int unitIndex)
 {
     if(clientModel && clientModel->getOptionsModel())
     {
@@ -1880,9 +1880,9 @@ void MeowcoinGUI::currencySelectionChanged(int unitIndex)
 }
 
 /** Triggered when the options model's display currency is updated */
-void MeowcoinGUI::onCurrencyChange(int newIndex)
+void SlimecoinGUI::onCurrencyChange(int newIndex)
 {
-    qDebug() << "MeowcoinGUI::onPriceUnitChange: " + QString::number(newIndex);
+    qDebug() << "SlimecoinGUI::onPriceUnitChange: " + QString::number(newIndex);
 
     if(newIndex < 0 || newIndex >= CurrencyUnits::count()){
         return;
@@ -1892,26 +1892,26 @@ void MeowcoinGUI::onCurrencyChange(int newIndex)
     this->currentPriceDisplay = &CurrencyUnits::CurrencyOptions[newIndex];
     //Update the main GUI box in case this was changed from the settings screen
     //This will fire the event again, but the options model prevents the infinite loop
-    this->comboMewcUnit->setCurrentIndex(newIndex);
+    this->comboSlmeUnit->setCurrentIndex(newIndex);
     this->getPriceInfo();
 }
 
-void MeowcoinGUI::getPriceInfo()
+void SlimecoinGUI::getPriceInfo()
 {
-    request->setUrl(QUrl(QString("https://api.xeggex.com/api/v2/ticker/MEWC_%1").arg(this->currentPriceDisplay->Ticker)));
+    request->setUrl(QUrl(QString("https://api.xeggex.com/api/v2/ticker/SLME_%1").arg(this->currentPriceDisplay->Ticker)));
     networkManager->get(*request);
 }
 
 #ifdef ENABLE_WALLET
-void MeowcoinGUI::mnemonic()
+void SlimecoinGUI::mnemonic()
 {
         MnemonicDialog dlg(this);
         dlg.exec();
 }
 #endif
 
-void MeowcoinGUI::getLatestVersion()
+void SlimecoinGUI::getLatestVersion()
 {
-    versionRequest->setUrl(QUrl("https://api.github.com/repos/JustAResearcher/Meowcoin/releases"));
+    versionRequest->setUrl(QUrl("https://api.github.com/repos/JustAResearcher/Slimecoin/releases"));
     networkVersionManager->get(*versionRequest);
 }

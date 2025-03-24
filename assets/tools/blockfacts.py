@@ -6,13 +6,13 @@ import subprocess
 import json
 
 
-#Set this to your meowcoin-cli program
-cli = "meowcoin-cli"
+#Set this to your slimecoin-cli program
+cli = "slimecoin-cli"
 
 #mode = "-testnet"
 mode = ""
 rpc_port = 9766
-#Set this information in your meowcoin.conf file (in datadir, not testnet3)
+#Set this information in your slimecoin.conf file (in datadir, not testnet3)
 rpc_user = 'rpcuser'
 rpc_pass = 'rpcpass555'
 

@@ -1,11 +1,11 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The Meowcoin Core developers
+// Copyright (c) 2017-2019 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_UINT256_H
-#define MEOWCOIN_UINT256_H
+#ifndef SLIMECOIN_UINT256_H
+#define SLIMECOIN_UINT256_H
 
 #include <assert.h>
 #include <cstring>
@@ -176,4 +176,4 @@ public:
         return result;
     }
 };
-#endif // MEOWCOIN_UINT256_H
+#endif // SLIMECOIN_UINT256_H

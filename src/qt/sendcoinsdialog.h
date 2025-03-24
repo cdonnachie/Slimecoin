@@ -1,10 +1,10 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The Meowcoin Core developers
+// Copyright (c) 2017-2019 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_QT_SENDCOINSDIALOG_H
-#define MEOWCOIN_QT_SENDCOINSDIALOG_H
+#ifndef SLIMECOIN_QT_SENDCOINSDIALOG_H
+#define SLIMECOIN_QT_SENDCOINSDIALOG_H
 
 #include "walletmodel.h"
 
@@ -124,4 +124,4 @@ private:
     int secDelay;
 };
 
-#endif // MEOWCOIN_QT_SENDCOINSDIALOG_H
+#endif // SLIMECOIN_QT_SENDCOINSDIALOG_H

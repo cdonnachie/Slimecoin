@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Meowcoin Core developers
+// Copyright (c) 2017-2021 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -1700,7 +1700,7 @@ void CWalletTx::GetAmounts(std::list<COutputEntry>& listReceived,
                 listReceived.push_back(output);
         }
 
-        /** MEWC START */
+        /** SLME START */
         if (AreAssetsDeployed()) {
             if (txout.scriptPubKey.IsAssetScript()) {
                 CAssetOutputEntry assetoutput;
@@ -1715,7 +1715,7 @@ void CWalletTx::GetAmounts(std::list<COutputEntry>& listReceived,
                     assetsReceived.emplace_back(assetoutput);
             }
         }
-        /** MEWC END */
+        /** SLME END */
     }
 
 }
@@ -2319,7 +2319,7 @@ void CWallet::AvailableCoinsWithAssets(std::vector<COutput> &vCoins, std::map<st
     AvailableCoinsAll(vCoins, mapAssetCoins, true, AreAssetsDeployed(), fOnlySafe, coinControl, nMinimumAmount, nMaximumAmount, nMinimumSumAmount, nMaximumCount, nMinDepth, nMaxDepth);
 }
 
-void CWallet::AvailableCoinsAll(std::vector<COutput>& vCoins, std::map<std::string, std::vector<COutput> >& mapAssetCoins, bool fGetMEWC, bool fGetAssets, bool fOnlySafe, const CCoinControl *coinControl, const CAmount& nMinimumAmount, const CAmount& nMaximumAmount, const CAmount& nMinimumSumAmount, const uint64_t& nMaximumCount, const int& nMinDepth, const int& nMaxDepth) const {
+void CWallet::AvailableCoinsAll(std::vector<COutput>& vCoins, std::map<std::string, std::vector<COutput> >& mapAssetCoins, bool fGetSLME, bool fGetAssets, bool fOnlySafe, const CCoinControl *coinControl, const CAmount& nMinimumAmount, const CAmount& nMaximumAmount, const CAmount& nMinimumSumAmount, const uint64_t& nMaximumCount, const int& nMinDepth, const int& nMaxDepth) const {
     vCoins.clear();
 
     {
@@ -2327,8 +2327,8 @@ void CWallet::AvailableCoinsAll(std::vector<COutput>& vCoins, std::map<std::stri
 
         CAmount nTotal = 0;
 
-        /** MEWC START */
-        bool fMEWCLimitHit = false;
+        /** SLME START */
+        bool fSLMELimitHit = false;
         // A set of the hashes that have already been used
         std::set<uint256> usedMempoolHashes;
 
@@ -2473,11 +2473,11 @@ void CWallet::AvailableCoinsAll(std::vector<COutput>& vCoins, std::map<std::stri
                     }
                 }
 
-                if (fGetMEWC) { // Looking for MEWC Tx OutPoints Only
-                    if (fMEWCLimitHit) // We hit our limit
+                if (fGetSLME) { // Looking for SLME Tx OutPoints Only
+                    if (fSLMELimitHit) // We hit our limit
                         continue;
 
-                    // We only want MEWC OutPoints. Don't include Asset OutPoints
+                    // We only want SLME OutPoints. Don't include Asset OutPoints
                     if (isAssetScript)
                         continue;
 
@@ -2488,23 +2488,23 @@ void CWallet::AvailableCoinsAll(std::vector<COutput>& vCoins, std::map<std::stri
                         nTotal += pcoin->tx->vout[i].nValue;
 
                         if (nTotal >= nMinimumSumAmount) {
-                            fMEWCLimitHit = true;
+                            fSLMELimitHit = true;
                         }
                     }
 
                     // Checks the maximum number of UTXO's.
                     if (nMaximumCount > 0 && vCoins.size() >= nMaximumCount) {
-                        fMEWCLimitHit = true;
+                        fSLMELimitHit = true;
                     }
                     continue;
                 }
             }
         }
-        /** MEWC END */
+        /** SLME END */
     }
 }
 
-/** MEWC START */
+/** SLME START */
 
 std::map<CTxDestination, std::vector<COutput>> CWallet::ListAssets() const
 {
@@ -2556,7 +2556,7 @@ std::map<CTxDestination, std::vector<COutput>> CWallet::ListAssets() const
     return result;
 }
 
-/** MEWC END */
+/** SLME END */
 
 std::map<CTxDestination, std::vector<COutput>> CWallet::ListCoins() const
 {
@@ -2888,7 +2888,7 @@ bool CWallet::SelectCoins(const std::vector<COutput>& vAvailableCoins, const CAm
     return res;
 }
 
-/** MEWC START */
+/** SLME START */
 bool CWallet::CreateNewChangeAddress(CReserveKey& reservekey, CKeyID& keyID, std::string& strFailReason)
 {
     // Called with coin control doesn't have a change_address
@@ -3118,7 +3118,7 @@ bool CWallet::SelectAssets(const std::map<std::string, std::vector<COutput> >& m
     return true;
 }
 
-/** MEWC END */
+/** SLME END */
 
 bool CWallet::SignTransaction(CMutableTransaction &tx)
 {
@@ -3254,7 +3254,7 @@ bool CWallet::CreateTransactionAll(const std::vector<CRecipient>& vecSend, CWall
                                    bool fTransferAsset, bool fReissueAsset, const CReissueAsset& reissueAsset,
                                    const AssetType& assetType, bool sign)
 {
-    /** MEWC START */
+    /** SLME START */
     if (!AreAssetsDeployed() && (fTransferAsset || fNewAsset || fReissueAsset))
         return false;
 
@@ -3266,7 +3266,7 @@ bool CWallet::CreateTransactionAll(const std::vector<CRecipient>& vecSend, CWall
 
     if (fReissueAsset && (reissueAsset.IsNull() || !IsValidDestination(destination)))
         return error("%s : Tried reissuing an asset and the reissue data was null or the destination was invalid", __func__);
-    /** MEWC END */
+    /** SLME END */
 
     CAmount nValue = 0;
     std::map<std::string, CAmount> mapAssetValue;
@@ -3274,7 +3274,7 @@ bool CWallet::CreateTransactionAll(const std::vector<CRecipient>& vecSend, CWall
     unsigned int nSubtractFeeFromAmount = 0;
     for (const auto& recipient : vecSend)
     {
-        /** MEWC START */
+        /** SLME START */
         if (fTransferAsset || fReissueAsset || assetType == AssetType::SUB || assetType == AssetType::UNIQUE || assetType == AssetType::MSGCHANNEL || assetType == AssetType::SUB_QUALIFIER || assetType == AssetType::RESTRICTED) {
             CAssetTransfer assetTransfer;
             std::string address;
@@ -3290,7 +3290,7 @@ bool CWallet::CreateTransactionAll(const std::vector<CRecipient>& vecSend, CWall
                 mapAssetValue[assetTransfer.strName] += assetTransfer.nAmount;
             }
         }
-        /** MEWC END */
+        /** SLME END */
 
         if (nValue < 0 || recipient.nAmount < 0)
         {
@@ -3352,17 +3352,17 @@ bool CWallet::CreateTransactionAll(const std::vector<CRecipient>& vecSend, CWall
         std::set<CInputCoin> setAssets;
         LOCK2(cs_main, cs_wallet);
         {
-            /** MEWC START */
+            /** SLME START */
             std::vector<COutput> vAvailableCoins;
             std::map<std::string, std::vector<COutput> > mapAssetCoins;
             if (fTransferAsset || fReissueAsset || assetType == AssetType::SUB || assetType == AssetType::UNIQUE || assetType == AssetType::MSGCHANNEL || assetType == AssetType::SUB_QUALIFIER || assetType == AssetType::RESTRICTED)
                 AvailableCoinsWithAssets(vAvailableCoins, mapAssetCoins, true, &coin_control);
             else
                 AvailableCoins(vAvailableCoins, true, &coin_control);
-            /** MEWC END */
+            /** SLME END */
             // Create change script that will be used if we need change
             // TODO: pass in scriptChange instead of reservekey so
-            // change transaction isn't always pay-to-meowcoin-address
+            // change transaction isn't always pay-to-slimecoin-address
             CScript scriptChange;
             CScript assetScriptChange;
 
@@ -3379,13 +3379,13 @@ bool CWallet::CreateTransactionAll(const std::vector<CRecipient>& vecSend, CWall
                 scriptChange = GetScriptForDestination(keyID);
             }
 
-            /** MEWC START */
+            /** SLME START */
             if (!boost::get<CNoDestination>(&coin_control.assetDestChange)) {
                 assetScriptChange = GetScriptForDestination(coin_control.assetDestChange);
             } else {
                 assetScriptChange = scriptChange;
             }
-            /** MEWC END */
+            /** SLME END */
 
             CTxOut change_prototype_txout(0, scriptChange);
             size_t change_prototype_size = GetSerializeSize(change_prototype_txout, SER_DISK, 0);
@@ -3415,14 +3415,14 @@ bool CWallet::CreateTransactionAll(const std::vector<CRecipient>& vecSend, CWall
                 {
                     CTxOut txout(recipient.nAmount, recipient.scriptPubKey);
 
-                    /** MEWC START */
-                    // Check to see if you need to make an asset data outpoint OP_MEWC_ASSET data
+                    /** SLME START */
+                    // Check to see if you need to make an asset data outpoint OP_SLME_ASSET data
                     if (recipient.scriptPubKey.IsNullAssetTxDataScript()) {
                         assert(txout.nValue == 0);
                         txNew.vout.push_back(txout);
                         continue;
                     }
-                    /** MEWC END */
+                    /** SLME END */
 
                     if (recipient.fSubtractFeeFromAmount)
                     {
@@ -3436,7 +3436,7 @@ bool CWallet::CreateTransactionAll(const std::vector<CRecipient>& vecSend, CWall
                         }
                     }
 
-                    if (IsDust(txout, ::dustRelayFee) && !IsScriptTransferAsset(recipient.scriptPubKey)) /** MEWC START */ /** MEWC END */
+                    if (IsDust(txout, ::dustRelayFee) && !IsScriptTransferAsset(recipient.scriptPubKey)) /** SLME START */ /** SLME END */
                     {
                         if (recipient.fSubtractFeeFromAmount && nFeeRet > 0)
                         {
@@ -3464,7 +3464,7 @@ bool CWallet::CreateTransactionAll(const std::vector<CRecipient>& vecSend, CWall
                         return false;
                     }
 
-                    /** MEWC START */
+                    /** SLME START */
                     if (AreAssetsDeployed()) {
                         setAssets.clear();
                         mapAssetsIn.clear();
@@ -3473,12 +3473,12 @@ bool CWallet::CreateTransactionAll(const std::vector<CRecipient>& vecSend, CWall
                             return false;
                         }
                     }
-                    /** MEWC END */
+                    /** SLME END */
                 }
 
                 const CAmount nChange = nValueIn - nValueToSelect;
 
-                /** MEWC START */
+                /** SLME START */
                 if (AreAssetsDeployed()) {
                     // Add the change for the assets
                     std::map<std::string, CAmount> mapAssetChange;
@@ -3565,7 +3565,7 @@ bool CWallet::CreateTransactionAll(const std::vector<CRecipient>& vecSend, CWall
                         }
                     }
                 }
-                /** MEWC END */
+                /** SLME END */
 
                 if (nChange > 0)
                 {
@@ -3599,7 +3599,7 @@ bool CWallet::CreateTransactionAll(const std::vector<CRecipient>& vecSend, CWall
                     nChangePosInOut = -1;
                 }
 
-                /** MEWC START */
+                /** SLME START */
                 if (AreAssetsDeployed()) {
                     if (fNewAsset) {
                         for (auto asset : assets) {
@@ -3628,7 +3628,7 @@ bool CWallet::CreateTransactionAll(const std::vector<CRecipient>& vecSend, CWall
                         txNew.vout.push_back(reissueTxOut);
                     }
                 }
-                /** MEWC END */
+                /** SLME END */
 
                 // Fill vin
                 //
@@ -3646,13 +3646,13 @@ bool CWallet::CreateTransactionAll(const std::vector<CRecipient>& vecSend, CWall
                     txNew.vin.push_back(CTxIn(coin.outpoint,CScript(),
                                               nSequence));
 
-                /** MEWC START */
+                /** SLME START */
                 if (AreAssetsDeployed()) {
                     for (const auto &asset : setAssets)
                         txNew.vin.push_back(CTxIn(asset.outpoint, CScript(),
                                                   nSequence));
                 }
-                /** MEWC END */
+                /** SLME END */
 
                 // Add the new asset inputs into the tempSet so the dummysigntx will add the correct amount of sigsß
                 std::set<CInputCoin> tempSet = setCoins;
@@ -3764,7 +3764,7 @@ bool CWallet::CreateTransactionAll(const std::vector<CRecipient>& vecSend, CWall
 
                 nIn++;
             }
-            /** MEWC START */
+            /** SLME START */
             if (AreAssetsDeployed()) {
                 for (const auto &asset : setAssets) {
                     const CScript &scriptPubKey = asset.txout.scriptPubKey;
@@ -3782,7 +3782,7 @@ bool CWallet::CreateTransactionAll(const std::vector<CRecipient>& vecSend, CWall
                     nIn++;
                 }
             }
-            /** MEWC END */
+            /** SLME END */
         }
 
         // Embed the constructed transaction data in wtxNew.

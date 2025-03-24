@@ -1,6 +1,6 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Meowcoin Core developers
+// Copyright (c) 2017-2021 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -193,7 +193,7 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x000000edd819220359469c54f2614b5602ebc775ea67a64602f354bdaa320f70"));
         assert(genesis.hashMerkleRoot == uint256S("0xe8916cf6592c8433d598c3a5fe60a9741fd2a997b39d93af2d789cdd9d9a7390"));
 
-        vSeeds.emplace_back("seed-mainnet-mewc.meowcoin.cc", false);
+        vSeeds.emplace_back("seed-mainnet-slme.slimecoin.cc", false);
         vSeeds.emplace_back("dnsseed.nodeslist.xyz", false);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,50);
@@ -202,7 +202,7 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
 
-        // Meowcoin BIP44 cointype in mainnet is '1669'
+        // Slimecoin BIP44 cointype in mainnet is '1669'
         nExtCoinType = 1669;
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
@@ -231,7 +231,7 @@ public:
 		// 20969961 transactions as of block #2383625 at 2022-07-28 22:02:22 (UTC)
 		// previously set at 6709969 txns by time 1577939273 ==>
         chainTxData = ChainTxData{
-            // Update as we know more about the contents of the Meowcoin chain
+            // Update as we know more about the contents of the Slimecoin chain
             // Stats as of 0x00000000000016ec03d8d93f9751323bcc42137b1b4df67e6a11c4394fd8e5ad window size 43200
             1665504479, // * UNIX timestamp of last known number of transactions
             99360,    // * total number of transactions between genesis and that timestamp
@@ -239,7 +239,7 @@ public:
             0.03289449084985968       // * estimated number of transactions per second after that timestamp
         };
 
-        /** MEWC Start **/
+        /** SLME Start **/
         // Burn Amounts
         nIssueAssetBurnAmount = 500 * COIN;
         nReissueAssetBurnAmount = 100 * COIN;
@@ -288,7 +288,7 @@ public:
 
         nMEOWWWWPOWActivationTime = 1710799200; // March 18 2024 -- 3pm PST
         nMEOWPOWActivationTime = nMEOWWWWPOWActivationTime;
-        /** MEWC End **/
+        /** SLME End **/
     }
 };
 
@@ -370,7 +370,7 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.emplace_back("seed-testnet-mewc.meowcoin.cc", false);
+        vSeeds.emplace_back("seed-testnet-slme.slimecoin.cc", false);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,109);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,124);
@@ -378,7 +378,7 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
-        // Meowcoin BIP44 cointype in testnet
+        // Slimecoin BIP44 cointype in testnet
         nExtCoinType = 1;
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
@@ -395,7 +395,7 @@ public:
         };
 
         chainTxData = ChainTxData{
-            // Update as we know more about the contents of the Meowcoin chain
+            // Update as we know more about the contents of the Slimecoin chain
             // Stats as of 00000023b66f46d74890287a7b1157dd780c7c5fdda2b561eb96684d2b39d62e window size 43200
             1661734222, // * UNIX timestamp of last known number of transactions
             0,     // * total number of transactions between genesis and that timestamp
@@ -403,7 +403,7 @@ public:
             0.0        // * estimated number of transactions per second after that timestamp
         };
 
-        /** MEWC Start **/
+        /** SLME Start **/
         // Burn Amounts
         nIssueAssetBurnAmount = 500 * COIN;
         nReissueAssetBurnAmount = 100 * COIN;
@@ -451,7 +451,7 @@ public:
 
         nMEOWWWWPOWActivationTime = 1707354000; // Feb 4, 2024
         nMEOWPOWActivationTime = nMEOWWWWPOWActivationTime;
-        /** MEWC End **/
+        /** SLME End **/
     }
 };
 
@@ -551,10 +551,10 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
-        // Meowcoin BIP44 cointype in regtest
+        // Slimecoin BIP44 cointype in regtest
         nExtCoinType = 1;
 
-        /** MEWC Start **/
+        /** SLME Start **/
         // Burn Amounts
         nIssueAssetBurnAmount = 500 * COIN;
         nReissueAssetBurnAmount = 100 * COIN;
@@ -605,7 +605,7 @@ public:
 
         nMEOWWWWPOWActivationTime = 3582830167; // March 1, 2024
         nMEOWPOWActivationTime = nMEOWWWWPOWActivationTime;
-        /** MEWC End **/
+        /** SLME End **/
     }
 };
 

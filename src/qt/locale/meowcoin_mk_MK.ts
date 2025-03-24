@@ -305,7 +305,7 @@
     </message>
     </context>
 <context>
-    <name>MeowcoinGUI</name>
+    <name>SlimecoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Потпиши &amp;порака...</translation>
@@ -379,7 +379,7 @@
         <translation>Повторно индексирање на блокови од дискот...</translation>
     </message>
     <message>
-        <source>Send coins to a Meowcoin address</source>
+        <source>Send coins to a Slimecoin address</source>
         <translation>Испрати биткоини на Биткоин адреса</translation>
     </message>
     <message>
@@ -387,7 +387,7 @@
         <translation>&amp;Потврди порака...</translation>
     </message>
     <message>
-        <source>Meowcoin</source>
+        <source>Slimecoin</source>
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -593,13 +593,13 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>meowcoin-core</name>
+    <name>slimecoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Опции:</translation>
     </message>
     <message>
-        <source>Meowcoin Core</source>
+        <source>Slimecoin Core</source>
         <translation>Биткоин Core</translation>
     </message>
     <message>

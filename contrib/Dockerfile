@@ -1,6 +1,6 @@
 FROM amd64/ubuntu:20.04 AS base
 
-#If you found this docker image helpful please donate MEWC to the maintainer
+#If you found this docker image helpful please donate SLME to the maintainer
 LABEL maintainer="RV9zdNeUTQUToZUcRp9uNF8gwH5LzDFtan"
 
 EXPOSE 9766/tcp
@@ -31,33 +31,33 @@ RUN apt-get update && \
 	apt-get clean
 
 #Copy source dir
-COPY . /home/meowcoin/build/Meowcoin/
-WORKDIR /home/meowcoin/build/Meowcoin
+COPY . /home/slimecoin/build/Slimecoin/
+WORKDIR /home/slimecoin/build/Slimecoin
 
 #build db4 from source
-WORKDIR /home/meowcoin/build/Meowcoin/contrib
+WORKDIR /home/slimecoin/build/Slimecoin/contrib
 RUN ./install_db4.sh ../../
 
-# build Meowcoincore
-WORKDIR /home/meowcoin/build/Meowcoin
-RUN ./autogen.sh && ./configure --disable-tests BDB_LIBS="-L/home/meowcoin/build/db4/lib -ldb_cxx-4.8" BDB_CFLAGS="-I/home/meowcoin/build/db4/include" --with-gui=no  && make -j4
+# build Slimecoincore
+WORKDIR /home/slimecoin/build/Slimecoin
+RUN ./autogen.sh && ./configure --disable-tests BDB_LIBS="-L/home/slimecoin/build/db4/lib -ldb_cxx-4.8" BDB_CFLAGS="-I/home/slimecoin/build/db4/include" --with-gui=no  && make -j4
 
 FROM base AS final
 
 #Add our service account user
-RUN useradd -ms /bin/bash meowcoin && \
-	mkdir /var/lib/meowcoin && \
-	chown meowcoin:meowcoin /var/lib/meowcoin && \
-	ln -s /var/lib/meowcoin /home/meowcoin/.meowcoin && \
-	chown -h meowcoin:meowcoin /home/meowcoin/.meowcoin
+RUN useradd -ms /bin/bash slimecoin && \
+	mkdir /var/lib/slimecoin && \
+	chown slimecoin:slimecoin /var/lib/slimecoin && \
+	ln -s /var/lib/slimecoin /home/slimecoin/.slimecoin && \
+	chown -h slimecoin:slimecoin /home/slimecoin/.slimecoin
 
-VOLUME /var/lib/meowcoin
+VOLUME /var/lib/slimecoin
 
 #Copy the compiled binaries from the build
-COPY --from=build /home/meowcoin/build/Meowcoin/src/meowcoind /usr/local/bin/meowcoind
-COPY --from=build /home/meowcoin/build/Meowcoin/src/meowcoin-cli /usr/local/bin/meowcoin-cli
+COPY --from=build /home/slimecoin/build/Slimecoin/src/slimecoind /usr/local/bin/slimecoind
+COPY --from=build /home/slimecoin/build/Slimecoin/src/slimecoin-cli /usr/local/bin/slimecoin-cli
 
-WORKDIR /home/meowcoin
-USER meowcoin
+WORKDIR /home/slimecoin
+USER slimecoin
 
-CMD /usr/local/bin/meowcoind -datadir=/var/lib/meowcoin -printtoconsole -onlynet=ipv4
+CMD /usr/local/bin/slimecoind -datadir=/var/lib/slimecoin -printtoconsole -onlynet=ipv4

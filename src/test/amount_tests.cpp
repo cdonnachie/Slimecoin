@@ -1,11 +1,11 @@
 // Copyright (c) 2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The Meowcoin Core developers
+// Copyright (c) 2017-2019 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "amount.h"
 #include "policy/feerate.h"
-#include "test/test_meowcoin.h"
+#include "test/test_slimecoin.h"
 
 #include <boost/test/unit_test.hpp>
 
@@ -100,7 +100,7 @@ BOOST_FIXTURE_TEST_SUITE(amount_tests, BasicTestingSetup)
         BOOST_CHECK(a <= a);
         BOOST_CHECK(b >= a);
         BOOST_CHECK(b >= b);
-        // a should be 0.00000002 MEWC/kB now
+        // a should be 0.00000002 SLME/kB now
         a += a;
         BOOST_CHECK(a == b);
     }
@@ -111,7 +111,7 @@ BOOST_FIXTURE_TEST_SUITE(amount_tests, BasicTestingSetup)
 
         CFeeRate feeRate;
         feeRate = CFeeRate(1);
-        BOOST_CHECK_EQUAL(feeRate.ToString(), "0.00000001 MEWC/kB");
+        BOOST_CHECK_EQUAL(feeRate.ToString(), "0.00000001 SLME/kB");
     }
 
 BOOST_AUTO_TEST_SUITE_END()

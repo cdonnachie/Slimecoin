@@ -1,13 +1,13 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Meowcoin Core developers
+// Copyright (c) 2017-2021 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/meowcoin-config.h"
+#include "config/slimecoin-config.h"
 #endif
 
-#include "meowcoingui.h"
+#include "slimecoingui.h"
 
 #include "chainparams.h"
 #include "clientmodel.h"
@@ -99,7 +99,7 @@ static void InitMessage(const std::string &message)
  */
 static std::string Translate(const char* psz)
 {
-    return QCoreApplication::translate("meowcoin-core", psz).toStdString();
+    return QCoreApplication::translate("slimecoin-core", psz).toStdString();
 }
 
 static QString GetLangTerritory()
@@ -146,11 +146,11 @@ static void initTranslations(QTranslator &qtTranslatorBase, QTranslator &qtTrans
     if (qtTranslator.load("qt_" + lang_territory, QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
         QApplication::installTranslator(&qtTranslator);
 
-    // Load e.g. meowcoin_de.qm (shortcut "de" needs to be defined in meowcoin.qrc)
+    // Load e.g. slimecoin_de.qm (shortcut "de" needs to be defined in slimecoin.qrc)
     if (translatorBase.load(lang, ":/translations/"))
         QApplication::installTranslator(&translatorBase);
 
-    // Load e.g. meowcoin_de_DE.qm (shortcut "de_DE" needs to be defined in meowcoin.qrc)
+    // Load e.g. slimecoin_de_DE.qm (shortcut "de_DE" needs to be defined in slimecoin.qrc)
     if (translator.load(lang_territory, ":/translations/"))
         QApplication::installTranslator(&translator);
 }
@@ -177,14 +177,14 @@ void DebugMessageHandler(QtMsgType type, const QMessageLogContext& context, cons
 }
 #endif
 
-/** Class encapsulating Meowcoin Core startup and shutdown.
+/** Class encapsulating Slimecoin Core startup and shutdown.
  * Allows running startup and shutdown in a different thread from the UI thread.
  */
-class MeowcoinCore: public QObject
+class SlimecoinCore: public QObject
 {
     Q_OBJECT
 public:
-    explicit MeowcoinCore();
+    explicit SlimecoinCore();
     /** Basic initialization, before starting initialization/shutdown thread.
      * Return true on success.
      */
@@ -208,13 +208,13 @@ private:
     void handleRunawayException(const std::exception *e);
 };
 
-/** Main Meowcoin application object */
-class MeowcoinApplication: public QApplication
+/** Main Slimecoin application object */
+class SlimecoinApplication: public QApplication
 {
     Q_OBJECT
 public:
-    explicit MeowcoinApplication();
-    ~MeowcoinApplication();
+    explicit SlimecoinApplication();
+    ~SlimecoinApplication();
 
 #ifdef ENABLE_WALLET
     /// Create payment server
@@ -237,7 +237,7 @@ public:
     /// Get process return value
     int getReturnValue() const { return returnValue; }
 
-    /// Get window identifier of QMainWindow (MeowcoinGUI)
+    /// Get window identifier of QMainWindow (SlimecoinGUI)
     WId getMainWinId() const;
 
     OptionsModel* getOptionsModel() const { return optionsModel; }
@@ -259,7 +259,7 @@ private:
     QThread *coreThread;
     OptionsModel *optionsModel;
     ClientModel *clientModel;
-    MeowcoinGUI *window;
+    SlimecoinGUI *window;
     QTimer *pollShutdownTimer;
 #ifdef ENABLE_WALLET
     PaymentServer* paymentServer;
@@ -272,20 +272,20 @@ private:
     void startThread();
 };
 
-#include "meowcoin.moc"
+#include "slimecoin.moc"
 
-MeowcoinCore::MeowcoinCore():
+SlimecoinCore::SlimecoinCore():
     QObject()
 {
 }
 
-void MeowcoinCore::handleRunawayException(const std::exception *e)
+void SlimecoinCore::handleRunawayException(const std::exception *e)
 {
     PrintExceptionContinue(e, "Runaway exception");
     Q_EMIT runawayException(QString::fromStdString(GetWarnings("gui")));
 }
 
-bool MeowcoinCore::baseInitialize()
+bool SlimecoinCore::baseInitialize()
 {
     if (!AppInitBasicSetup())
     {
@@ -306,7 +306,7 @@ bool MeowcoinCore::baseInitialize()
     return true;
 }
 
-void MeowcoinCore::initialize()
+void SlimecoinCore::initialize()
 {
     try
     {
@@ -320,7 +320,7 @@ void MeowcoinCore::initialize()
     }
 }
 
-void MeowcoinCore::restart(QStringList args)
+void SlimecoinCore::restart(QStringList args)
 {
     static bool executing_restart{false};
 
@@ -347,7 +347,7 @@ void MeowcoinCore::restart(QStringList args)
     }
 }
 
-void MeowcoinCore::shutdown()
+void SlimecoinCore::shutdown()
 {
     try
     {
@@ -365,9 +365,9 @@ void MeowcoinCore::shutdown()
 }
 
 static int qt_argc = 1;
-static const char* qt_argv = "meowcoin-qt";
+static const char* qt_argv = "slimecoin-qt";
 
-MeowcoinApplication::MeowcoinApplication():
+SlimecoinApplication::SlimecoinApplication():
     QApplication(qt_argc, const_cast<char **>(&qt_argv)),
     coreThread(0),
     optionsModel(0),
@@ -383,17 +383,17 @@ MeowcoinApplication::MeowcoinApplication():
     setQuitOnLastWindowClosed(false);
 
     // UI per-platform customization
-    // This must be done inside the MeowcoinApplication constructor, or after it, because
+    // This must be done inside the SlimecoinApplication constructor, or after it, because
     // PlatformStyle::instantiate requires a QApplication
     std::string platformName;
-    platformName = gArgs.GetArg("-uiplatform", MeowcoinGUI::DEFAULT_UIPLATFORM);
+    platformName = gArgs.GetArg("-uiplatform", SlimecoinGUI::DEFAULT_UIPLATFORM);
     platformStyle = PlatformStyle::instantiate(QString::fromStdString(platformName));
     if (!platformStyle) // Fall back to "other" if specified name not found
         platformStyle = PlatformStyle::instantiate("other");
     assert(platformStyle);
 }
 
-MeowcoinApplication::~MeowcoinApplication()
+SlimecoinApplication::~SlimecoinApplication()
 {
     if(coreThread)
     {
@@ -416,20 +416,20 @@ MeowcoinApplication::~MeowcoinApplication()
 }
 
 #ifdef ENABLE_WALLET
-void MeowcoinApplication::createPaymentServer()
+void SlimecoinApplication::createPaymentServer()
 {
     paymentServer = new PaymentServer(this);
 }
 #endif
 
-void MeowcoinApplication::createOptionsModel(bool resetSettings)
+void SlimecoinApplication::createOptionsModel(bool resetSettings)
 {
     optionsModel = new OptionsModel(nullptr, resetSettings);
 }
 
-void MeowcoinApplication::createWindow(const NetworkStyle *networkStyle)
+void SlimecoinApplication::createWindow(const NetworkStyle *networkStyle)
 {
-    window = new MeowcoinGUI(platformStyle, networkStyle, 0);
+    window = new SlimecoinGUI(platformStyle, networkStyle, 0);
     window->setMinimumSize(1024,700);
     window->setBaseSize(1024,700);
 
@@ -438,7 +438,7 @@ void MeowcoinApplication::createWindow(const NetworkStyle *networkStyle)
     pollShutdownTimer->start(200);
 }
 
-void MeowcoinApplication::createSplashScreen(const NetworkStyle *networkStyle)
+void SlimecoinApplication::createSplashScreen(const NetworkStyle *networkStyle)
 {
     SplashScreen *splash = new SplashScreen(networkStyle);
     // We don't hold a direct pointer to the splash screen after creation, but the splash
@@ -448,12 +448,12 @@ void MeowcoinApplication::createSplashScreen(const NetworkStyle *networkStyle)
     connect(this, SIGNAL(requestedShutdown()), splash, SLOT(close()));
 }
 
-void MeowcoinApplication::startThread()
+void SlimecoinApplication::startThread()
 {
     if(coreThread)
         return;
     coreThread = new QThread(this);
-    MeowcoinCore *executor = new MeowcoinCore();
+    SlimecoinCore *executor = new SlimecoinCore();
     executor->moveToThread(coreThread);
 
     /*  communication to and from thread */
@@ -470,20 +470,20 @@ void MeowcoinApplication::startThread()
     coreThread->start();
 }
 
-void MeowcoinApplication::parameterSetup()
+void SlimecoinApplication::parameterSetup()
 {
     InitLogging();
     InitParameterInteraction();
 }
 
-void MeowcoinApplication::requestInitialize()
+void SlimecoinApplication::requestInitialize()
 {
     qDebug() << __func__ << ": Requesting initialize";
     startThread();
     Q_EMIT requestedInitialize();
 }
 
-void MeowcoinApplication::requestShutdown()
+void SlimecoinApplication::requestShutdown()
 {
     // Show a simple window indicating shutdown status
     // Do this first as some of the steps may take some time below,
@@ -510,7 +510,7 @@ void MeowcoinApplication::requestShutdown()
     Q_EMIT requestedShutdown();
 }
 
-void MeowcoinApplication::initializeResult(bool success)
+void SlimecoinApplication::initializeResult(bool success)
 {
     qDebug() << __func__ << ": Initialization result: " << success;
     // Set exit result.
@@ -533,8 +533,8 @@ void MeowcoinApplication::initializeResult(bool success)
         {
             walletModel = new WalletModel(platformStyle, vpwallets[0], optionsModel);
 
-            window->addWallet(MeowcoinGUI::DEFAULT_WALLET, walletModel);
-            window->setCurrentWallet(MeowcoinGUI::DEFAULT_WALLET);
+            window->addWallet(SlimecoinGUI::DEFAULT_WALLET, walletModel);
+            window->setCurrentWallet(SlimecoinGUI::DEFAULT_WALLET);
 
             connect(walletModel, SIGNAL(coinsSent(CWallet*,SendCoinsRecipient,QByteArray)),
                              paymentServer, SLOT(fetchPaymentACK(CWallet*,const SendCoinsRecipient&,QByteArray)));
@@ -554,7 +554,7 @@ void MeowcoinApplication::initializeResult(bool success)
 
 #ifdef ENABLE_WALLET
         // Now that initialization/startup is done, process any command-line
-        // meowcoin: URIs or payment requests:
+        // slimecoin: URIs or payment requests:
         connect(paymentServer, SIGNAL(receivedPaymentRequest(SendCoinsRecipient)),
                          window, SLOT(handlePaymentRequest(SendCoinsRecipient)));
         connect(window, SIGNAL(receivedURI(QString)),
@@ -568,20 +568,20 @@ void MeowcoinApplication::initializeResult(bool success)
     }
 }
 
-void MeowcoinApplication::shutdownResult(bool success)
+void SlimecoinApplication::shutdownResult(bool success)
 {
     returnValue = success ? EXIT_SUCCESS : EXIT_FAILURE;
     qDebug() << __func__ << ": Shutdown result: " << returnValue;
     quit(); // Exit main loop after shutdown finished
 }
 
-void MeowcoinApplication::handleRunawayException(const QString &message)
+void SlimecoinApplication::handleRunawayException(const QString &message)
 {
-    QMessageBox::critical(0, "Runaway exception", MeowcoinGUI::tr("A fatal error occurred. Meowcoin can no longer continue safely and will quit.") + QString("\n\n") + message);
+    QMessageBox::critical(0, "Runaway exception", SlimecoinGUI::tr("A fatal error occurred. Slimecoin can no longer continue safely and will quit.") + QString("\n\n") + message);
     ::exit(EXIT_FAILURE);
 }
 
-WId MeowcoinApplication::getMainWinId() const
+WId SlimecoinApplication::getMainWinId() const
 {
     if (!window)
         return 0;
@@ -589,7 +589,7 @@ WId MeowcoinApplication::getMainWinId() const
     return window->winId();
 }
 
-#ifndef MEOWCOIN_QT_TEST
+#ifndef SLIMECOIN_QT_TEST
 int main(int argc, char *argv[])
 {
     SetupEnvironment();
@@ -607,8 +607,8 @@ int main(int argc, char *argv[])
     QTextCodec::setCodecForCStrings(QTextCodec::codecForTr());
 #endif
 
-    Q_INIT_RESOURCE(meowcoin);
-    Q_INIT_RESOURCE(meowcoin_locale);
+    Q_INIT_RESOURCE(slimecoin);
+    Q_INIT_RESOURCE(slimecoin_locale);
 
 #if QT_VERSION > 0x050600
     // Generate high-dpi pixmaps
@@ -628,7 +628,7 @@ int main(int argc, char *argv[])
 #endif
 
     // This should be after the attributes.
-    MeowcoinApplication app;
+    SlimecoinApplication app;
 
     // Register meta types used for QMetaObject::invokeMethod
     qRegisterMetaType< bool* >();
@@ -665,7 +665,7 @@ int main(int argc, char *argv[])
     if (!Intro::pickDataDirectory())
         return EXIT_SUCCESS;
 
-    /// 6. Determine availability of data directory and parse meowcoin.conf
+    /// 6. Determine availability of data directory and parse slimecoin.conf
     /// - Do not call GetDataDir(true) before this step finishes
     if (!fs::is_directory(GetDataDir(false)))
     {
@@ -674,7 +674,7 @@ int main(int argc, char *argv[])
         return EXIT_FAILURE;
     }
     try {
-        gArgs.ReadConfigFile(gArgs.GetArg("-conf", MEOWCOIN_CONF_FILENAME));
+        gArgs.ReadConfigFile(gArgs.GetArg("-conf", SLIMECOIN_CONF_FILENAME));
     } catch (const std::exception& e) {
         QMessageBox::critical(0, QObject::tr(PACKAGE_NAME),
                               QObject::tr("Error: Cannot parse configuration file: %1. Only use key=value syntax.").arg(e.what()));
@@ -717,7 +717,7 @@ int main(int argc, char *argv[])
         exit(EXIT_SUCCESS);
 
     // Start up the payment server early, too, so impatient users that click on
-    // meowcoin: links repeatedly have their payment requests routed to this process:
+    // slimecoin: links repeatedly have their payment requests routed to this process:
     app.createPaymentServer();
 #endif
 
@@ -760,7 +760,7 @@ int main(int argc, char *argv[])
         // Perform base initialization before spinning up initialization/shutdown thread
         // This is acceptable because this function only contains steps that are quick to execute,
         // so the GUI thread won't be held up.
-        if (MeowcoinCore::baseInitialize()) {
+        if (SlimecoinCore::baseInitialize()) {
             app.requestInitialize();
 #if defined(Q_OS_WIN) && QT_VERSION >= 0x050000
             WinShutdownMonitor::registerShutdownBlockReason(QObject::tr("%1 didn't yet exit safely...").arg(QObject::tr(PACKAGE_NAME)), (HWND)app.getMainWinId());
@@ -782,4 +782,4 @@ int main(int argc, char *argv[])
     }
     return rv;
 }
-#endif // MEOWCOIN_QT_TEST
+#endif // SLIMECOIN_QT_TEST

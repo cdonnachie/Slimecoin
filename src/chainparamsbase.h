@@ -1,18 +1,18 @@
 // Copyright (c) 2014-2015 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The Meowcoin Core developers
+// Copyright (c) 2017-2019 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_CHAINPARAMSBASE_H
-#define MEOWCOIN_CHAINPARAMSBASE_H
+#ifndef SLIMECOIN_CHAINPARAMSBASE_H
+#define SLIMECOIN_CHAINPARAMSBASE_H
 
 #include <memory>
 #include <string>
 #include <vector>
 
 /**
- * CBaseChainParams defines the base parameters (shared between meowcoin-cli and meowcoind)
- * of a given instance of the Meowcoin system.
+ * CBaseChainParams defines the base parameters (shared between slimecoin-cli and slimecoind)
+ * of a given instance of the Slimecoin system.
  */
 class CBaseChainParams
 {
@@ -61,4 +61,4 @@ void SelectBaseParams(const std::string& chain);
  */
 std::string ChainNameFromCommandLine();
 
-#endif // MEOWCOIN_CHAINPARAMSBASE_H
+#endif // SLIMECOIN_CHAINPARAMSBASE_H

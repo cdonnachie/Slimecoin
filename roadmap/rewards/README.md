@@ -1,28 +1,28 @@
 # Rewards
 
-Rewards, also sometimes called dividends, provides a way to send tokenized assets or MEWC to token holders.  This can be used to reward shareholders with profits (denominated in MEWC), or to reward membership holders, or to reward those that contributed the most to a shared project and earned special tokens.  
+Rewards, also sometimes called dividends, provides a way to send tokenized assets or SLME to token holders.  This can be used to reward shareholders with profits (denominated in SLME), or to reward membership holders, or to reward those that contributed the most to a shared project and earned special tokens.  
 
 Rewards do not require a consensus protocol change, and the rpc calls exist to be able do rewards already.
 
 These capabilities just make it native and easy-to-use from the client.
 
-Example that rewards TRONCO holders with MEWC:  
-```reward 10000 MEWC TRONCO```
+Example that rewards TRONCO holders with SLME:  
+```reward 10000 SLME TRONCO```
 
 ## Reward calculation
 
 First, the QTY of TARGET_TOKEN is calculated.  This is the total issuance, minus the qty held by the exception addresses.
 
-Next, the reward calculation takes the qty to send.  This must be specified, and will usually be MEWC.
+Next, the reward calculation takes the qty to send.  This must be specified, and will usually be SLME.
 
 PER_TOKEN_AMOUNT_IN_SATOSHIS = [QTY TO SEND_IN_SATOSHIS] / [QTY OF TARGET_TOKEN]
 
-For MEWC this must send an equal number of satoshis to every TARGET_TOKEN.  Remainder satoshis should be sent to the miners.
+For SLME this must send an equal number of satoshis to every TARGET_TOKEN.  Remainder satoshis should be sent to the miners.
 
 For a token, this must send an equal number of the token to every TARGET_TOKEN.  The calculation will need to factor in the units.  For example, if you attempted to send 7 non-divisible (units=0) of SEND_TOKEN to every holder of TARGET_TOKEN, but there were 8 or more TARGET_TOKEN holders, then the 'reward' call would fail because it is impossible to reward the TARGET_TOKEN holders equally.
 
-Example: 10 MEWC to 3 TRONCO holders.  10 * 100,000,000 sats = 1,000,000,000 MEWC sats.
-PER_TOKEN_AMOUNT_IN_SATOSHIS = 1,000,000,000 / 3 = 333333333.33333333 (repeating) per TRONCO holder.  The remainder of .3333 (repeating) satoshis per holder will not be sent as an output, and therefore will be given to the miners.  This is 1 sat once multiplied by the 3 TRONCO holders.  Each TRONCO holder will receive exactly 333333333 MEWC sats.
+Example: 10 SLME to 3 TRONCO holders.  10 * 100,000,000 sats = 1,000,000,000 SLME sats.
+PER_TOKEN_AMOUNT_IN_SATOSHIS = 1,000,000,000 / 3 = 333333333.33333333 (repeating) per TRONCO holder.  The remainder of .3333 (repeating) satoshis per holder will not be sent as an output, and therefore will be given to the miners.  This is 1 sat once multiplied by the 3 TRONCO holders.  Each TRONCO holder will receive exactly 333333333 SLME sats.
 
 One special case - Paying TRONCO to TRONCO.  This special case would require an exception address, and the source of the TRONCO would need to come from one or more of the exception addresses.
 reward 400000 TRONCO TRONCO ['exception address']
@@ -34,13 +34,13 @@ No protocol change needed.
 
 #### GUI - Desktop
 
-Select a token or MEWC to send.
+Select a token or SLME to send.
 Set the QTY to send.
 Select the target token
 * If you are sending another token, you must have the owner token for the TARGET_TOKEN.
-* If you are sending MEWC, you do not need the owner token for the TARGET_TOKEN
+* If you are sending SLME, you do not need the owner token for the TARGET_TOKEN
 
-GUI will show the exact amount being sent to each TARGET_TOKEN.  It will also calculate and show the remaining which must be returned as change.  If MEWC is being sent, it will show the remainder that is being sent to the miners.
+GUI will show the exact amount being sent to each TARGET_TOKEN.  It will also calculate and show the remaining which must be returned as change.  If SLME is being sent, it will show the remainder that is being sent to the miners.
 
 #### GUI - Mobile
 
@@ -50,7 +50,7 @@ Mobile will not initially have the rewards feature.
 
 These rpc calls are added in support of rewards:
 
-reward QTY [MEWC|TOKEN] TARGET_TOKEN [exception address list]
+reward QTY [SLME|TOKEN] TARGET_TOKEN [exception address list]
 
 #### Examples
 
@@ -62,13 +62,13 @@ RPsCVwsq8Uf2dcUSXcYPzVnsAMZtAHw6sV   20 TRONCO
 RBp5woWDU8TRMz1TPeemyLxxLL3xsCnQgh   30 TRONCO
 RFMD7ZJzexAmiLA9BHxwFCPVeiuAgdVjcP   40 TRONCO
 
-reward 100 MEWC TRONCO
+reward 100 SLME TRONCO
 
-Takes 100 MEWC (10,000,000,000 sats)
-RBQ5A9wYKcebZtTSrJ5E4bKgPRbNmr8M2H gets 10 MEWC (10,000,000,000 MEWC sats)
-RPsCVwsq8Uf2dcUSXcYPzVnsAMZtAHw6sV gets 20 MEWC (20,000,000,000 MEWC sats)
-RBp5woWDU8TRMz1TPeemyLxxLL3xsCnQgh gets 30 MEWC (30,000,000,000 MEWC sats)
-RFMD7ZJzexAmiLA9BHxwFCPVeiuAgdVjcP gets 40 MEWC (40,000,000,000 MEWC sats)
+Takes 100 SLME (10,000,000,000 sats)
+RBQ5A9wYKcebZtTSrJ5E4bKgPRbNmr8M2H gets 10 SLME (10,000,000,000 SLME sats)
+RPsCVwsq8Uf2dcUSXcYPzVnsAMZtAHw6sV gets 20 SLME (20,000,000,000 SLME sats)
+RBp5woWDU8TRMz1TPeemyLxxLL3xsCnQgh gets 30 SLME (30,000,000,000 SLME sats)
+RFMD7ZJzexAmiLA9BHxwFCPVeiuAgdVjcP gets 40 SLME (40,000,000,000 SLME sats)
 ```
 
 Example 2 (simple with 2 exception addresses)
@@ -80,12 +80,12 @@ RPsCVwsq8Uf2dcUSXcYPzVnsAMZtAHw6sV    5 TRONCO
 RBp5woWDU8TRMz1TPeemyLxxLL3xsCnQgh   15 TRONCO
 RFMD7ZJzexAmiLA9BHxwFCPVeiuAgdVjcP   30 TRONCO
 
-reward 1000 MEWC TRONCO ['RBQ5A9wYKcebZtTSrJ5E4bKgPRbNmr8M2H','RCqsnXo2Uc1tfNxwnFzkTYXfjKP21VX5ZD']
+reward 1000 SLME TRONCO ['RBQ5A9wYKcebZtTSrJ5E4bKgPRbNmr8M2H','RCqsnXo2Uc1tfNxwnFzkTYXfjKP21VX5ZD']
 
-Takes 1000 MEWC (100,000,000,000 sats)
-RPsCVwsq8Uf2dcUSXcYPzVnsAMZtAHw6sV gets 100 MEWC (10,000,000,000 MEWC sats)
-RBp5woWDU8TRMz1TPeemyLxxLL3xsCnQgh gets 300 MEWC (30,000,000,000 MEWC sats)
-RFMD7ZJzexAmiLA9BHxwFCPVeiuAgdVjcP gets 600 MEWC (60,000,000,000 MEWC sats)
+Takes 1000 SLME (100,000,000,000 sats)
+RPsCVwsq8Uf2dcUSXcYPzVnsAMZtAHw6sV gets 100 SLME (10,000,000,000 SLME sats)
+RBp5woWDU8TRMz1TPeemyLxxLL3xsCnQgh gets 300 SLME (30,000,000,000 SLME sats)
+RFMD7ZJzexAmiLA9BHxwFCPVeiuAgdVjcP gets 600 SLME (60,000,000,000 SLME sats)
 ```
 
 Example 3 (Payment of BLACKCO to TRONCO holders with 2 exception addresses)  

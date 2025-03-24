@@ -1,5 +1,5 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The Meowcoin Core developers
+// Copyright (c) 2017-2019 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -13,11 +13,11 @@
 #include "script/sign.h"
 #include "util.h"
 #include "utilstrencodings.h"
-#include "test/test_meowcoin.h"
+#include "test/test_slimecoin.h"
 #include "rpc/server.h"
 
 #if defined(HAVE_CONSENSUS_LIB)
-#include "script/meowcoinconsensus.h"
+#include "script/slimecoinconsensus.h"
 #endif
 
 #include <fstream>

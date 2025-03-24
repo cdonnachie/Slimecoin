@@ -1,16 +1,16 @@
 // Copyright (c) 2011-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Meowcoin Core developers
+// Copyright (c) 2017-2021 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include "config/meowcoin-config.h"
+#include "config/slimecoin-config.h"
 #endif
 
 #include "optionsdialog.h"
 #include "ui_optionsdialog.h"
 
-#include "meowcoinunits.h"
+#include "slimecoinunits.h"
 #include "guiutil.h"
 #include "optionsmodel.h"
 #include "guiconstants.h" // for DEFAULT_IPFS_VIEWER and DEFAULT_THIRD_PARTY_BROWSERS
@@ -78,7 +78,7 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
     ui->meowAtStartup->setToolTip(ui->meowAtStartup->toolTip().arg(tr(PACKAGE_NAME)));
     ui->meowAtStartup->setText(ui->meowAtStartup->text().arg(tr(PACKAGE_NAME)));
 
-    ui->openMeowcoinConfButton->setToolTip(ui->openMeowcoinConfButton->toolTip().arg(tr(PACKAGE_NAME)));
+    ui->openSlimecoinConfButton->setToolTip(ui->openSlimecoinConfButton->toolTip().arg(tr(PACKAGE_NAME)));
 
     ui->lang->setToolTip(ui->lang->toolTip().arg(tr(PACKAGE_NAME)));
     ui->lang->addItem(QString("(") + tr("default") + QString(")"), QVariant(""));
@@ -113,7 +113,7 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
     ui->ipfsUrl->setPlaceholderText(DEFAULT_IPFS_VIEWER);
 #endif
 
-    ui->unit->setModel(new MeowcoinUnits(this));
+    ui->unit->setModel(new SlimecoinUnits(this));
     QStringList currencyList;
     for(int unitNum = 0; unitNum < CurrencyUnits::count() ; unitNum++) {
         ui->currencyUnitIndex->addItem(QString(CurrencyUnits::CurrencyOptions[unitNum].Header), unitNum);
@@ -248,7 +248,7 @@ void OptionsDialog::on_ipfsUrlReset_clicked()
     ui->ipfsUrl->setText(DEFAULT_IPFS_VIEWER);
 }
 
-void OptionsDialog::on_openMeowcoinConfButton_clicked()
+void OptionsDialog::on_openSlimecoinConfButton_clicked()
 {
     /* explain the purpose of the config file */
     QMessageBox::information(this, tr("Configuration options"),
@@ -256,7 +256,7 @@ void OptionsDialog::on_openMeowcoinConfButton_clicked()
            "Additionally, any command-line options will override this configuration file."));
 
     /* show an error if there was some problem opening the file */
-    if (!GUIUtil::openMeowcoinConf())
+    if (!GUIUtil::openSlimecoinConf())
         QMessageBox::critical(this, tr("Error"), tr("The configuration file could not be opened."));
 }
 

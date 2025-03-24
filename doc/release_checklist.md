@@ -2,7 +2,7 @@
 
   1. Check PROTOCOL_VERSION in the following location: src/version.h
 
-  2. Check Meowcoincoind Version in the following locations: configure.ac, src/version.h
+  2. Check Slimecoincoind Version in the following locations: configure.ac, src/version.h
 
   3. All unit and functional tests pass
 
@@ -20,9 +20,9 @@
 
 **Post Release :**
 
-  1. Update mewccrypto.com with correct popup version
+  1. Update slmecrypto.com with correct popup version
   
-  2. Update mewccrypto.com with correct release download urls for each platform (Windows, Linux, Mac)
+  2. Update slmecrypto.com with correct release download urls for each platform (Windows, Linux, Mac)
 
 **Build Process**
 

@@ -149,7 +149,7 @@
     <name>RPCConsole</name>
     </context>
 <context>
-    <name>MeowcoinGUI</name>
+    <name>SlimecoinGUI</name>
     </context>
 <context>
     <name>ReceiveCoinsDialog</name>
@@ -215,6 +215,6 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>meowcoin-core</name>
+    <name>slimecoin-core</name>
     </context>
 </TS>

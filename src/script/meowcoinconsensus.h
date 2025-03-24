@@ -1,16 +1,16 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The Meowcoin Core developers
+// Copyright (c) 2017-2019 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_MEOWCOINCONSENSUS_H
-#define MEOWCOIN_MEOWCOINCONSENSUS_H
+#ifndef SLIMECOIN_SLIMECOINCONSENSUS_H
+#define SLIMECOIN_SLIMECOINCONSENSUS_H
 
 #include <stdint.h>
 
-#if defined(BUILD_MEOWCOIN_INTERNAL) && defined(HAVE_CONFIG_H)
-#include "config/meowcoin-config.h"
+#if defined(BUILD_SLIMECOIN_INTERNAL) && defined(HAVE_CONFIG_H)
+#include "config/slimecoin-config.h"
   #if defined(_WIN32)
     #if defined(DLL_EXPORT)
       #if defined(HAVE_FUNC_ATTRIBUTE_DLLEXPORT)
@@ -22,7 +22,7 @@
   #elif defined(HAVE_FUNC_ATTRIBUTE_VISIBILITY)
     #define EXPORT_SYMBOL __attribute__ ((visibility ("default")))
   #endif
-#elif defined(MSC_VER) && !defined(STATIC_LIBMEOWCOINCONSENSUS)
+#elif defined(MSC_VER) && !defined(STATIC_LIBSLIMECOINCONSENSUS)
   #define EXPORT_SYMBOL __declspec(dllimport)
 #endif
 
@@ -34,7 +34,7 @@
 extern "C" {
 #endif
 
-#define MEOWCOINCONSENSUS_API_VER 1
+#define SLIMECOINCONSENSUS_API_VER 1
 
 typedef enum meowconsensus_error_t
 {
@@ -81,4 +81,4 @@ EXPORT_SYMBOL unsigned int meowconsensus_version();
 
 #undef EXPORT_SYMBOL
 
-#endif // MEOWCOIN_MEOWCOINCONSENSUS_H
+#endif // SLIMECOIN_SLIMECOINCONSENSUS_H

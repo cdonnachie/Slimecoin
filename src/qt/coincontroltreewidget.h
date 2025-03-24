@@ -1,10 +1,10 @@
 // Copyright (c) 2011-2014 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The Meowcoin Core developers
+// Copyright (c) 2017-2019 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_QT_COINCONTROLTREEWIDGET_H
-#define MEOWCOIN_QT_COINCONTROLTREEWIDGET_H
+#ifndef SLIMECOIN_QT_COINCONTROLTREEWIDGET_H
+#define SLIMECOIN_QT_COINCONTROLTREEWIDGET_H
 
 #include <QKeyEvent>
 #include <QTreeWidget>
@@ -20,4 +20,4 @@ protected:
     virtual void keyPressEvent(QKeyEvent *event);
 };
 
-#endif // MEOWCOIN_QT_COINCONTROLTREEWIDGET_H
+#endif // SLIMECOIN_QT_COINCONTROLTREEWIDGET_H

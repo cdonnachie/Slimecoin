@@ -1,10 +1,10 @@
 // Copyright (c) 2017 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The Meowcoin Core developers
+// Copyright (c) 2017-2019 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_RPC_MINING_H
-#define MEOWCOIN_RPC_MINING_H
+#ifndef SLIMECOIN_RPC_MINING_H
+#define SLIMECOIN_RPC_MINING_H
 
 #include "script/script.h"
 

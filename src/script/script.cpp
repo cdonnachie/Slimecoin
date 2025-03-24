@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Meowcoin Core developers
+// Copyright (c) 2017-2021 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #include "streams.h"
@@ -143,9 +143,9 @@ const char* GetOpName(opcodetype opcode)
     case OP_NOP9                   : return "OP_NOP9";
     case OP_NOP10                  : return "OP_NOP10";
 
-    /** MEWC START */
-    case OP_MEWC_ASSET              : return "OP_MEWC_ASSET";
-    /** MEWC END */
+    /** SLME START */
+    case OP_SLME_ASSET              : return "OP_SLME_ASSET";
+    /** SLME END */
 
     case OP_INVALIDOPCODE          : return "OP_INVALIDOPCODE";
 
@@ -227,7 +227,7 @@ bool CScript::IsPayToScriptHash() const
             (*this)[22] == OP_EQUAL);
 }
 
-/** MEWC START */
+/** SLME START */
 bool CScript::IsAssetScript() const
 {
     int nType = 0;
@@ -245,33 +245,33 @@ bool CScript::IsAssetScript(int& nType, bool& isOwner) const
 bool CScript::IsAssetScript(int& nType, bool& fIsOwner, int& nStartingIndex) const
 {
     if (this->size() > 31) {
-        if ((*this)[25] == OP_MEWC_ASSET) { // OP_MEWC_ASSET is always in the 25 index of the script if it exists
+        if ((*this)[25] == OP_SLME_ASSET) { // OP_SLME_ASSET is always in the 25 index of the script if it exists
             int index = -1;
-            if ((*this)[27] == MEWC_R) { // Check to see if MEWC starts at 27 ( this->size() < 105)
-                if ((*this)[28] == MEWC_V)
-                    if ((*this)[29] == MEWC_N)
+            if ((*this)[27] == SLME_R) { // Check to see if SLME starts at 27 ( this->size() < 105)
+                if ((*this)[28] == SLME_V)
+                    if ((*this)[29] == SLME_N)
                         index = 30;
             } else {
-                if ((*this)[28] == MEWC_R) // Check to see if MEWC starts at 28 ( this->size() >= 105)
-                    if ((*this)[29] == MEWC_V)
-                        if ((*this)[30] == MEWC_N)
+                if ((*this)[28] == SLME_R) // Check to see if SLME starts at 28 ( this->size() >= 105)
+                    if ((*this)[29] == SLME_V)
+                        if ((*this)[30] == SLME_N)
                             index = 31;
             }
 
             if (index > 0) {
                 nStartingIndex = index + 1; // Set the index where the asset data begins. Use to serialize the asset data into asset objects
-                if ((*this)[index] == MEWC_T) { // Transfer first anticipating more transfers than other assets operations
+                if ((*this)[index] == SLME_T) { // Transfer first anticipating more transfers than other assets operations
                     nType = TX_TRANSFER_ASSET;
                     return true;
-                } else if ((*this)[index] == MEWC_Q && this->size() > 39) {
+                } else if ((*this)[index] == SLME_Q && this->size() > 39) {
                     nType = TX_NEW_ASSET;
                     fIsOwner = false;
                     return true;
-                } else if ((*this)[index] == MEWC_O) {
+                } else if ((*this)[index] == SLME_O) {
                     nType = TX_NEW_ASSET;
                     fIsOwner = true;
                     return true;
-                } else if ((*this)[index] == MEWC_R) {
+                } else if ((*this)[index] == SLME_R) {
                     nType = TX_REISSUE_ASSET;
                     return true;
                 }
@@ -331,15 +331,15 @@ bool CScript::IsNullAsset() const
 bool CScript::IsNullAssetTxDataScript() const
 {
     return (this->size() > 23 &&
-            (*this)[0] == OP_MEWC_ASSET &&
+            (*this)[0] == OP_SLME_ASSET &&
             (*this)[1] == 0x14);
 }
 
 bool CScript::IsNullGlobalRestrictionAssetTxDataScript() const
 {
-    // 1 OP_MEWC_ASSET followed by two OP_RESERVED + atleast 4 characters for the restricted name $ABC
+    // 1 OP_SLME_ASSET followed by two OP_RESERVED + atleast 4 characters for the restricted name $ABC
     return (this->size() > 6 &&
-            (*this)[0] == OP_MEWC_ASSET &&
+            (*this)[0] == OP_SLME_ASSET &&
             (*this)[1] == OP_RESERVED &&
             (*this)[2] == OP_RESERVED);
 }
@@ -347,13 +347,13 @@ bool CScript::IsNullGlobalRestrictionAssetTxDataScript() const
 
 bool CScript::IsNullAssetVerifierTxDataScript() const
 {
-    // 1 OP_MEWC_ASSET followed by one OP_RESERVED
+    // 1 OP_SLME_ASSET followed by one OP_RESERVED
     return (this->size() > 3 &&
-            (*this)[0] == OP_MEWC_ASSET &&
+            (*this)[0] == OP_SLME_ASSET &&
             (*this)[1] == OP_RESERVED &&
             (*this)[2] != OP_RESERVED);
 }
-/** MEWC END */
+/** SLME END */
 
 bool CScript::IsPayToWitnessScriptHash() const
 {
@@ -449,7 +449,7 @@ bool CScript::HasValidOps() const
 bool CScript::IsUnspendable() const
 {
     CAmount nAmount;
-    return (size() > 0 && *begin() == OP_RETURN) || (size() > 0 && *begin() == OP_MEWC_ASSET) || (size() > MAX_SCRIPT_SIZE) || (GetAssetAmountFromScript(*this, nAmount) && nAmount == 0);
+    return (size() > 0 && *begin() == OP_RETURN) || (size() > 0 && *begin() == OP_SLME_ASSET) || (size() > MAX_SCRIPT_SIZE) || (GetAssetAmountFromScript(*this, nAmount) && nAmount == 0);
 }
 
 //!--------------------------------------------------------------------------------------------------------------------------!//

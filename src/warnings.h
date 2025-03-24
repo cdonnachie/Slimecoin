@@ -1,11 +1,11 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The Meowcoin Core developers
+// Copyright (c) 2017-2019 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_WARNINGS_H
-#define MEOWCOIN_WARNINGS_H
+#ifndef SLIMECOIN_WARNINGS_H
+#define SLIMECOIN_WARNINGS_H
 
 #include <stdlib.h>
 #include <string>
@@ -25,4 +25,4 @@ std::string GetWarnings(const std::string& strFor);
 
 static const bool DEFAULT_TESTSAFEMODE = false;
 
-#endif //  MEOWCOIN_WARNINGS_H
+#endif //  SLIMECOIN_WARNINGS_H

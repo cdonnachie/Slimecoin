@@ -1,32 +1,32 @@
-Meowcoin Core integration/staging tree
+Slimecoin Core integration/staging tree
 =====================================
 
-https://mewccrypto.com
+https://slmecrypto.com
 
-To see how to run Meowcoin, please read the respective files in [the doc folder](doc)
+To see how to run Slimecoin, please read the respective files in [the doc folder](doc)
 
 
-What is Meowcoin?
+What is Slimecoin?
 ----------------
-Meowcoin is a a project that uses its own blockchain as technological platform to reach their objectives, which are focused in the animal sector (pet rescue and adoption, shelters support, etc). 
-Meowcoin also provide small scale and home miners with a profitable blockchain to devote their hash to, and benefit the wider sector through philanthropic means.
-Its blockchain provides digital currency that enables instant payments to anyone, anywhere in the world. The Meowcoin platform also lets anyone create assets (tokens) on the Meowcoin network. Assets can be used for NFTs, STOs, Gift Cards, and fractional ownership of anything of value.
-Meowcoin uses peer-to-peer technology to operate with no central authority: managing transactions and issuing money are carried out collectively by the network. 
+Slimecoin is a a project that uses its own blockchain as technological platform to reach their objectives, which are focused in the animal sector (pet rescue and adoption, shelters support, etc). 
+Slimecoin also provide small scale and home miners with a profitable blockchain to devote their hash to, and benefit the wider sector through philanthropic means.
+Its blockchain provides digital currency that enables instant payments to anyone, anywhere in the world. The Slimecoin platform also lets anyone create assets (tokens) on the Slimecoin network. Assets can be used for NFTs, STOs, Gift Cards, and fractional ownership of anything of value.
+Slimecoin uses peer-to-peer technology to operate with no central authority: managing transactions and issuing money are carried out collectively by the network. 
 
 License
 -------
 
-Meowcoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+Slimecoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see https://opensource.org/licenses/MIT.
 
 Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/JustAResearcher/Meowcoin/tags) are created
-regularly to indicate new official, stable release versions of Meowcoin Core.
+completely stable. [Tags](https://github.com/JustAResearcher/Slimecoin/tags) are created
+regularly to indicate new official, stable release versions of Slimecoin Core.
 
-Active development is done in branches, branches are created for specific versions. Development for Meowcoin uses the following workflow:
+Active development is done in branches, branches are created for specific versions. Development for Slimecoin uses the following workflow:
 
 * Create a new branch
 * Implement changes
@@ -68,24 +68,24 @@ to add a test plan to the pull request description if testing the changes is
 not straightforward.
 
 
-About Meowcoin
+About Slimecoin
 ----------------
 A digital peer to peer network for the facilitation of asset transfer.
 
 
 
-In the fictional world of Westeros, meows are used as messengers who carry statements of truth. Meowcoin is a use case specific blockchain designed to carry statements of truth about who owns what assets. 
+In the fictional world of Westeros, meows are used as messengers who carry statements of truth. Slimecoin is a use case specific blockchain designed to carry statements of truth about who owns what assets. 
 
 
 
 Thank you to the Bitcoin developers. 
 
-The Meowcoin project is launched based on the hard work and continuous effort of over 400 Bitcoin developers who made over 14,000 commits over the life to date of the Bitcoin project. We are eternally grateful to you for your efforts and diligence in making a secure network and for their support of free and open source software development.  The Meowcoin experiment is made on the foundation you built.
+The Slimecoin project is launched based on the hard work and continuous effort of over 400 Bitcoin developers who made over 14,000 commits over the life to date of the Bitcoin project. We are eternally grateful to you for your efforts and diligence in making a secure network and for their support of free and open source software development.  The Slimecoin experiment is made on the foundation you built.
 
 
 Abstract
 ----------------
-Meowcoin aims to implement a blockchain which is optimized specifically for the use case of transferring assets such as securities from one holder to another. Based on the extensive development and testing of Bitcoin, Meowcoin is built on a fork of the Bitcoin code. Key changes include a faster block reward time and a change in the number, but not weighed distribution schedule, of coins. Meowcoin is free and open source and will be issued and mined transparently with no pre-mine, developer allocation or any other similar set aside. Meowcoin is intended to prioritize user control, privacy and censorship resistance and be jurisdiction agnostic while allowing simple optional additional features for users based on need.
+Slimecoin aims to implement a blockchain which is optimized specifically for the use case of transferring assets such as securities from one holder to another. Based on the extensive development and testing of Bitcoin, Slimecoin is built on a fork of the Bitcoin code. Key changes include a faster block reward time and a change in the number, but not weighed distribution schedule, of coins. Slimecoin is free and open source and will be issued and mined transparently with no pre-mine, developer allocation or any other similar set aside. Slimecoin is intended to prioritize user control, privacy and censorship resistance and be jurisdiction agnostic while allowing simple optional additional features for users based on need.
 
 
 
@@ -95,9 +95,9 @@ The success of the Ethereum ERC 20 token shows the demand for tokenized assets t
 
 Bitcoin also has the capability of serving as the rails for tokens by using projects such as Omnilayer, RSK or Counterparty. However, neither Bitcoin nor Ethereum was specifically designed for facilitating ownership of other assets. 
 
-Meowcoin is designed to be a use case specific blockchain designed to efficiently handle one specific function: the transfer of assets from one party to another.
+Slimecoin is designed to be a use case specific blockchain designed to efficiently handle one specific function: the transfer of assets from one party to another.
 
-Bitcoin is and always should be focused on its goals of being a better form of money. Bitcoin developers will unlikely prioritize improvements or features which are specifically beneficial to the facilitation of token transfers.  One goal of the Meowcoin project is to see if a use case specific blockchain and development effort can create code which can either improve existing structures like Bitcoin or provide advantages for specific use cases.
+Bitcoin is and always should be focused on its goals of being a better form of money. Bitcoin developers will unlikely prioritize improvements or features which are specifically beneficial to the facilitation of token transfers.  One goal of the Slimecoin project is to see if a use case specific blockchain and development effort can create code which can either improve existing structures like Bitcoin or provide advantages for specific use cases.
 
 In the new global economy, borders and jurisdictions will be less relevant as more assets are tradable and trade across borders is increasingly frictionless. In an age where people can move significant amounts of wealth instantly using Bitcoin, global consumers will likely demand the same efficiency for their securities and similar asset holdings.
 

@@ -1,33 +1,33 @@
-# /etc/conf.d/meowcoind: config file for /etc/init.d/meowcoind
+# /etc/conf.d/slimecoind: config file for /etc/init.d/slimecoind
 
 # Config file location
-#MEOWCOIND_CONFIGFILE="/etc/meowcoin/meowcoin.conf"
+#SLIMECOIND_CONFIGFILE="/etc/slimecoin/slimecoin.conf"
 
-# What directory to write pidfile to?  (created and owned by $MEOWCOIND_USER)
-#MEOWCOIND_PIDDIR="/var/run/meowcoind"
+# What directory to write pidfile to?  (created and owned by $SLIMECOIND_USER)
+#SLIMECOIND_PIDDIR="/var/run/slimecoind"
 
 # What filename to give the pidfile
-#MEOWCOIND_PIDFILE="${MEOWCOIND_PIDDIR}/meowcoind.pid"
+#SLIMECOIND_PIDFILE="${SLIMECOIND_PIDDIR}/slimecoind.pid"
 
-# Where to write meowcoind data (be mindful that the blockchain is large)
-#MEOWCOIND_DATADIR="/var/lib/meowcoind"
+# Where to write slimecoind data (be mindful that the blockchain is large)
+#SLIMECOIND_DATADIR="/var/lib/slimecoind"
 
-# User and group to own meowcoind process
-#MEOWCOIND_USER="meowcoin"
-#MEOWCOIND_GROUP="meowcoin"
+# User and group to own slimecoind process
+#SLIMECOIND_USER="slimecoin"
+#SLIMECOIND_GROUP="slimecoin"
 
-# Path to meowcoind executable
-#MEOWCOIND_BIN="/usr/bin/meowcoind"
+# Path to slimecoind executable
+#SLIMECOIND_BIN="/usr/bin/slimecoind"
 
-# Nice value to run meowcoind under
-#MEOWCOIND_NICE=0
+# Nice value to run slimecoind under
+#SLIMECOIND_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)
-#MEOWCOIND_OPTS=""
+#SLIMECOIND_OPTS=""
 
-# The timeout in seconds OpenRC will wait for meowcoind to terminate
+# The timeout in seconds OpenRC will wait for slimecoind to terminate
 # after a SIGTERM has been raised.
 # Note that this will be mapped as argument to start-stop-daemon's
 # '--retry' option, which means you can specify a retry schedule
 # here. For more information see man 8 start-stop-daemon.
-MEOWCOIND_SIGTERM_TIMEOUT=60
+SLIMECOIND_SIGTERM_TIMEOUT=60

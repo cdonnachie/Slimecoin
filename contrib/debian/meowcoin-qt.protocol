@@ -1,6 +1,6 @@
 [Protocol]
-exec=meowcoin-qt '%u'
-protocol=meowcoin
+exec=slimecoin-qt '%u'
+protocol=slimecoin
 input=none
 output=none
 helper=true

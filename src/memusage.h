@@ -1,10 +1,10 @@
 // Copyright (c) 2015-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The Meowcoin Core developers
+// Copyright (c) 2017-2019 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_MEMUSAGE_H
-#define MEOWCOIN_MEMUSAGE_H
+#ifndef SLIMECOIN_MEMUSAGE_H
+#define SLIMECOIN_MEMUSAGE_H
 
 #include "indirectmap.h"
 
@@ -167,4 +167,4 @@ static inline size_t DynamicUsage(const std::unordered_map<X, Y, Z>& m)
 
 }
 
-#endif // MEOWCOIN_MEMUSAGE_H
+#endif // SLIMECOIN_MEMUSAGE_H

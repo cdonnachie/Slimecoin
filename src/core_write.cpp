@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Meowcoin Core developers
+// Copyright (c) 2017-2021 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -113,8 +113,8 @@ std::string ScriptToAsmStr(const CScript& script, const bool fAttemptSighashDeco
             return str;
         }
 
-        if (opcode == OP_MEWC_ASSET) {
-            // Once we hit an OP_MEWC_ASSET, we know that all the next data should be considered as hex
+        if (opcode == OP_SLME_ASSET) {
+            // Once we hit an OP_SLME_ASSET, we know that all the next data should be considered as hex
             str += GetOpName(opcode);
             str += " ";
             str += HexStr(vch);
@@ -174,7 +174,7 @@ void ScriptPubKeyToUniv(const CScript& scriptPubKey,
     out.pushKV("reqSigs", nRequired);
     out.pushKV("type", GetTxnOutputType(type));
 
-    /** MEWC START */
+    /** SLME START */
     if (type == TX_NEW_ASSET || type == TX_TRANSFER_ASSET || type == TX_REISSUE_ASSET) {
         UniValue assetInfo(UniValue::VOBJ);
 
@@ -262,7 +262,7 @@ void ScriptPubKeyToUniv(const CScript& scriptPubKey,
 
         out.pushKV("asset_data", assetInfo);
     }
-     /** MEWC END */
+     /** SLME END */
 
     UniValue a(UniValue::VARR);
     for (const CTxDestination& addr : addresses) {

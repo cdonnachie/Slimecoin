@@ -1,13 +1,13 @@
 // Copyright (c) 2009-2016 The Bitcoin Core developers
-// Copyright (c) 2017-2019 The Meowcoin Core developers
+// Copyright (c) 2017-2019 The Slimecoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MEOWCOIN_NETADDRESS_H
-#define MEOWCOIN_NETADDRESS_H
+#ifndef SLIMECOIN_NETADDRESS_H
+#define SLIMECOIN_NETADDRESS_H
 
 #if defined(HAVE_CONFIG_H)
-#include "config/meowcoin-config.h"
+#include "config/slimecoin-config.h"
 #endif
 
 #include "compat.h"
@@ -175,4 +175,4 @@ class CService : public CNetAddr
         }
 };
 
-#endif // MEOWCOIN_NETADDRESS_H
+#endif // SLIMECOIN_NETADDRESS_H
